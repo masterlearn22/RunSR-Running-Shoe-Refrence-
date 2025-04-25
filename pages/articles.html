@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel - RunShoes</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>RunShoes</span>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="products.html">Produk</a></li>
+                        <li><a href="articles.html" class="active">Artikel</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">2</span>
+                    </a>
+                    <a href="login.html" class="btn btn-primary">Masuk</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Artikel Seputar Lari</h1>
+                <p>Tips dan trik seputar lari, perawatan sepatu, dan latihan untuk meningkatkan performa Anda.</p>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section class="articles-section">
+            <div class="container">
+                <div class="articles-layout">
+                    <!-- Sidebar -->
+                    <div class="articles-sidebar">
+                        <div class="sidebar-widget">
+                            <h3>Kategori</h3>
+                            <div class="divider"></div>
+                            <ul class="category-list">
+                                <li><a href="articles.html" class="active">Semua Artikel</a></li>
+                                <li><a href="articles.html?category=tips">Tips & Trik</a></li>
+                                <li><a href="articles.html?category=training">Latihan</a></li>
+                                <li><a href="articles.html?category=maintenance">Perawatan Sepatu</a></li>
+                                <li><a href="articles.html?category=health">Kesehatan</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h3>Cari Artikel</h3>
+                            <div class="divider"></div>
+                            <div class="search-box">
+                                <input type="search" placeholder="Cari artikel...">
+                                <button><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-widget">
+                            <h3>Artikel Populer</h3>
+                            <div class="divider"></div>
+                            <div class="popular-articles">
+                                <div class="popular-article">
+                                    <a href="article-detail.html?id=1">
+                                        <div class="popular-article-image">
+                                            <img src="../assets/images/articles/article-1.jpg" alt="Cara Memilih Sepatu Lari yang Tepat">
+                                        </div>
+                                        <div class="popular-article-info">
+                                            <h4>Cara Memilih Sepatu Lari yang Tepat</h4>
+                                            <p>10 April 2023</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="popular-article">
+                                    <a href="article-detail.html?id=2">
+                                        <div class="popular-article-image">
+                                            <img src="../assets/images/articles/article-2.jpg" alt="5 Latihan untuk Meningkatkan Performa Lari">
+                                        </div>
+                                        <div class="popular-article-info">
+                                            <h4>5 Latihan untuk Meningkatkan Performa Lari</h4>
+                                            <p>15 April 2023</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="popular-article">
+                                    <a href="article-detail.html?id=3">
+                                        <div class="popular-article-image">
+                                            <img src="../assets/images/articles/article-3.jpg" alt="Tips Merawat Sepatu Lari Agar Tahan Lama">
+                                        </div>
+                                        <div class="popular-article-info">
+                                            <h4>Tips Merawat Sepatu Lari Agar Tahan Lama</h4>
+                                            <p>20 April 2023</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Articles Content -->
+                    <div class="articles-content">
+                        <div class="articles-toolbar">
+                            <div class="search-box">
+                                <input type="search" placeholder="Cari artikel...">
+                                <button><i class="fas fa-search"></i></button>
+                            </div>
+                            <div class="sort-options">
+                                <label for="sort-by">Urutkan:</label>
+                                <select id="sort-by">
+                                    <option value="newest">Terbaru</option>
+                                    <option value="oldest">Terlama</option>
+                                    <option value="popular">Terpopuler</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="articles-grid">
+                            <div class="article-card">
+                                <div class="article-image">
+                                    <img src="../assets/images/articles/article-1.jpg" alt="Cara Memilih Sepatu Lari yang Tepat">
+                                    <div class="article-category">tips</div>
+                                </div>
+                                <div class="article-info">
+                                    <div class="article-meta">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>10 April 2023</span>
+                                    </div>
+                                    <h3><a href="article-detail.html?id=1">Cara Memilih Sepatu Lari yang Tepat</a></h3>
+                                    <p class="article-excerpt">Panduan lengkap untuk memilih sepatu lari yang sesuai dengan kebutuhan dan tipe kaki Anda.</p>
+                                    <a href="article-detail.html?id=1" class="btn btn-sm">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="article-card">
+                                <div class="article-image">
+                                    <img src="../assets/images/articles/article-2.jpg" alt="5 Latihan untuk Meningkatkan Performa Lari">
+                                    <div  alt="5 Latihan untuk Meningkatkan Performa Lari">
+                                    <div class="article-category">training</div>
+                                </div>
+                                <div class="article-info">
+                                    <div class="article-meta">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>15 April 2023</span>
+                                    </div>
+                                    <h3><a href="article-detail.html?id=2">5 Latihan untuk Meningkatkan Performa Lari</a></h3>
+                                    <p class="article-excerpt">Latihan-latihan yang dapat membantu meningkatkan performa lari dan mencegah cedera.</p>
+                                    <a href="article-detail.html?id=2" class="btn btn-sm">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="article-card">
+                                <div class="article-image">
+                                    <img src="../assets/images/articles/article-3.jpg" alt="Tips Merawat Sepatu Lari Agar Tahan Lama">
+                                    <div class="article-category">maintenance</div>
+                                </div>
+                                <div class="article-info">
+                                    <div class="article-meta">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>20 April 2023</span>
+                                    </div>
+                                    <h3><a href="article-detail.html?id=3">Tips Merawat Sepatu Lari Agar Tahan Lama</a></h3>
+                                    <p class="article-excerpt">Cara merawat sepatu lari agar tetap nyaman digunakan dan tahan lama.</p>
+                                    <a href="article-detail.html?id=3" class="btn btn-sm">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="article-card">
+                                <div class="article-image">
+                                    <img src="../assets/images/articles/article-4.jpg" alt="Persiapan Menghadapi Maraton Pertama">
+                                    <div class="article-category">training</div>
+                                </div>
+                                <div class="article-info">
+                                    <div class="article-meta">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>25 April 2023</span>
+                                    </div>
+                                    <h3><a href="article-detail.html?id=4">Persiapan Menghadapi Maraton Pertama</a></h3>
+                                    <p class="article-excerpt">Panduan lengkap untuk mempersiapkan diri menghadapi maraton pertama Anda.</p>
+                                    <a href="article-detail.html?id=4" class="btn btn-sm">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="article-card">
+                                <div class="article-image">
+                                    <img src="../assets/images/articles/article-5.jpg" alt="Mengenal Teknologi Sepatu Lari Modern">
+                                    <div class="article-category">tips</div>
+                                </div>
+                                <div class="article-info">
+                                    <div class="article-meta">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>1 Mei 2023</span>
+                                    </div>
+                                    <h3><a href="article-detail.html?id=5">Mengenal Teknologi Sepatu Lari Modern</a></h3>
+                                    <p class="article-excerpt">Penjelasan tentang berbagai teknologi yang digunakan dalam sepatu lari modern.</p>
+                                    <a href="article-detail.html?id=5" class="btn btn-sm">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="article-card">
+                                <div class="article-image">
+                                    <img src="../assets/images/articles/article-6.jpg" alt="Cara Mengatasi Cedera Umum Saat Lari">
+                                    <div class="article-category">health</div>
+                                </div>
+                                <div class="article-info">
+                                    <div class="article-meta">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>5 Mei 2023</span>
+                                    </div>
+                                    <h3><a href="article-detail.html?id=6">Cara Mengatasi Cedera Umum Saat Lari</a></h3>
+                                    <p class="article-excerpt">Tips dan cara mengatasi cedera umum yang sering dialami oleh pelari, seperti shin splints dan plantar fasciitis.</p>
+                                    <a href="article-detail.html?id=6" class="btn btn-sm">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pagination">
+                            <button class="pagination-btn disabled"><i class="fas fa-arrow-left"></i></button>
+                            <button class="pagination-btn active">1</button>
+                            <button class="pagination-btn">2</button>
+                            <button class="pagination-btn">3</button>
+                            <button class="pagination-btn"><i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>RunShoes</span>
+                    </div>
+                    <p>Temukan sepatu lari yang tepat untuk kebutuhan Anda.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Produk</h3>
+                    <ul>
+                        <li><a href="products.html">Semua Produk</a></li>
+                        <li><a href="products.html?type=road">Sepatu Lari Jalan</a></li>
+                        <li><a href="products.html?type=trail">Sepatu Trail Running</a></li>
+                        <li><a href="products.html?type=marathon">Sepatu Maraton</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Artikel</h3>
+                    <ul>
+                        <li><a href="articles.html">Semua Artikel</a></li>
+                        <li><a href="articles.html?category=tips">Tips & Trik</a></li>
+                        <li><a href="articles.html?category=training">Latihan</a></li>
+                        <li><a href="articles.html?category=maintenance">Perawatan Sepatu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 RunShoes. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
