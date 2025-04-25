@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk - RunShoes</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>RunShoes</span>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="products.html" class="active">Produk</a></li>
+                        <li><a href="articles.html">Artikel</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">2</span>
+                    </a>
+                    <a href="login.html" class="btn btn-primary">Masuk</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container product-detail-container">
+            <div class="breadcrumb">
+                <a href="products.html"><i class="fas fa-arrow-left"></i> Kembali ke Katalog</a>
+            </div>
+
+            <div class="product-detail">
+                <div class="product-gallery">
+                    <div class="product-main-image">
+                        <img src="../assets/images/products/shoe-1.jpg" alt="Nike Air Zoom 1" id="main-product-image">
+                    </div>
+                    <div class="product-thumbnails">
+                        <div class="thumbnail active" data-image="../assets/images/products/shoe-1.jpg">
+                            <img src="../assets/images/products/shoe-1.jpg" alt="Nike Air Zoom 1 - View 1">
+                        </div>
+                        <div class="thumbnail" data-image="../assets/images/products/shoe-1-side.jpg">
+                            <img src="../assets/images/products/shoe-1-side.jpg" alt="Nike Air Zoom 1 - View 2">
+                        </div>
+                        <div class="thumbnail" data-image="../assets/images/products/shoe-1-back.jpg">
+                            <img src="../assets/images/products/shoe-1-back.jpg" alt="Nike Air Zoom 1 - View 3">
+                        </div>
+                        <div class="thumbnail" data-image="../assets/images/products/shoe-1-top.jpg">
+                            <img src="../assets/images/products/shoe-1-top.jpg" alt="Nike Air Zoom 1 - View 4">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <div class="product-header">
+                        <h1 class="product-title">Nike Air Zoom 1</h1>
+                        <div class="product-meta">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.9 (120 ulasan)</span>
+                            </div>
+                            <div class="product-category">Sepatu untuk lari jalan</div>
+                        </div>
+                        <div class="product-price">Rp500.000</div>
+                    </div>
+
+                    <div class="product-description">
+                        <p>Sepatu lari premium yang dirancang untuk memberikan kenyamanan maksimal dan performa terbaik. Dengan teknologi terbaru, sepatu ini membantu Anda mencapai tujuan lari Anda dengan lebih mudah.</p>
+                    </div>
+
+                    <div class="product-features">
+                        <h3>Fitur</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Bantalan yang responsif untuk kenyamanan maksimal</li>
+                            <li><i class="fas fa-check"></i> Upper yang breathable untuk sirkulasi udara yang baik</li>
+                            <li><i class="fas fa-check"></i> Outsole yang tahan lama dan memberikan traksi yang baik</li>
+                            <li><i class="fas fa-check"></i> Desain yang ringan untuk performa terbaik</li>
+                            <li><i class="fas fa-check"></i> Teknologi stabilitas untuk mendukung kaki Anda</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="option-group">
+                            <h3>Warna</h3>
+                            <div class="color-options">
+                                <label class="color-option">
+                                    <input type="radio" name="color" value="black" checked>
+                                    <span class="color-label">Hitam</span>
+                                </label>
+                                <label class="color-option">
+                                    <input type="radio" name="color" value="white">
+                                    <span class="color-label">Putih</span>
+                                </label>
+                                <label class="color-option">
+                                    <input type="radio" name="color" value="blue">
+                                    <span class="color-label">Biru</span>
+                                </label>
+                                <label class="color-option">
+                                    <input type="radio" name="color" value="red">
+                                    <span class="color-label">Merah</span>
+                                </label>
+                                <label class="color-option">
+                                    <input type="radio" name="color" value="gray">
+                                    <span class="color-label">Abu-abu</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <h3>Ukuran</h3>
+                            <div class="size-options">
+                                <label class="size-option">
+                                    <input type="radio" name="size" value="39">
+                                    <span class="size-label">39</span>
+                                </label>
+                                <label class="size-option">
+                                    <input type="radio" name="size" value="40">
+                                    <span class="size-label">40</span>
+                                </label>
+                                <label class="size-option">
+                                    <input type="radio" name="size" value="41" checked>
+                                    <span class="size-label">41</span>
+                                </label>
+                                <label class="size-option">
+                                    <input type="radio" name="size" value="42">
+                                    <span class="size-label">42</span>
+                                </label>
+                                <label class="size-option">
+                                    <input type="radio" name="size" value="43">
+                                    <span class="size-label">43</span>
+                                </label>
+                                <label class="size-option">
+                                    <input type="radio" name="size" value="44">
+                                    <span class="size-label">44</span>
+                                </label>
+                                <label class="size-option">
+                                    <input type="radio" name="size" value="45">
+                                    <span class="size-label">45</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <h3>Jumlah</h3>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                                <input type="number" value="1" min="1" max="10" class="quantity-input">
+                                <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-lg"><i class="fas fa-shopping-bag"></i> Tambah ke Keranjang</button>
+                        <button class="btn btn-outline btn-lg"><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-tabs">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="reviews">Ulasan (120)</button>
+                    <button class="tab-btn" data-tab="shipping">Pengiriman & Pengembalian</button>
+                    <button class="tab-btn" data-tab="size-guide">Panduan Ukuran</button>
+                </div>
+
+                <div class="tab-content active" id="reviews">
+                    <div class="reviews">
+                        <div class="review">
+                            <div class="review-header">
+                                <h4>Budi Santoso</h4>
+                                <div class="review-date">15 Maret 2023</div>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-content">
+                                <p>Sepatu yang sangat nyaman dan ringan. Saya menggunakannya untuk lari 10K dan tidak ada masalah sama sekali.</p>
+                            </div>
+                        </div>
+
+                        <div class="review">
+                            <div class="review-header">
+                                <h4>Ani Wijaya</h4>
+                                <div class="review-date">2 April 2023</div>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class="review-content">
+                                <p>Sepatu yang bagus dengan harga yang terjangkau. Saya suka desainnya yang stylish.</p>
+                            </div>
+                        </div>
+
+                        <div class="review">
+                            <div class="review-header">
+                                <h4>Dedi Kurniawan</h4>
+                                <div class="review-date">20 April 2023</div>
+                            </div>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-content">
+                                <p>Sepatu ini sangat membantu saya dalam latihan maraton. Cushioning-nya sangat nyaman dan memberikan support yang baik.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="shipping">
+                    <h3>Informasi Pengiriman</h3>
+                    <p>Kami mengirimkan produk ke seluruh Indonesia menggunakan jasa pengiriman terpercaya. Estimasi waktu pengiriman adalah 2-5 hari kerja, tergantung lokasi Anda.</p>
+                    
+                    <h3>Kebijakan Pengembalian</h3>
+                    <p>Anda dapat mengembalikan produk dalam waktu 30 hari setelah pembelian jika produk dalam kondisi asli dan belum digunakan. Biaya pengiriman untuk pengembalian ditanggung oleh pembeli.</p>
+                </div>
+
+                <div class="tab-content" id="size-guide">
+                    <h3>Panduan Ukuran</h3>
+                    <p>Berikut adalah panduan ukuran untuk membantu Anda memilih ukuran sepatu yang tepat. Ukuran yang tercantum adalah ukuran EU.</p>
+                    
+                    <table class="size-chart">
+                        <thead>
+                            <tr>
+                                <th>EU</th>
+                                <th>US (Pria)</th>
+                                <th>US (Wanita)</th>
+                                <th>UK</th>
+                                <th>CM</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>39</td>
+                                <td>6</td>
+                                <td>7.5</td>
+                                <td>5.5</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <td>40</td>
+                                <td>7</td>
+                                <td>8.5</td>
+                                <td>6.5</td>
+                                <td>24.5</td>
+                            </tr>
+                            <tr>
+                                <td>41</td>
+                                <td>8</td>
+                                <td>9.5</td>
+                                <td>7.5</td>
+                                <td>25</td>
+                            </tr>
+                            <tr>
+                                <td>42</td>
+                                <td>9</td>
+                                <td>10.5</td>
+                                <td>8.5</td>
+                                <td>25.5</td>
+                            </tr>
+                            <tr>
+                                <td>43</td>
+                                <td>10</td>
+                                <td>11.5</td>
+                                <td>9.5</td>
+                                <td>26</td>
+                            </tr>
+                            <tr>
+                                <td>44</td>
+                                <td>11</td>
+                                <td>12.5</td>
+                                <td>10.5</td>
+                                <td>26.5</td>
+                            </tr>
+                            <tr>
+                                <td>45</td>
+                                <td>12</td>
+                                <td>13.5</td>
+                                <td>11.5</td>
+                                <td>27</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p class="size-tip">Tip: Jika Anda berada di antara dua ukuran, kami sarankan untuk memilih ukuran yang lebih besar.</p>
+                </div>
+            </div>
+
+            <div class="related-products">
+                <h2>Produk Terkait</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../assets/images/products/shoe-2.jpg" alt="Adidas Ultraboost 2">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Adidas Ultraboost 2</h3>
+                            <p>Sepatu untuk trail running</p>
+                            <div class="product-footer">
+                                <span class="product-price">Rp1.000.000</span>
+                                <a href="product-detail.html?id=2" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../assets/images/products/shoe-3.jpg" alt="Asics Gel-Nimbus 3">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Asics Gel-Nimbus 3</h3>
+                            <p>Sepatu untuk maraton</p>
+                            <div class="product-footer">
+                                <span class="product-price">Rp1.500.000</span>
+                                <a href="product-detail.html?id=3" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../assets/images/products/shoe-4.jpg" alt="Brooks Ghost 4">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Brooks Ghost 4</h3>
+                            <p>Sepatu untuk lari santai</p>
+                            <div class="product-footer">
+                                <span class="product-price">Rp2.000.000</span>
+                                <a href="product-detail.html?id=4" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../assets/images/products/shoe-5.jpg" alt="New Balance Fresh Foam 5">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>New Balance Fresh Foam 5</h3>
+                            <p>Sepatu untuk lari jalan</p>
+                            <div class="product-footer">
+                                <span class="product-price">Rp2.500.000</span>
+                                <a href="product-detail.html?id=5" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>RunShoes</span>
+                    </div>
+                    <p>Temukan sepatu lari yang tepat untuk kebutuhan Anda.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Produk</h3>
+                    <ul>
+                        <li><a href="products.html">Semua Produk</a></li>
+                        <li><a href="products.html?type=road">Sepatu Lari Jalan</a></li>
+                        <li><a href="products.html?type=trail">Sepatu Trail Running</a></li>
+                        <li><a href="products.html?type=marathon">Sepatu Maraton</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Artikel</h3>
+                    <ul>
+                        <li><a href="articles.html">Semua Artikel</a></li>
+                        <li><a href="articles.html?category=tips">Tips & Trik</a></li>
+                        <li><a href="articles.html?category=training">Latihan</a></li>
+                        <li><a href="articles.html?category=maintenance">Perawatan Sepatu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 RunShoes. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

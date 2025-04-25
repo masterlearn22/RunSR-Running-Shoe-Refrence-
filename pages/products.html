@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk - RunShoes</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>RunShoes</span>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="products.html" class="active">Produk</a></li>
+                        <li><a href="articles.html">Artikel</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">2</span>
+                    </a>
+                    <a href="login.html" class="btn btn-primary">Masuk</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Katalog Sepatu Lari</h1>
+                <p>Temukan sepatu lari yang sesuai dengan kebutuhan dan preferensi Anda.</p>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="container">
+                <div class="products-layout">
+                    <!-- Sidebar Filters -->
+                    <div class="products-sidebar">
+                        <div class="filter-group">
+                            <h3>Filter</h3>
+                            <div class="divider"></div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Tipe Lari</h4>
+                            <div class="filter-options">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="road" name="type" value="road">
+                                    <label for="road">Lari di Jalan</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="trail" name="type" value="trail">
+                                    <label for="trail">Trail Running</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="marathon" name="type" value="marathon">
+                                    <label for="marathon">Maraton</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="casual" name="type" value="casual">
+                                    <label for="casual">Lari Santai</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Brand</h4>
+                            <div class="filter-options">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="nike" name="brand" value="nike">
+                                    <label for="nike">Nike</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="adidas" name="brand" value="adidas">
+                                    <label for="adidas">Adidas</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="asics" name="brand" value="asics">
+                                    <label for="asics">Asics</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="brooks" name="brand" value="brooks">
+                                    <label for="brooks">Brooks</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="new-balance" name="brand" value="new-balance">
+                                    <label for="new-balance">New Balance</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Harga</h4>
+                            <div class="filter-options">
+                                <div class="price-slider">
+                                    <input type="range" min="500000" max="5000000" step="100000" value="500000" class="slider" id="price-min">
+                                    <input type="range" min="500000" max="5000000" step="100000" value="5000000" class="slider" id="price-max">
+                                </div>
+                                <div class="price-range">
+                                    <span>Rp500.000</span>
+                                    <span>Rp5.000.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Fitur</h4>
+                            <div class="filter-options">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="cushioning" name="feature" value="cushioning">
+                                    <label for="cushioning">Cushioning</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="stability" name="feature" value="stability">
+                                    <label for="stability">Stability</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="lightweight" name="feature" value="lightweight">
+                                    <label for="lightweight">Lightweight</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="waterproof" name="feature" value="waterproof">
+                                    <label for="waterproof">Waterproof</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary btn-block">Terapkan Filter</button>
+                    </div>
+
+                    <!-- Products Content -->
+                    <div class="products-content">
+                        <div class="products-toolbar">
+                            <div class="search-box">
+                                <input type="search" placeholder="Cari sepatu lari...">
+                                <button><i class="fas fa-search"></i></button>
+                            </div>
+                            <div class="sort-options">
+                                <label for="sort-by">Urutkan:</label>
+                                <select id="sort-by">
+                                    <option value="popular">Popularitas</option>
+                                    <option value="price-low">Harga: Rendah ke Tinggi</option>
+                                    <option value="price-high">Harga: Tinggi ke Rendah</option>
+                                    <option value="newest">Terbaru</option>
+                                    <option value="rating">Rating</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="products-grid">
+                            <!-- Product Cards -->
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="../assets/images/products/shoe-1.jpg" alt="Sepatu Lari 1">
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.9</span>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Nike Air Zoom 1</h3>
+                                    <p>Sepatu untuk lari jalan</p>
+                                    <div class="product-footer">
+                                        <span class="product-price">Rp500.000 - Rp1.000.000</span>
+                                        <a href="product-detail.html?id=1" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="../assets/images/products/shoe-2.jpg" alt="Sepatu Lari 2">
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.8</span>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Adidas Ultraboost 2</h3>
+                                    <p>Sepatu untuk trail running</p>
+                                    <div class="product-footer">
+                                        <span class="product-price">Rp1.000.000 - Rp1.500.000</span>
+                                        <a href="product-detail.html?id=2" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="../assets/images/products/shoe-3.jpg" alt="Sepatu Lari 3">
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.7</span>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Asics Gel-Nimbus 3</h3>
+                                    <p>Sepatu untuk maraton</p>
+                                    <div class="product-footer">
+                                        <span class="product-price">Rp1.500.000 - Rp2.000.000</span>
+                                        <a href="product-detail.html?id=3" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="../assets/images/products/shoe-4.jpg" alt="Sepatu Lari 4">
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.6</span>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Brooks Ghost 4</h3>
+                                    <p>Sepatu untuk lari santai</p>
+                                    <div class="product-footer">
+                                        <span class="product-price">Rp2.000.000 - Rp2.500.000</span>
+                                        <a href="product-detail.html?id=4" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="../assets/images/products/shoe-5.jpg" alt="Sepatu Lari 5">
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.5</span>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>New Balance Fresh Foam 5</h3>
+                                    <p>Sepatu untuk lari jalan</p>
+                                    <div class="product-footer">
+                                        <span class="product-price">Rp2.500.000 - Rp3.000.000</span>
+                                        <a href="product-detail.html?id=5" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="../assets/images/products/shoe-6.jpg" alt="Sepatu Lari 6">
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.4</span>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Nike Pegasus 6</h3>
+                                    <p>Sepatu untuk trail running</p>
+                                    <div class="product-footer">
+                                        <span class="product-price">Rp3.000.000 - Rp3.500.000</span>
+                                        <a href="product-detail.html?id=6" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="../assets/images/products/shoe-7.jpg" alt="Sepatu Lari 7">
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.3</span>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Adidas Supernova 7</h3>
+                                    <p>Sepatu untuk maraton</p>
+                                    <div class="product-footer">
+                                        <span class="product-price">Rp1.500.000 - Rp2.000.000</span>
+                                        <a href="product-detail.html?id=7" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="../assets/images/products/shoe-8.jpg" alt="Sepatu Lari 8">
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.2</span>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Asics GT-2000 8</h3>
+                                    <p>Sepatu untuk lari santai</p>
+                                    <div class="product-footer">
+                                        <span class="product-price">Rp1.800.000 - Rp2.300.000</span>
+                                        <a href="product-detail.html?id=8" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="../assets/images/products/shoe-9.jpg" alt="Sepatu Lari 9">
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.1</span>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <h3>Brooks Adrenaline 9</h3>
+                                    <p>Sepatu untuk lari jalan</p>
+                                    <div class="product-footer">
+                                        <span class="product-price">Rp2.200.000 - Rp2.700.000</span>
+                                        <a href="product-detail.html?id=9" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pagination">
+                            <button class="pagination-btn disabled"><i class="fas fa-arrow-left"></i></button>
+                            <button class="pagination-btn active">1</button>
+                            <button class="pagination-btn">2</button>
+                            <button class="pagination-btn">3</button>
+                            <button class="pagination-btn">4</button>
+                            <button class="pagination-btn"><i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>RunShoes</span>
+                    </div>
+                    <p>Temukan sepatu lari yang tepat untuk kebutuhan Anda.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Produk</h3>
+                    <ul>
+                        <li><a href="products.html">Semua Produk</a></li>
+                        <li><a href="products.html?type=road">Sepatu Lari Jalan</a></li>
+                        <li><a href="products.html?type=trail">Sepatu Trail Running</a></li>
+                        <li><a href="products.html?type=marathon">Sepatu Maraton</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Artikel</h3>
+                    <ul>
+                        <li><a href="articles.html">Semua Artikel</a></li>
+                        <li><a href="articles.html?category=tips">Tips & Trik</a></li>
+                        <li><a href="articles.html?category=training">Latihan</a></li>
+                        <li><a href="articles.html?category=maintenance">Perawatan Sepatu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 RunShoes. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/products.js"></script>
+</body>
+</html>
