@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja - RunShoes</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>RunShoes</span>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="products.html">Produk</a></li>
+                        <li><a href="articles.html">Artikel</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-icon active">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">2</span>
+                    </a>
+                    <a href="login.html" class="btn btn-primary">Masuk</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cart-section">
+            <div class="container">
+                <div class="cart-header">
+                    <h1>Keranjang Belanja</h1>
+                    <span class="cart-count-text">2 item</span>
+                </div>
+
+                <div class="cart-layout">
+                    <div class="cart-items">
+                        <table class="cart-table">
+                            <thead>
+                                <tr>
+                                    <th>Produk</th>
+                                    <th>Harga</th>
+                                    <th>Jumlah</th>
+                                    <th>Total</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="cart-product">
+                                            <div class="cart-product-image">
+                                                <img src="../assets/images/products/shoe-1.jpg" alt="Nike Air Zoom 1">
+                                            </div>
+                                            <div class="cart-product-info">
+                                                <h3>Nike Air Zoom 1</h3>
+                                                <div class="cart-product-meta">
+                                                    <p>Ukuran: 42</p>
+                                                    <p>Warna: Hitam</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Rp1.500.000</td>
+                                    <td>
+                                        <div class="quantity-selector">
+                                            <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                                            <input type="number" value="1" min="1" max="10" class="quantity-input">
+                                            <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                                        </div>
+                                    </td>
+                                    <td class="cart-product-total">Rp1.500.000</td>
+                                    <td>
+                                        <button class="btn-icon remove-item"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="cart-product">
+                                            <div class="cart-product-image">
+                                                <img src="../assets/images/products/shoe-2.jpg" alt="Adidas Ultraboost 2">
+                                            </div>
+                                            <div class="cart-product-info">
+                                                <h3>Adidas Ultraboost 2</h3>
+                                                <div class="cart-product-meta">
+                                                    <p>Ukuran: 43</p>
+                                                    <p>Warna: Biru</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Rp2.000.000</td>
+                                    <td>
+                                        <div class="quantity-selector">
+                                            <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                                            <input type="number" value="1" min="1" max="10" class="quantity-input">
+                                            <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                                        </div>
+                                    </td>
+                                    <td class="cart-product-total">Rp2.000.000</td>
+                                    <td>
+                                        <button class="btn-icon remove-item"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="cart-actions">
+                            <div class="coupon-form">
+                                <input type="text" placeholder="Kode Voucher" class="coupon-input">
+                                <button class="btn btn-outline">Terapkan</button>
+                            </div>
+                            <a href="products.html" class="btn btn-link"><i class="fas fa-arrow-left"></i> Lanjutkan Belanja</a>
+                        </div>
+                    </div>
+
+                    <div class="cart-summary">
+                        <h2>Ringkasan Pesanan</h2>
+                        <div class="summary-item">
+                            <span>Subtotal</span>
+                            <span>Rp3.500.000</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Pengiriman</span>
+                            <span>Rp50.000</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Diskon</span>
+                            <span>-</span>
+                        </div>
+                        <div class="summary-total">
+                            <span>Total</span>
+                            <span>Rp3.550.000</span>
+                        </div>
+                        <a href="payment.html" class="btn btn-primary btn-block">Lanjutkan ke Pembayaran</a>
+                        <div class="payment-methods">
+                            <p>Kami menerima pembayaran melalui:</p>
+                            <div class="payment-icons">
+                                <span class="payment-icon">BCA</span>
+                                <span class="payment-icon">Mandiri</span>
+                                <span class="payment-icon">BNI</span>
+                                <span class="payment-icon">BRI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>RunShoes</span>
+                    </div>
+                    <p>Temukan sepatu lari yang tepat untuk kebutuhan Anda.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Produk</h3>
+                    <ul>
+                        <li><a href="products.html">Semua Produk</a></li>
+                        <li><a href="products.html?type=road">Sepatu Lari Jalan</a></li>
+                        <li><a href="products.html?type=trail">Sepatu Trail Running</a></li>
+                        <li><a href="products.html?type=marathon">Sepatu Maraton</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Artikel</h3>
+                    <ul>
+                        <li><a href="articles.html">Semua Artikel</a></li>
+                        <li><a href="articles.html?category=tips">Tips & Trik</a></li>
+                        <li><a href="articles.html?category=training">Latihan</a></li>
+                        <li><a href="articles.html?category=maintenance">Perawatan Sepatu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 RunShoes. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/cart.js"></script>
+</body>
+</html>
