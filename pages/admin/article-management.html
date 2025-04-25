@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Manajemen Artikel - RunShoes Admin</title>
+   <link rel="stylesheet" href="../../assets/css/styles.css">
+   <link rel="stylesheet" href="../../assets/css/admin.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-body">
+   <div class="admin-layout">
+       <!-- Sidebar -->
+       <aside class="admin-sidebar">
+           <div class="admin-logo">
+               <a href="../../index.html" target="_blank">
+                   <i class="fas fa-shopping-bag"></i>
+                   <span>RunShoes</span>
+               </a>
+           </div>
+           <nav class="admin-menu">
+               <ul>
+                   <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                   <li><a href="product-management.html"><i class="fas fa-box"></i> Produk</a></li>
+                   <li><a href="order-management.html"><i class="fas fa-shopping-cart"></i> Pesanan</a></li>
+                   <li><a href="user-management.html"><i class="fas fa-users"></i> Pengguna</a></li>
+                   <li><a href="article-management.html" class="active"><i class="fas fa-newspaper"></i> Artikel</a></li>
+                   <li><a href="report.html"><i class="fas fa-chart-bar"></i> Laporan</a></li>
+                   <li><a href="settings.html"><i class="fas fa-cog"></i> Pengaturan</a></li>
+               </ul>
+           </nav>
+       </aside>
+
+       <!-- Main Content -->
+       <main class="admin-content">
+           <header class="admin-header">
+               <div class="admin-header-left">
+                   <button class="sidebar-toggle">
+                       <i class="fas fa-bars"></i>
+                   </button>
+                   <h1>Manajemen Artikel</h1>
+               </div>
+               <div class="admin-header-right">
+                   <div class="admin-search">
+                       <input type="search" placeholder="Cari artikel...">
+                       <button><i class="fas fa-search"></i></button>
+                   </div>
+                   <div class="admin-notifications">
+                       <button class="notification-btn">
+                           <i class="fas fa-bell"></i>
+                           <span class="notification-badge">3</span>
+                       </button>
+                   </div>
+                   <div class="admin-user-dropdown">
+                       <button class="user-dropdown-btn">
+                           <img src="../../assets/images/admin/admin-avatar.jpg" alt="Admin" class="admin-avatar">
+                           <span>Admin</span>
+                           <i class="fas fa-chevron-down"></i>
+                       </button>
+                       <div class="user-dropdown-menu">
+                           <a href="#"><i class="fas fa-user"></i> Profil</a>
+                           <a href="#"><i class="fas fa-cog"></i> Pengaturan</a>
+                           <a href="../../index.html"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+                       </div>
+                   </div>
+               </div>
+           </header>
+
+           <div class="admin-content-body">
+               <div class="content-header">
+                   <div class="content-header-actions">
+                       <button class="btn btn-primary" id="addArticleBtn">
+                           <i class="fas fa-plus"></i> Tambah Artikel
+                       </button>
+                   </div>
+                   <div class="content-header-filters">
+                       <div class="filter-group">
+                           <label for="category-filter">Kategori:</label>
+                           <select id="category-filter">
+                               <option value="">Semua Kategori</option>
+                               <option value="tips">Tips & Trik</option>
+                               <option value="training">Latihan</option>
+                               <option value="maintenance">Perawatan Sepatu</option>
+                               <option value="health">Kesehatan</option>
+                           </select>
+                       </div>
+                       <div class="filter-group">
+                           <label for="status-filter">Status:</label>
+                           <select id="status-filter">
+                               <option value="">Semua Status</option>
+                               <option value="published">Dipublikasikan</option>
+                               <option value="draft">Draft</option>
+                               <option value="archived">Diarsipkan</option>
+                           </select>
+                       </div>
+                       <div class="filter-group">
+                           <label for="date-filter">Tanggal:</label>
+                           <select id="date-filter">
+                               <option value="">Semua Waktu</option>
+                               <option value="today">Hari Ini</option>
+                               <option value="week">Minggu Ini</option>
+                               <option value="month">Bulan Ini</option>
+                               <option value="year">Tahun Ini</option>
+                           </select>
+                       </div>
+                   </div>
+               </div>
+
+               <div class="table-card">
+                   <div class="table-header">
+                       <h3>Daftar Artikel</h3>
+                       <div class="table-actions">
+                           <button class="btn btn-sm btn-outline">
+                               <i class="fas fa-file-export"></i> Export
+                           </button>
+                           <button class="btn btn-sm btn-outline">
+                               <i class="fas fa-file-import"></i> Import
+                           </button>
+                       </div>
+                   </div>
+                   <div class="table-body">
+                       <table class="admin-table">
+                           <thead>
+                               <tr>
+                                   <th>
+                                       <input type="checkbox" id="select-all">
+                                   </th>
+                                   <th>Judul</th>
+                                   <th>Kategori</th>
+                                   <th>Penulis</th>
+                                   <th>Tanggal</th>
+                                   <th>Status</th>
+                                   <th>Dilihat</th>
+                                   <th>Aksi</th>
+                               </tr>
+                           </thead>
+                           <tbody>
+                               <tr>
+                                   <td>
+                                       <input type="checkbox" class="article-checkbox">
+                                   </td>
+                                   <td>
+                                       <div class="article-cell">
+                                           <img src="../../assets/images/articles/article-1.jpg" alt="Cara Memilih Sepatu Lari yang Tepat">
+                                           <span>Cara Memilih Sepatu Lari yang Tepat</span>
+                                       </div>
+                                   </td>
+                                   <td>Tips & Trik</td>
+                                   <td>Budi Santoso</td>
+                                   <td>10 Apr 2023</td>
+                                   <td><span class="status-badge status-active">Dipublikasikan</span></td>
+                                   <td>1,245</td>
+                                   <td>
+                                       <div class="table-actions">
+                                           <button class="btn-icon" title="Edit Artikel"><i class="fas fa-edit"></i></button>
+                                           <button class="btn-icon" title="Hapus Artikel"><i class="fas fa-trash-alt"></i></button>
+                                           <button class="btn-icon" title="Lihat Artikel"><i class="fas fa-eye"></i></button>
+                                       </div>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       <input type="checkbox" class="article-checkbox">
+                                   </td>
+                                   <td>
+                                       <div class="article-cell">
+                                           <img src="../../assets/images/articles/article-2.jpg" alt="5 Latihan untuk Meningkatkan Performa Lari">
+                                           <span>5 Latihan untuk Meningkatkan Performa Lari</span>
+                                       </div>
+                                   </td>
+                                   <td>Latihan</td>
+                                   <td>Ani Wijaya</td>
+                                   <td>15 Apr 2023</td>
+                                   <td><span class="status-badge status-active">Dipublikasikan</span></td>
+                                   <td>987</td>
+                                   <td>
+                                       <div class="table-actions">
+                                           <button class="btn-icon" title="Edit Artikel"><i class="fas fa-edit"></i></button>
+                                           <button class="btn-icon" title="Hapus Artikel"><i class="fas fa-trash-alt"></i></button>
+                                           <button class="btn-icon" title="Lihat Artikel"><i class="fas fa-eye"></i></button>
+                                       </div>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       <input type="checkbox" class="article-checkbox">
+                                   </td>
+                                   <td>
+                                       <div class="article-cell">
+                                           <img src="../../assets/images/articles/article-3.jpg" alt="Tips Merawat Sepatu Lari Agar Tahan Lama">
+                                           <span>Tips Merawat Sepatu Lari Agar Tahan Lama</span>
+                                       </div>
+                                   </td>
+                                   <td>Perawatan Sepatu</td>
+                                   <td>Citra Dewi</td>
+                                   <td>20 Apr 2023</td>
+                                   <td><span class="status-badge status-active">Dipublikasikan</span></td>
+                                   <td>856</td>
+                                   <td>
+                                       <div class="table-actions">
+                                           <button class="btn-icon" title="Edit Artikel"><i class="fas fa-edit"></i></button>
+                                           <button class="btn-icon" title="Hapus Artikel"><i class="fas fa-trash-alt"></i></button>
+                                           <button class="btn-icon" title="Lihat Artikel"><i class="fas fa-eye"></i></button>
+                                       </div>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       <input type="checkbox" class="article-checkbox">
+                                   </td>
+                                   <td>
+                                       <div class="article-cell">
+                                           <img src="../../assets/images/articles/article-4.jpg" alt="Persiapan Menghadapi Maraton Pertama">
+                                           <span>Persiapan Menghadapi Maraton Pertama</span>
+                                       </div>
+                                   </td>
+                                   <td>Latihan</td>
+                                   <td>Dedi Kurniawan</td>
+                                   <td>25 Apr 2023</td>
+                                   <td><span class="status-badge status-active">Dipublikasikan</span></td>
+                                   <td>723</td>
+                                   <td>
+                                       <div class="table-actions">
+                                           <button class="btn-icon" title="Edit Artikel"><i class="fas fa-edit"></i></button>
+                                           <button class="btn-icon" title="Hapus Artikel"><i class="fas fa-trash-alt"></i></button>
+                                           <button class="btn-icon" title="Lihat Artikel"><i class="fas fa-eye"></i></button>
+                                       </div>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       <input type="checkbox" class="article-checkbox">
+                                   </td>
+                                   <td>
+                                       <div class="article-cell">
+                                           <img src="../../assets/images/articles/article-5.jpg" alt="Mengenal Teknologi Sepatu Lari Modern">
+                                           <span>Mengenal Teknologi Sepatu Lari Modern</span>
+                                       </div>
+                                   </td>
+                                   <td>Tips & Trik</td>
+                                   <td>Eko Prasetyo</td>
+                                   <td>1 Mei 2023</td>
+                                   <td><span class="status-badge status-inactive">Draft</span></td>
+                                   <td>0</td>
+                                   <td>
+                                       <div class="table-actions">
+                                           <button class="btn-icon" title="Edit Artikel"><i class="fas fa-edit"></i></button>
+                                           <button class="btn-icon" title="Hapus Artikel"><i class="fas fa-trash-alt"></i></button>
+                                           <button class="btn-icon" title="Lihat Artikel"><i class="fas fa-eye"></i></button>
+                                       </div>
+                                   </td>
+                               </tr>
+                               <tr>
+                                   <td>
+                                       <input type="checkbox" class="article-checkbox">
+                                   </td>
+                                   <td>
+                                       <div class="article-cell">
+                                           <img src="../../assets/images/articles/article-6.jpg" alt="Cara Mengatasi Cedera Umum Saat Lari">
+                                           <span>Cara Mengatasi Cedera Umum Saat Lari</span>
+                                       </div>
+                                   </td>
+                                   <td>Kesehatan</td>
+                                   <td>Fani Gunawan</td>
+                                   <td>5 Mei 2023</td>
+                                   <td><span class="status-badge status-inactive">Draft</span></td>
+                                   <td>0</td>
+                                   <td>
+                                       <div class="table-actions">
+                                           <button class="btn-icon" title="Edit Artikel"><i class="fas fa-edit"></i></button>
+                                           <button class="btn-icon" title="Hapus Artikel"><i class="fas fa-trash-alt"></i></button>
+                                           <button class="btn-icon" title="Lihat Artikel"><i class="fas fa-eye"></i></button>
+                                       </div>
+                                   </td>
+                               </tr>
+                           </tbody>
+                       </table>
+                   </div>
+                   <div class="table-footer">
+                       <div class="table-info">
+                           Menampilkan 1-6 dari 12 artikel
+                       </div>
+                       <div class="table-pagination">
+                           <button class="pagination-btn disabled"><i class="fas fa-chevron-left"></i></button>
+                           <button class="pagination-btn active">1</button>
+                           <button class="pagination-btn">2</button>
+                           <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </main>
+   </div>
+
+   <!-- Modal Tambah/Edit Artikel -->
+   <div class="modal" id="articleModal">
+       <div class="modal-content">
+           <div class="modal-header">
+               <h2>Tambah Artikel Baru</h2>
+               <button class="modal-close"><i class="fas fa-times"></i></button>
+           </div>
+           <div class="modal-body">
+               <form id="articleForm">
+                   <div class="form-section">
+                       <h3>Informasi Dasar</h3>
+                       <div class="form-group">
+                           <label for="article-title">Judul Artikel</label>
+                           <input type="text" id="article-title" placeholder="Masukkan judul artikel" required>
+                       </div>
+                       <div class="form-row">
+                           <div class="form-group">
+                               <label for="article-category">Kategori</label>
+                               <select id="article-category" required>
+                                   <option value="" disabled selected>Pilih kategori</option>
+                                   <option value="tips">Tips & Trik</option>
+                                   <option value="training">Latihan</option>
+                                   <option value="maintenance">Perawatan Sepatu</option>
+                                   <option value="health">Kesehatan</option>
+                               </select>
+                           </div>
+                           <div class="form-group">
+                               <label for="article-status">Status</label>
+                               <select id="article-status" required>
+                                   <option value="published">Dipublikasikan</option>
+                                   <option value="draft">Draft</option>
+                                   <option value="archived">Diarsipkan</option>
+                               </select>
+                           </div>
+                       </div>
+                       <div class="form-group">
+                           <label for="article-author">Penulis</label>
+                           <input type="text" id="article-author" placeholder="Masukkan nama penulis" required>
+                       </div>
+                   </div>
+
+                   <div class="form-section">
+                       <h3>Konten</h3>
+                       <div class="form-group">
+                           <label for="article-excerpt">Ringkasan</label>
+                           <textarea id="article-excerpt" rows="3" placeholder="Masukkan ringkasan artikel" required></textarea>
+                       </div>
+                       <div class="form-group">
+                           <label for="article-content">Konten Artikel</label>
+                           <textarea id="article-content" rows="10" placeholder="Masukkan konten artikel" required></textarea>
+                       </div>
+                   </div>
+
+                   <div class="form-section">
+                       <h3>Gambar & SEO</h3>
+                       <div class="form-group">
+                           <label>Gambar Utama</label>
+                           <div class="image-upload-container">
+                               <div class="image-upload-box">
+                                   <input type="file" id="article-image-main" accept="image/*">
+                                   <div class="upload-placeholder">
+                                       <i class="fas fa-cloud-upload-alt"></i>
+                                       <p>Gambar Utama</p>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="form-group">
+                           <label for="article-tags">Tag (pisahkan dengan koma)</label>
+                           <input type="text" id="article-tags" placeholder="Contoh: sepatu lari, tips, pemula">
+                       </div>
+                       <div class="form-group">
+                           <label for="article-meta-title">Meta Title</label>
+                           <input type="text" id="article-meta-title" placeholder="Masukkan meta title untuk SEO">
+                       </div>
+                       <div class="form-group">
+                           <label for="article-meta-description">Meta Description</label>
+                           <textarea id="article-meta-description" rows="3" placeholder="Masukkan meta description untuk SEO"></textarea>
+                       </div>
+                   </div>
+               </form>
+           </div>
+           <div class="modal-footer">
+               <button class="btn btn-outline" id="cancelArticleBtn">Batal</button>
+               <button class="btn btn-primary" id="saveArticleBtn">Simpan Artikel</button>
+           </div>
+       </div>
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="../../assets/js/main.js"></script>
+   <script src="../../assets/js/admin.js"></script>
+</body>
+</html>

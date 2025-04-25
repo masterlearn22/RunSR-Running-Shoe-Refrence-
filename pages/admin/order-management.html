@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management - Admin Dashboard</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="admin-body">
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <a href="dashboard.html">
+                    <i class="fas fa-running"></i>
+                    <span>RunTech Admin</span>
+                </a>
+            </div>
+            <nav class="admin-menu">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="product-management.html">
+                            <i class="fas fa-shoe-prints"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="order-management.html" class="active">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Orders</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="article-management.html">
+                            <i class="fas fa-newspaper"></i>
+                            <span>Articles</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="user-management.html">
+                            <i class="fas fa-users"></i>
+                            <span>Users</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../index.html">
+                            <i class="fas fa-store"></i>
+                            <span>View Store</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-content">
+            <!-- Header -->
+            <header class="admin-header">
+                <div class="admin-header-left">
+                    <button class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Order Management</h1>
+                </div>
+                <div class="admin-header-right">
+                    <div class="admin-search">
+                        <button><i class="fas fa-search"></i></button>
+                        <input type="text" placeholder="Search orders...">
+                    </div>
+                    <div class="admin-notifications">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <div class="admin-user-dropdown">
+                        <button class="user-dropdown-btn">
+                            <img src="../../assets/images/ui/admin-avatar.jpg" alt="Admin" class="admin-avatar">
+                            <span>Admin User</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Body -->
+            <div class="admin-content-body">
+                <div class="content-header">
+                    <h2>Manage Orders</h2>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-file-export"></i> Export Orders
+                    </button>
+                </div>
+
+                <div class="content-header-filters">
+                    <div class="filter-group">
+                        <label for="status-filter">Status:</label>
+                        <select id="status-filter">
+                            <option value="">All Status</option>
+                            <option value="pending">Pending</option>
+                            <option value="processing">Processing</option>
+                            <option value="shipped">Shipped</option>
+                            <option value="delivered">Delivered</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="payment-filter">Payment:</label>
+                        <select id="payment-filter">
+                            <option value="">All Methods</option>
+                            <option value="credit-card">Credit Card</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="bank-transfer">Bank Transfer</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="date-filter">Date:</label>
+                        <select id="date-filter">
+                            <option value="">All Time</option>
+                            <option value="today">Today</option>
+                            <option value="this-week">This Week</option>
+                            <option value="this-month">This Month</option>
+                            <option value="last-month">Last Month</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="table-card">
+                    <div class="table-body">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <input type="checkbox" id="select-all">
+                                    </th>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Date</th>
+                                    <th>Total</th>
+                                    <th>Payment Method</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="select-item">
+                                    </td>
+                                    <td><strong>#ORD-5782</strong></td>
+                                    <td>John Smith</td>
+                                    <td>May 21, 2023</td>
+                                    <td>$189.99</td>
+                                    <td>Credit Card</td>
+                                    <td><span class="status-badge status-processing">Processing</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                            <button class="btn-icon"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-icon"><i class="fas fa-print"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="select-item">
+                                    </td>
+                                    <td><strong>#ORD-5781</strong></td>
+                                    <td>Sarah Johnson</td>
+                                    <td>May 20, 2023</td>
+                                    <td>$245.50</td>
+                                    <td>PayPal</td>
+                                    <td><span class="status-badge status-shipped">Shipped</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                            <button class="btn-icon"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-icon"><i class="fas fa-print"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="select-item">
+                                    </td>
+                                    <td><strong>#ORD-5780</strong></td>
+                                    <td>Mike Williams</td>
+                                    <td>May 19, 2023</td>
+                                    <td>$129.95</td>
+                                    <td>Credit Card</td>
+                                    <td><span class="status-badge status-completed">Delivered</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                            <button class="btn-icon"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-icon"><i class="fas fa-print"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="select-item">
+                                    </td>
+                                    <td><strong>#ORD-5779</strong></td>
+                                    <td>Emily Davis</td>
+                                    <td>May 18, 2023</td>
+                                    <td>$89.99</td>
+                                    <td>Bank Transfer</td>
+                                    <td><span class="status-badge status-pending">Pending</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                            <button class="btn-icon"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-icon"><i class="fas fa-print"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="select-item">
+                                    </td>
+                                    <td><strong>#ORD-5778</strong></td>
+                                    <td>Alex Thompson</td>
+                                    <td>May 17, 2023</td>
+                                    <td>$210.75</td>
+                                    <td>PayPal</td>
+                                    <td><span class="status-badge status-cancelled">Cancelled</span></td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <button class="btn-icon"><i class="fas fa-edit"></i></button>
+                                            <button class="btn-icon"><i class="fas fa-eye"></i></button>
+                                            <button class="btn-icon"><i class="fas fa-print"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-footer">
+                        <div class="table-info">
+                            Showing 1 to 5 of 78 entries
+                        </div>
+                        <div class="table-pagination">
+                            <button class="pagination-btn disabled"><i class="fas fa-angle-left"></i></button>
+                            <button class="pagination-btn active">1</button>
+                            <button class="pagination-btn">2</button>
+                            <button class="pagination-btn">3</button>
+                            <button class="pagination-btn">4</button>
+                            <button class="pagination-btn">5</button>
+                            <button class="pagination-btn"><i class="fas fa-angle-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../../assets/js/admin.js"></script>
+</body>
+</html>
