@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran - RunShoes</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>RunShoes</span>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="products.html">Produk</a></li>
+                        <li><a href="articles.html">Artikel</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-icon active">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">2</span>
+                    </a>
+                    <a href="login.html" class="btn btn-primary">Masuk</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="payment-section">
+            <div class="container">
+                <div class="payment-header">
+                    <h1>Pembayaran</h1>
+                    <div class="payment-steps">
+                        <div class="step completed">
+                            <div class="step-number">1</div>
+                            <div class="step-label">Keranjang</div>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step active">
+                            <div class="step-number">2</div>
+                            <div class="step-label">Pembayaran</div>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-label">Konfirmasi</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-layout">
+                    <div class="payment-form">
+                        <div class="form-section">
+                            <h2>Informasi Pengiriman</h2>
+                            <div class="form-group">
+                                <label for="fullname">Nama Lengkap</label>
+                                <input type="text" id="fullname" placeholder="Masukkan nama lengkap Anda" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" placeholder="Masukkan email Anda" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Nomor Telepon</label>
+                                    <input type="tel" id="phone" placeholder="Masukkan nomor telepon Anda" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Alamat</label>
+                                <textarea id="address" rows="3" placeholder="Masukkan alamat lengkap Anda" required></textarea>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="province">Provinsi</label>
+                                    <select id="province" required>
+                                        <option value="" disabled selected>Pilih provinsi</option>
+                                        <option value="dki-jakarta">DKI Jakarta</option>
+                                        <option value="jawa-barat">Jawa Barat</option>
+                                        <option value="jawa-tengah">Jawa Tengah</option>
+                                        <option value="jawa-timur">Jawa Timur</option>
+                                        <option value="bali">Bali</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">Kota/Kabupaten</label>
+                                    <select id="city" required>
+                                        <option value="" disabled selected>Pilih kota/kabupaten</option>
+                                        <option value="jakarta-selatan">Jakarta Selatan</option>
+                                        <option value="jakarta-pusat">Jakarta Pusat</option>
+                                        <option value="jakarta-barat">Jakarta Barat</option>
+                                        <option value="jakarta-timur">Jakarta Timur</option>
+                                        <option value="jakarta-utara">Jakarta Utara</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="district">Kecamatan</label>
+                                    <select id="district" required>
+                                        <option value="" disabled selected>Pilih kecamatan</option>
+                                        <option value="tebet">Tebet</option>
+                                        <option value="pancoran">Pancoran</option>
+                                        <option value="mampang-prapatan">Mampang Prapatan</option>
+                                        <option value="pasar-minggu">Pasar Minggu</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="postal-code">Kode Pos</label>
+                                    <input type="text" id="postal-code" placeholder="Masukkan kode pos" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h2>Metode Pengiriman</h2>
+                            <div class="shipping-options">
+                                <label class="shipping-option">
+                                    <input type="radio" name="shipping" value="regular" checked>
+                                    <div class="shipping-option-content">
+                                        <div class="shipping-option-info">
+                                            <h4>Reguler (2-3 hari)</h4>
+                                            <p>Pengiriman standar ke seluruh Indonesia</p>
+                                        </div>
+                                        <div class="shipping-option-price">Rp50.000</div>
+                                    </div>
+                                </label>
+                                <label class="shipping-option">
+                                    <input type="radio" name="shipping" value="express">
+                                    <div class="shipping-option-content">
+                                        <div class="shipping-option-info">
+                                            <h4>Express (1 hari)</h4>
+                                            <p>Pengiriman cepat ke kota-kota besar</p>
+                                        </div>
+                                        <div class="shipping-option-price">Rp100.000</div>
+                                    </div>
+                                </label>
+                                <label class="shipping-option">
+                                    <input type="radio" name="shipping" value="same-day">
+                                    <div class="shipping-option-content">
+                                        <div class="shipping-option-info">
+                                            <h4>Same Day (Hari ini)</h4>
+                                            <p>Pengiriman di hari yang sama (hanya untuk area tertentu)</p>
+                                        </div>
+                                        <div class="shipping-option-price">Rp150.000</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h2>Metode Pembayaran</h2>
+                            <div class="payment-options">
+                                <div class="payment-option-group">
+                                    <h4>Transfer Bank</h4>
+                                    <div class="payment-option-list">
+                                        <label class="payment-option">
+                                            <input type="radio" name="payment" value="bca" checked>
+                                            <div class="payment-option-content">
+                                                <div class="payment-option-icon">BCA</div>
+                                                <div class="payment-option-info">Bank Central Asia</div>
+                                            </div>
+                                        </label>
+                                        <label class="payment-option">
+                                            <input type="radio" name="payment" value="mandiri">
+                                            <div class="payment-option-content">
+                                                <div class="payment-option-icon">Mandiri</div>
+                                                <div class="payment-option-info">Bank Mandiri</div>
+                                            </div>
+                                        </label>
+                                        <label class="payment-option">
+                                            <input type="radio" name="payment" value="bni">
+                                            <div class="payment-option-content">
+                                                <div class="payment-option-icon">BNI</div>
+                                                <div class="payment-option-info">Bank Negara Indonesia</div>
+                                            </div>
+                                        </label>
+                                        <label class="payment-option">
+                                            <input type="radio" name="payment" value="bri">
+                                            <div class="payment-option-content">
+                                                <div class="payment-option-icon">BRI</div>
+                                                <div class="payment-option-info">Bank Rakyat Indonesia</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="payment-option-group">
+                                    <h4>E-Wallet</h4>
+                                    <div class="payment-option-list">
+                                        <label class="payment-option">
+                                            <input type="radio" name="payment" value="gopay">
+                                            <div class="payment-option-content">
+                                                <div class="payment-option-icon">GoPay</div>
+                                                <div class="payment-option-info">GoPay</div>
+                                            </div>
+                                        </label>
+                                        <label class="payment-option">
+                                            <input type="radio" name="payment" value="ovo">
+                                            <div class="payment-option-content">
+                                                <div class="payment-option-icon">OVO</div>
+                                                <div class="payment-option-info">OVO</div>
+                                            </div>
+                                        </label>
+                                        <label class="payment-option">
+                                            <input type="radio" name="payment" value="dana">
+                                            <div class="payment-option-content">
+                                                <div class="payment-option-icon">DANA</div>
+                                                <div class="payment-option-info">DANA</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <a href="cart.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Kembali ke Keranjang</a>
+                            <button type="submit" class="btn btn-primary">Lanjutkan <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="payment-summary">
+                        <h2>Ringkasan Pesanan</h2>
+                        <div class="summary-products">
+                            <div class="summary-product">
+                                <div class="summary-product-image">
+                                    <img src="../assets/images/products/shoe-1.jpg" alt="Nike Air Zoom 1">
+                                </div>
+                                <div class="summary-product-info">
+                                    <h4>Nike Air Zoom 1</h4>
+                                    <div class="summary-product-meta">
+                                        <p>Ukuran: 42 | Warna: Hitam</p>
+                                        <p>1 x Rp1.500.000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="summary-product">
+                                <div class="summary-product-image">
+                                    <img src="../assets/images/products/shoe-2.jpg" alt="Adidas Ultraboost 2">
+                                </div>
+                                <div class="summary-product-info">
+                                    <h4>Adidas Ultraboost 2</h4>
+                                    <div class="summary-product-meta">
+                                        <p>Ukuran: 43 | Warna: Biru</p>
+                                        <p>1 x Rp2.000.000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="summary-divider"></div>
+                        <div class="summary-item">
+                            <span>Subtotal</span>
+                            <span>Rp3.500.000</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Pengiriman</span>
+                            <span>Rp50.000</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Diskon</span>
+                            <span>-</span>
+                        </div>
+                        <div class="summary-total">
+                            <span>Total</span>
+                            <span>Rp3.550.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>RunShoes</span>
+                    </div>
+                    <p>Temukan sepatu lari yang tepat untuk kebutuhan Anda.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Produk</h3>
+                    <ul>
+                        <li><a href="products.html">Semua Produk</a></li>
+                        <li><a href="products.html?type=road">Sepatu Lari Jalan</a></li>
+                        <li><a href="products.html?type=trail">Sepatu Trail Running</a></li>
+                        <li><a href="products.html?type=marathon">Sepatu Maraton</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Artikel</h3>
+                    <ul>
+                        <li><a href="articles.html">Semua Artikel</a></li>
+                        <li><a href="articles.html?category=tips">Tips & Trik</a></li>
+                        <li><a href="articles.html?category=training">Latihan</a></li>
+                        <li><a href="articles.html?category=maintenance">Perawatan Sepatu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 RunShoes. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
