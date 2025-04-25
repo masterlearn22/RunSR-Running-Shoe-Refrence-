@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunShoes - Toko Sepatu Lari Online</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>RunShoes</span>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Beranda</a></li>
+                        <li><a href="pages/products.html">Produk</a></li>
+                        <li><a href="pages/articles.html">Artikel</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="pages/cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">2</span>
+                    </a>
+                    <a href="pages/login.html" class="btn btn-primary">Masuk</a>
+                </div>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Temukan Sepatu Lari yang Tepat untuk Kebutuhan Anda</h1>
+                        <p>Kami membantu Anda menemukan sepatu lari yang sesuai dengan kebutuhan, gaya lari, dan budget Anda.</p>
+                        <div class="hero-buttons">
+                            <a href="pages/products.html" class="btn btn-light">Lihat Katalog</a>
+                            <a href="#recommendation-form" class="btn btn-outline-light">Dapatkan Rekomendasi</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="assets/images/ui/hero-image.jpg" alt="Running shoes collection">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendation Form Section -->
+        <section class="recommendation-form" id="recommendation-form">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Dapatkan Rekomendasi Sepatu Lari</h2>
+                    <p>Isi formulir di bawah ini untuk mendapatkan rekomendasi sepatu lari yang sesuai dengan kebutuhan Anda.</p>
+                </div>
+                <form class="recommendation-form-content">
+                    <div class="form-group">
+                        <label for="running-type">Tipe Lari</label>
+                        <select id="running-type" required>
+                            <option value="" disabled selected>Pilih tipe lari</option>
+                            <option value="road">Lari di Jalan</option>
+                            <option value="trail">Trail Running</option>
+                            <option value="marathon">Maraton</option>
+                            <option value="casual">Lari Santai</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="foot-issue">Masalah Kaki</label>
+                        <select id="foot-issue" required>
+                            <option value="" disabled selected>Pilih masalah kaki (jika ada)</option>
+                            <option value="pronation">Pronasi</option>
+                            <option value="supination">Supinasi</option>
+                            <option value="flat-feet">Flat Feet</option>
+                            <option value="high-arch">High Arch</option>
+                            <option value="none">Tidak Ada</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Budget</label>
+                        <select id="budget" required>
+                            <option value="" disabled selected>Pilih range budget</option>
+                            <option value="low">Rp500.000 - Rp1.000.000</option>
+                            <option value="medium">Rp1.000.000 - Rp2.000.000</option>
+                            <option value="high">Rp2.000.000 - Rp3.000.000</option>
+                            <option value="premium">Lebih dari Rp3.000.000</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Dapatkan Rekomendasi</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Popular Products Section -->
+        <section class="popular-products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Sepatu Lari Terpopuler</h2>
+                    <p>Sepatu lari terbaik yang dipilih oleh pelari di seluruh Indonesia.</p>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/images/products/shoe-1.jpg" alt="Sepatu Lari 1">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Nike Air Zoom 1</h3>
+                            <p>Sepatu untuk lari jalan</p>
+                            <div class="product-footer">
+                                <span class="product-price">Rp500.000</span>
+                                <a href="pages/product-detail.html?id=1" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/images/products/shoe-2.jpg" alt="Sepatu Lari 2">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Adidas Ultraboost 2</h3>
+                            <p>Sepatu untuk trail running</p>
+                            <div class="product-footer">
+                                <span class="product-price">Rp1.000.000</span>
+                                <a href="pages/product-detail.html?id=2" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/images/products/shoe-3.jpg" alt="Sepatu Lari 3">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Asics Gel-Nimbus 3</h3>
+                            <p>Sepatu untuk maraton</p>
+                            <div class="product-footer">
+                                <span class="product-price">Rp1.500.000</span>
+                                <a href="pages/product-detail.html?id=3" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/images/products/shoe-4.jpg" alt="Sepatu Lari 4">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Brooks Ghost 4</h3>
+                            <p>Sepatu untuk lari santai</p>
+                            <div class="product-footer">
+                                <span class="product-price">Rp2.000.000</span>
+                                <a href="pages/product-detail.html?id=4" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/images/products/shoe-5.jpg" alt="Sepatu Lari 5">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>New Balance Fresh Foam 5</h3>
+                            <p>Sepatu untuk lari jalan</p>
+                            <div class="product-footer">
+                                <span class="product-price">Rp2.500.000</span>
+                                <a href="pages/product-detail.html?id=5" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/images/products/shoe-6.jpg" alt="Sepatu Lari 6">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.4</span>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Nike Pegasus 6</h3>
+                            <p>Sepatu untuk trail running</p>
+                            <div class="product-footer">
+                                <span class="product-price">Rp3.000.000</span>
+                                <a href="pages/product-detail.html?id=6" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer">
+                    <a href="pages/products.html" class="btn btn-outline">Lihat Semua Produk <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Articles Section -->
+        <section class="latest-articles">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Artikel Terbaru</h2>
+                    <p>Tips dan trik seputar lari, perawatan sepatu, dan latihan untuk meningkatkan performa Anda.</p>
+                </div>
+                <div class="articles-grid">
+                    <div class="article-card">
+                        <div class="article-image">
+                            <img src="assets/images/articles/article-1.jpg" alt="Artikel 1">
+                        </div>
+                        <div class="article-info">
+                            <p class="article-date">10 April 2023</p>
+                            <h3>Cara Memilih Sepatu Lari yang Tepat</h3>
+                            <p class="article-excerpt">Panduan lengkap untuk memilih sepatu lari yang sesuai dengan kebutuhan dan tipe kaki Anda.</p>
+                            <a href="pages/article-detail.html?id=1" class="btn btn-sm">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="article-card">
+                        <div class="article-image">
+                            <img src="assets/images/articles/article-2.jpg" alt="Artikel 2">
+                        </div>
+                        <div class="article-info">
+                            <p class="article-date">15 April 2023</p>
+                            <h3>5 Latihan untuk Meningkatkan Performa Lari</h3>
+                            <p class="article-excerpt">Latihan-latihan yang dapat membantu meningkatkan performa lari dan mencegah cedera.</p>
+                            <a href="pages/article-detail.html?id=2" class="btn btn-sm">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="article-card">
+                        <div class="article-image">
+                            <img src="assets/images/articles/article-3.jpg" alt="Artikel 3">
+                        </div>
+                        <div class="article-info">
+                            <p class="article-date">20 April 2023</p>
+                            <h3>Tips Merawat Sepatu Lari Agar Tahan Lama</h3>
+                            <p class="article-excerpt">Cara merawat sepatu lari agar tetap nyaman digunakan dan tahan lama.</p>
+                            <a href="pages/article-detail.html?id=3" class="btn btn-sm">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer">
+                    <a href="pages/articles.html" class="btn btn-outline">Lihat Semua Artikel <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>RunShoes</span>
+                    </div>
+                    <p>Temukan sepatu lari yang tepat untuk kebutuhan Anda.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Produk</h3>
+                    <ul>
+                        <li><a href="pages/products.html">Semua Produk</a></li>
+                        <li><a href="pages/products.html?type=road">Sepatu Lari Jalan</a></li>
+                        <li><a href="pages/products.html?type=trail">Sepatu Trail Running</a></li>
+                        <li><a href="pages/products.html?type=marathon">Sepatu Maraton</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Artikel</h3>
+                    <ul>
+                        <li><a href="pages/articles.html">Semua Artikel</a></li>
+                        <li><a href="pages/articles.html?category=tips">Tips & Trik</a></li>
+                        <li><a href="pages/articles.html?category=training">Latihan</a></li>
+                        <li><a href="pages/articles.html?category=maintenance">Perawatan Sepatu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 RunShoes. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
