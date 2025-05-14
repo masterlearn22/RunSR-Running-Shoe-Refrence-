@@ -182,3 +182,42 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 })
+
+// Tambahkan kode untuk menampilkan indikator scroll pada mobile
+document.addEventListener("DOMContentLoaded", () => {
+  // Fungsi untuk menambahkan indikator scroll pada container yang bisa di-scroll
+  function addScrollIndicator(container) {
+    if (!container) return
+
+    // Cek apakah container bisa di-scroll secara horizontal
+    if (container.scrollWidth > container.clientWidth) {
+      container.classList.add("can-scroll")
+
+      // Tambahkan event listener untuk menghapus indikator saat user mulai scroll
+      container.addEventListener("scroll", function () {
+        if (this.scrollLeft > 20) {
+          this.classList.remove("can-scroll")
+        } else if (this.scrollLeft === 0) {
+          this.classList.add("can-scroll")
+        }
+      })
+    }
+  }
+
+  // Tambahkan indikator pada products-grid dan articles-grid
+  const productsGrid = document.querySelector(".products-grid")
+  const articlesGrid = document.querySelector(".articles-grid")
+
+  if (window.innerWidth < 768) {
+    addScrollIndicator(productsGrid)
+    addScrollIndicator(articlesGrid)
+  }
+
+  // Update saat window resize
+  window.addEventListener("resize", () => {
+    if (window.innerWidth < 768) {
+      addScrollIndicator(productsGrid)
+      addScrollIndicator(articlesGrid)
+    }
+  })
+})

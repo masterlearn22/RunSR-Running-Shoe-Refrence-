@@ -437,5 +437,26 @@
     </footer>
 
     <script src="../assets/js/main.js"></script>
+    <script>
+  // Extract product ID from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = parseInt(urlParams.get("id"));
+
+  // Find the product by ID
+  const product = products.find((p) => p.id === productId);
+
+  if (product) {
+    // Update product details dynamically
+    document.querySelector(".product-title").textContent = product.name;
+    document.querySelector(".product-brand").textContent = product.brand;
+    document.querySelector(".product-price").textContent = `Rp${product.price.toLocaleString("id-ID")}`;
+    document.querySelector(".product-description").textContent = product.description;
+    document.querySelector(".product-image img").src = product.image;
+    document.querySelector(".product-rating span").textContent = product.rating;
+  } else {
+    // Handle case where product is not found
+    document.querySelector(".product-detail").innerHTML = "<p>Product not found.</p>";
+  }
+</script>
 </body>
 </html>

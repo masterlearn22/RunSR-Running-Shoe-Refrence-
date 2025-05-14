@@ -5,7 +5,248 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pembayaran - RunShoes</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Styles untuk notifikasi */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            transform: translateX(120%);
+            transition: transform 0.3s ease;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        .notification i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        .notification-message {
+            font-weight: 500;
+        }
+        
+        /* Style untuk error pada form */
+        .form-group.error input,
+        .form-group.error select,
+        .form-group.error textarea {
+            border-color: #e74c3c;
+        }
+        
+        .error-message {
+            color: #e74c3c;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .form-group.error .error-message {
+            display: block;
+        }
+        
+        .payment-option-group.error {
+            border: 1px solid #e74c3c;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        /* Perbaikan untuk metode pembayaran */
+        .payment-option-group h4 {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .payment-option-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .payment-option {
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .payment-option-content {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            transition: all 0.2s ease;
+        }
+
+        .payment-option input:checked + .payment-option-content {
+            border-color: var(--primary-color);
+            background-color: var(--primary-light);
+        }
+
+        .payment-option-icon {
+            width: 50px;
+            height: 30px;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .payment-option-icon img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .payment-option-info {
+            font-weight: 500;
+        }
+
+        /* Perbaikan untuk shipping options */
+        .shipping-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .shipping-option {
+            cursor: pointer;
+        }
+
+        .shipping-option-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            transition: all 0.2s ease;
+        }
+
+        .shipping-option input:checked + .shipping-option-content {
+            border-color: var(--primary-color);
+            background-color: var(--primary-light);
+        }
+
+        .shipping-option-info h4 {
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .shipping-option-info p {
+            margin-bottom: 0;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .shipping-option-price {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .payment-option-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Menyembunyikan radio button */
+        .payment-option input[type="radio"],
+        .shipping-option input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* Styling untuk payment option saat hover */
+        .payment-option-content:hover {
+            border-color: var(--primary-color);
+            background-color: rgba(var(--primary-rgb), 0.05);
+            cursor: pointer;
+        }
+
+        /* Styling untuk payment option saat dipilih */
+        .payment-option input:checked + .payment-option-content {
+            border-color: var(--primary-color);
+            background-color: rgba(var(--primary-rgb), 0.1);
+            box-shadow: 0 0 0 1px var(--primary-color);
+        }
+
+        /* Menambahkan indikator visual saat dipilih */
+        .payment-option-content {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .payment-option input:checked + .payment-option-content::after {
+            content: "✓";
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background-color: var(--primary-color);
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        /* Styling serupa untuk shipping option */
+        .shipping-option-content:hover {
+            border-color: var(--primary-color);
+            background-color: rgba(var(--primary-rgb), 0.05);
+            cursor: pointer;
+        }
+
+        .shipping-option input:checked + .shipping-option-content {
+            border-color: var(--primary-color);
+            background-color: rgba(var(--primary-rgb), 0.1);
+            box-shadow: 0 0 0 1px var(--primary-color);
+        }
+
+        .shipping-option-content {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shipping-option input:checked + .shipping-option-content::after {
+            content: "✓";
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background-color: var(--primary-color);
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        /* Tambahkan variabel warna untuk konsistensi */
+        :root {
+            --primary-rgb: 0, 123, 255;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -42,52 +283,38 @@
     <main>
         <section class="payment-section">
             <div class="container">
-                <div class="payment-header">
-                    <h1>Pembayaran</h1>
-                    <div class="payment-steps">
-                        <div class="step completed">
-                            <div class="step-number">1</div>
-                            <div class="step-label">Keranjang</div>
-                        </div>
-                        <div class="step-line"></div>
-                        <div class="step active">
-                            <div class="step-number">2</div>
-                            <div class="step-label">Pembayaran</div>
-                        </div>
-                        <div class="step-line"></div>
-                        <div class="step">
-                            <div class="step-number">3</div>
-                            <div class="step-label">Konfirmasi</div>
-                        </div>
-                    </div>
-                </div>
+                
 
                 <div class="payment-layout">
-                    <div class="payment-form">
+                    <form id="payment-form" class="payment-form">
                         <div class="form-section">
                             <h2>Informasi Pengiriman</h2>
                             <div class="form-group">
                                 <label for="fullname">Nama Lengkap</label>
-                                <input type="text" id="fullname" placeholder="Masukkan nama lengkap Anda" required>
+                                <input type="text" id="fullname" name="fullname" placeholder="Masukkan nama lengkap Anda" required>
+                                <div class="error-message">Nama lengkap harus diisi</div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="email" id="email" placeholder="Masukkan email Anda" required>
+                                    <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+                                    <div class="error-message">Email harus diisi dengan format yang benar</div>
                                 </div>
                                 <div class="form-group">
                                     <label for="phone">Nomor Telepon</label>
-                                    <input type="tel" id="phone" placeholder="Masukkan nomor telepon Anda" required>
+                                    <input type="tel" id="phone" name="phone" placeholder="Masukkan nomor telepon Anda" required>
+                                    <div class="error-message">Nomor telepon harus diisi</div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="address">Alamat</label>
-                                <textarea id="address" rows="3" placeholder="Masukkan alamat lengkap Anda" required></textarea>
+                                <textarea id="address" name="address" rows="3" placeholder="Masukkan alamat lengkap Anda" required></textarea>
+                                <div class="error-message">Alamat harus diisi</div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="province">Provinsi</label>
-                                    <select id="province" required>
+                                    <select id="province" name="province" required>
                                         <option value="" disabled selected>Pilih provinsi</option>
                                         <option value="dki-jakarta">DKI Jakarta</option>
                                         <option value="jawa-barat">Jawa Barat</option>
@@ -95,10 +322,11 @@
                                         <option value="jawa-timur">Jawa Timur</option>
                                         <option value="bali">Bali</option>
                                     </select>
+                                    <div class="error-message">Provinsi harus dipilih</div>
                                 </div>
                                 <div class="form-group">
                                     <label for="city">Kota/Kabupaten</label>
-                                    <select id="city" required>
+                                    <select id="city" name="city" required>
                                         <option value="" disabled selected>Pilih kota/kabupaten</option>
                                         <option value="jakarta-selatan">Jakarta Selatan</option>
                                         <option value="jakarta-pusat">Jakarta Pusat</option>
@@ -106,29 +334,32 @@
                                         <option value="jakarta-timur">Jakarta Timur</option>
                                         <option value="jakarta-utara">Jakarta Utara</option>
                                     </select>
+                                    <div class="error-message">Kota/Kabupaten harus dipilih</div>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="district">Kecamatan</label>
-                                    <select id="district" required>
+                                    <select id="district" name="district" required>
                                         <option value="" disabled selected>Pilih kecamatan</option>
                                         <option value="tebet">Tebet</option>
                                         <option value="pancoran">Pancoran</option>
                                         <option value="mampang-prapatan">Mampang Prapatan</option>
                                         <option value="pasar-minggu">Pasar Minggu</option>
                                     </select>
+                                    <div class="error-message">Kecamatan harus dipilih</div>
                                 </div>
                                 <div class="form-group">
                                     <label for="postal-code">Kode Pos</label>
-                                    <input type="text" id="postal-code" placeholder="Masukkan kode pos" required>
+                                    <input type="text" id="postal-code" name="postal-code" placeholder="Masukkan kode pos" required>
+                                    <div class="error-message">Kode pos harus diisi</div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-section">
                             <h2>Metode Pengiriman</h2>
-                            <div class="shipping-options">
+                            <div class="shipping-options" id="shipping-options">
                                 <label class="shipping-option">
                                     <input type="radio" name="shipping" value="regular" checked>
                                     <div class="shipping-option-content">
@@ -159,80 +390,96 @@
                                         <div class="shipping-option-price">Rp150.000</div>
                                     </div>
                                 </label>
+                                <div class="error-message" id="shipping-error">Pilih metode pengiriman</div>
                             </div>
                         </div>
 
                         <div class="form-section">
                             <h2>Metode Pembayaran</h2>
                             <div class="payment-options">
-                                <div class="payment-option-group">
+                                <div class="payment-option-group" id="payment-bank-group">
                                     <h4>Transfer Bank</h4>
                                     <div class="payment-option-list">
                                         <label class="payment-option">
-                                            <input type="radio" name="payment" value="bca" checked>
+                                            <input type="radio" name="payment" value="bca">
                                             <div class="payment-option-content">
-                                                <div class="payment-option-icon">BCA</div>
-                                                <div class="payment-option-info">Bank Central Asia</div>
+                                                <div class="payment-option-icon">
+                                                    <img src="../assets/img/icon/BCA.png" alt="BCA">
+                                                </div>
+                                                <div class="payment-option-info">BCA</div>
                                             </div>
                                         </label>
                                         <label class="payment-option">
                                             <input type="radio" name="payment" value="mandiri">
                                             <div class="payment-option-content">
-                                                <div class="payment-option-icon">Mandiri</div>
-                                                <div class="payment-option-info">Bank Mandiri</div>
+                                                <div class="payment-option-icon">
+                                                    <img src="../assets/img/icon/Mandiri.png" alt="Mandiri">
+                                                </div>
+                                                <div class="payment-option-info">Mandiri</div>
                                             </div>
                                         </label>
                                         <label class="payment-option">
                                             <input type="radio" name="payment" value="bni">
                                             <div class="payment-option-content">
-                                                <div class="payment-option-icon">BNI</div>
-                                                <div class="payment-option-info">Bank Negara Indonesia</div>
+                                                <div class="payment-option-icon">
+                                                    <img src="../assets/img/icon/BNI.png" alt="BNI">
+                                                </div>
+                                                <div class="payment-option-info">BNI</div>
                                             </div>
                                         </label>
                                         <label class="payment-option">
                                             <input type="radio" name="payment" value="bri">
                                             <div class="payment-option-content">
-                                                <div class="payment-option-icon">BRI</div>
-                                                <div class="payment-option-info">Bank Rakyat Indonesia</div>
+                                                <div class="payment-option-icon">
+                                                    <img src="../assets/img/icon/BRI.png" alt="BRI">
+                                                </div>
+                                                <div class="payment-option-info">BRI</div>
                                             </div>
                                         </label>
                                     </div>
                                 </div>
 
-                                <div class="payment-option-group">
+                                <div class="payment-option-group" id="payment-ewallet-group">
                                     <h4>E-Wallet</h4>
                                     <div class="payment-option-list">
                                         <label class="payment-option">
                                             <input type="radio" name="payment" value="gopay">
                                             <div class="payment-option-content">
-                                                <div class="payment-option-icon">GoPay</div>
+                                                <div class="payment-option-icon">
+                                                    <img src="../assets/img/icon/Gopay.png" alt="GoPay">
+                                                </div>
                                                 <div class="payment-option-info">GoPay</div>
                                             </div>
                                         </label>
                                         <label class="payment-option">
                                             <input type="radio" name="payment" value="ovo">
                                             <div class="payment-option-content">
-                                                <div class="payment-option-icon">OVO</div>
+                                                <div class="payment-option-icon">
+                                                    <img src="../assets/img/icon/OVO.png" alt="OVO">
+                                                </div>
                                                 <div class="payment-option-info">OVO</div>
                                             </div>
                                         </label>
                                         <label class="payment-option">
                                             <input type="radio" name="payment" value="dana">
                                             <div class="payment-option-content">
-                                                <div class="payment-option-icon">DANA</div>
+                                                <div class="payment-option-icon">
+                                                    <img src="../assets/img/icon/DANA.png" alt="DANA">
+                                                </div>
                                                 <div class="payment-option-info">DANA</div>
                                             </div>
                                         </label>
                                     </div>
                                 </div>
+                                <div class="error-message" id="payment-error">Pilih metode pembayaran</div>
                             </div>
                         </div>
 
                         <div class="form-actions">
                             <a href="cart.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Kembali ke Keranjang</a>
-                            <button type="submit" class="btn btn-primary">Lanjutkan <i class="fas fa-arrow-right"></i></button>
+                            <button type="submit" id="submit-payment" class="btn btn-primary">Lanjutkan <i class="fas fa-arrow-right"></i></button>
                         </div>
-                    </div>
+                    </form>
 
                     <div class="payment-summary">
                         <h2>Ringkasan Pesanan</h2>
@@ -328,6 +575,137 @@
         </div>
     </footer>
 
+    <!-- Notifikasi -->
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <div class="notification-message">Pembayaran telah berhasil diproses!</div>
+    </div>
+
     <script src="../assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('payment-form');
+            const submitButton = document.getElementById('submit-payment');
+            
+            // Fungsi untuk menampilkan notifikasi
+            function showNotification(message, isSuccess = true) {
+                const notification = document.getElementById('notification');
+                const icon = notification.querySelector('i');
+                const messageElement = notification.querySelector('.notification-message');
+                
+                // Set pesan dan ikon
+                messageElement.textContent = message;
+                
+                if (isSuccess) {
+                    notification.style.backgroundColor = '#4CAF50';
+                    icon.className = 'fas fa-check-circle';
+                } else {
+                    notification.style.backgroundColor = '#e74c3c';
+                    icon.className = 'fas fa-exclamation-circle';
+                }
+                
+                // Tampilkan notifikasi
+                notification.classList.add('show');
+                
+                // Sembunyikan notifikasi setelah 5 detik
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 5000);
+            }
+            
+            // Fungsi untuk validasi form
+            function validateForm() {
+                let isValid = true;
+                
+                // Reset semua error
+                const errorElements = document.querySelectorAll('.form-group.error');
+                errorElements.forEach(element => {
+                    element.classList.remove('error');
+                });
+                
+                // Validasi input text, email, dan select
+                const inputs = form.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], select, textarea');
+                inputs.forEach(input => {
+                    if (input.hasAttribute('required') && !input.value.trim()) {
+                        isValid = false;
+                        input.closest('.form-group').classList.add('error');
+                    }
+                    
+                    // Validasi khusus untuk email
+                    if (input.type === 'email' && input.value.trim()) {
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailRegex.test(input.value.trim())) {
+                            isValid = false;
+                            input.closest('.form-group').classList.add('error');
+                        }
+                    }
+                });
+                
+                // Validasi radio button untuk metode pembayaran
+                const paymentSelected = form.querySelector('input[name="payment"]:checked');
+                if (!paymentSelected) {
+                    isValid = false;
+                    document.getElementById('payment-bank-group').classList.add('error');
+                    document.getElementById('payment-ewallet-group').classList.add('error');
+                    document.getElementById('payment-error').style.display = 'block';
+                } else {
+                    document.getElementById('payment-error').style.display = 'none';
+                }
+                
+                return isValid;
+            }
+            
+            // Event listener untuk form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (validateForm()) {
+                    // Simulasi proses pembayaran
+                    submitButton.disabled = true;
+                    submitButton.innerHTML = 'Memproses... <i class="fas fa-spinner fa-spin"></i>';
+                    
+                    // Simulasi delay proses pembayaran (2 detik)
+                    setTimeout(() => {
+                        showNotification('Pembayaran telah berhasil diproses!');
+                        
+                        // Redirect ke landing page setelah 1 detik
+                        setTimeout(() => {
+                            window.location.href = '../index.html';
+                        }, 1000);
+                    }, 2000);
+                } else {
+                    // Tampilkan pesan error
+                    showNotification('Mohon lengkapi semua data yang diperlukan', false);
+                    
+                    // Scroll ke elemen error pertama
+                    const firstError = document.querySelector('.form-group.error, .payment-option-group.error');
+                    if (firstError) {
+                        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            });
+            
+            // Hapus error saat input diubah
+            const allInputs = form.querySelectorAll('input, select, textarea');
+            allInputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    const formGroup = this.closest('.form-group');
+                    if (formGroup) {
+                        formGroup.classList.remove('error');
+                    }
+                });
+            });
+            
+            // Hapus error payment saat radio button dipilih
+            const paymentRadios = form.querySelectorAll('input[name="payment"]');
+            paymentRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    document.getElementById('payment-bank-group').classList.remove('error');
+                    document.getElementById('payment-ewallet-group').classList.remove('error');
+                    document.getElementById('payment-error').style.display = 'none';
+                });
+            });
+        });
+    </script>
 </body>
 </html>

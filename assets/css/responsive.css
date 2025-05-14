@@ -110,6 +110,7 @@
 
 /* Small Devices (Landscape Phones, less than 768px) */
 @media (max-width: 767.98px) {
+  /* Kode yang sudah ada tetap dipertahankan */
   .container {
     max-width: 540px;
   }
@@ -151,11 +152,39 @@
     display: block;
   }
 
+  /* Modifikasi untuk products-grid dan articles-grid agar scroll horizontal */
   .products-grid,
   .articles-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
   }
 
+  .product-card,
+  .article-card {
+    flex: 0 0 auto;
+    width: 280px;
+    margin-bottom: 0;
+    scroll-snap-align: start;
+  }
+
+  /* Sembunyikan scrollbar tapi tetap bisa scroll */
+  .products-grid::-webkit-scrollbar,
+  .articles-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .products-grid,
+  .articles-grid {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* Kode yang sudah ada tetap dipertahankan */
   .products-toolbar {
     flex-direction: column;
     align-items: flex-start;
@@ -274,9 +303,16 @@
     font-size: 1.5rem;
   }
 
-  .products-grid,
+  /* Hapus style grid untuk products-grid dan articles-grid karena sudah diatur di breakpoint 768px */
+  /* .products-grid,
   .articles-grid {
     grid-template-columns: 1fr;
+  } */
+
+  /* Sesuaikan lebar card untuk layar yang lebih kecil */
+  .product-card,
+  .article-card {
+    width: 250px;
   }
 
   .pagination {
@@ -541,5 +577,6 @@
 }
 
 .status-shipped {
-    background-color: rgba(245, 158, 11, 0.1);
-    color: var\
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--warning-color);
+}
