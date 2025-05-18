@@ -155,19 +155,19 @@
   /* Modifikasi untuk products-grid dan articles-grid agar scroll horizontal */
   .products-grid,
   .articles-grid {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 1rem;
-    padding-bottom: 1rem;
+     display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    overflow-x: visible; /* hilangkan scroll horizontal */
+    padding-bottom: 0;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
 
   .product-card,
   .article-card {
-    flex: 0 0 auto;
-    width: 280px;
+     width: auto !important; /* biar sesuai grid */
+    flex: none !important;  /* hilangkan flex shrink/grow */
     margin-bottom: 0;
     scroll-snap-align: start;
   }
@@ -303,11 +303,6 @@
     font-size: 1.5rem;
   }
 
-  /* Hapus style grid untuk products-grid dan articles-grid karena sudah diatur di breakpoint 768px */
-  /* .products-grid,
-  .articles-grid {
-    grid-template-columns: 1fr;
-  } */
 
   /* Sesuaikan lebar card untuk layar yang lebih kecil */
   .product-card,
