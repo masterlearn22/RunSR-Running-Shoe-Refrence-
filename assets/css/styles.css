@@ -1,29 +1,32 @@
 /* Base Styles */
+/* Definisi variabel CSS untuk warna, ukuran, dan properti lain yang digunakan secara global */
 :root {
-  --primary-color: #10b981;
-  --primary-dark: #059669;
-  --primary-light: #d1fae5;
-  --secondary-color: #0ea5e9;
-  --text-color: #1f2937;
-  --text-light: #6b7280;
-  --background-color: #ffffff;
-  --background-light: #f9fafb;
-  --border-color: #e5e7eb;
-  --success-color: #10b981;
-  --error-color: #ef4444;
-  --warning-color: #f59e0b;
-  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --transition: all 0.3s ease;
-  --border-radius: 0.375rem;
-  --container-width: 1200px;
+  --primary-color: #10b981; /* Warna utama (hijau) */
+  --primary-dark: #059669; /* Warna utama yang lebih gelap untuk hover */
+  --primary-light: #d1fae5; /* Warna utama yang lebih terang untuk latar belakang */
+  --secondary-color: #0ea5e9; /* Warna sekunder (biru) */
+  --text-color: #1f2937; /* Warna teks utama */
+  --text-light: #6b7280; /* Warna teks sekunder (abu-abu) */
+  --background-color: #ffffff; /* Warna latar belakang utama (putih) */
+  --background-light: #f9fafb; /* Warna latar belakang terang */
+  --border-color: #e5e7eb; /* Warna garis pembatas */
+  --success-color: #10b981; /* Warna untuk status sukses (hijau) */
+  --error-color: #ef4444; /* Warna untuk status error (merah) */
+  --warning-color: #f59e0b; /* Warna untuk status peringatan (kuning) */
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk elemen */
+  --transition: all 0.3s ease; /* Efek transisi untuk animasi halus */
+  --border-radius: 0.375rem; /* Radius sudut untuk elemen */
+  --container-width: 1200px; /* Lebar maksimum kontainer */
 }
 
+/* Reset margin, padding, dan pengaturan box-sizing untuk semua elemen */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Pengaturan dasar untuk body, termasuk font, warna teks, dan latar belakang */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-color);
@@ -31,22 +34,26 @@ body {
   background-color: var(--background-color);
 }
 
+/* Styling untuk tautan (link) agar tidak memiliki dekorasi bawaan dan memiliki transisi halus */
 a {
   text-decoration: none;
   color: inherit;
   transition: var(--transition);
 }
 
+/* Menghapus tanda bullet pada daftar */
 ul {
   list-style: none;
 }
 
+/* Pengaturan gambar agar responsif dan ditampilkan sebagai blok */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
+/* Pengaturan dasar untuk elemen form agar mewarisi font dan warna */
 button,
 input,
 select,
@@ -57,6 +64,7 @@ textarea {
   outline: none;
 }
 
+/* Kontainer utama untuk membatasi lebar konten dan menambahkan padding */
 .container {
   width: 100%;
   max-width: var(--container-width);
@@ -64,6 +72,7 @@ textarea {
   padding: 0 1rem;
 }
 
+/* Garis pembatas horizontal untuk memisahkan konten */
 .divider {
   height: 1px;
   background-color: var(--border-color);
@@ -71,6 +80,7 @@ textarea {
 }
 
 /* Typography */
+/* Pengaturan font untuk heading dengan bobot tebal dan jarak bawah */
 h1,
 h2,
 h3,
@@ -82,27 +92,33 @@ h6 {
   margin-bottom: 1rem;
 }
 
+/* Ukuran font untuk heading h1 */
 h1 {
   font-size: 2.5rem;
 }
 
+/* Ukuran font untuk heading h2 */
 h2 {
   font-size: 2rem;
 }
 
+/* Ukuran font untuk heading h3 */
 h3 {
   font-size: 1.5rem;
 }
 
+/* Ukuran font untuk heading h4 */
 h4 {
   font-size: 1.25rem;
 }
 
+/* Jarak bawah untuk paragraf */
 p {
   margin-bottom: 1rem;
 }
 
 /* Buttons */
+/* Styling dasar untuk tombol dengan tampilan fleksibel dan transisi halus */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -116,59 +132,71 @@ p {
   text-align: center;
 }
 
+/* Tombol dengan warna utama (hijau) */
 .btn-primary {
   background-color: var(--primary-color);
   color: white;
 }
 
+/* Efek hover untuk tombol utama */
 .btn-primary:hover {
   background-color: var(--primary-dark);
 }
 
+/* Tombol dengan border tanpa latar belakang */
 .btn-outline {
   background-color: transparent;
   border: 1px solid var(--border-color);
   color: var(--text-color);
 }
 
+/* Efek hover untuk tombol outline */
 .btn-outline:hover {
   background-color: var(--background-light);
 }
 
+/* Tombol dengan latar belakang putih dan teks warna utama */
 .btn-light {
   background-color: white;
   color: var(--primary-color);
 }
 
+/* Efek hover untuk tombol light */
 .btn-light:hover {
   background-color: var(--background-light);
 }
 
+/* Tombol outline dengan border dan teks putih */
 .btn-outline-light {
   background-color: transparent;
   border: 1px solid white;
   color: white;
 }
 
+/* Efek hover untuk tombol outline-light */
 .btn-outline-light:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Tombol berukuran kecil */
 .btn-sm {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
 }
 
+/* Tombol berukuran besar */
 .btn-lg {
   padding: 0.75rem 1.5rem;
   font-size: 1.125rem;
 }
 
+/* Tombol yang memenuhi lebar kontainer */
 .btn-block {
   display: block;
   width: 100%;
 }
 
+/* Tombol dengan ikon berbentuk lingkaran */
 .btn-icon {
   padding: 0.5rem;
   border-radius: 50%;
@@ -177,6 +205,7 @@ p {
   justify-content: center;
 }
 
+/* Tombol berupa tautan tanpa latar belakang */
 .btn-link {
   background: none;
   color: var(--primary-color);
@@ -184,21 +213,25 @@ p {
   text-decoration: none;
 }
 
+/* Efek hover untuk tombol tautan */
 .btn-link:hover {
   text-decoration: underline;
 }
 
 /* Forms */
+/* Grup formulir dengan jarak bawah */
 .form-group {
   margin-bottom: 1rem;
 }
 
+/* Label dalam grup formulir */
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
 
+/* Styling untuk input teks, email, password, angka, pencarian, select, dan textarea */
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -214,6 +247,7 @@ textarea {
   transition: var(--transition);
 }
 
+/* Efek fokus untuk input dan select */
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
@@ -225,17 +259,20 @@ textarea:focus {
   box-shadow: 0 0 0 2px var(--primary-light);
 }
 
+/* Grup checkbox dengan tampilan fleksibel */
 .checkbox-group {
   display: flex;
   align-items: center;
   margin-bottom: 0.5rem;
 }
 
+/* Jarak antara checkbox dan label */
 .checkbox-group input[type="checkbox"] {
   margin-right: 0.5rem;
 }
 
 /* Header */
+/* Styling untuk header yang tetap di atas saat scroll */
 .header {
   background-color: var(--background-color);
   box-shadow: var(--box-shadow);
@@ -244,6 +281,7 @@ textarea:focus {
   z-index: 100;
 }
 
+/* Konten header dengan tata letak fleksibel */
 .header-content {
   display: flex;
   align-items: center;
@@ -251,6 +289,7 @@ textarea:focus {
   height: 4rem;
 }
 
+/* Logo dengan font tebal dan ikon */
 .logo {
   display: flex;
   align-items: center;
@@ -258,36 +297,43 @@ textarea:focus {
   font-size: 1.25rem;
 }
 
+/* Ikon pada logo */
 .logo i {
   margin-right: 0.5rem;
   color: var(--primary-color);
 }
 
+/* Navigasi utama dengan daftar tautan horizontal */
 .main-nav ul {
   display: flex;
   gap: 1.5rem;
 }
 
+/* Styling tautan pada navigasi utama */
 .main-nav a {
   font-weight: 500;
 }
 
+/* Efek hover dan status aktif untuk tautan navigasi */
 .main-nav a:hover,
 .main-nav a.active {
   color: var(--primary-color);
 }
 
+/* Area untuk aksi header seperti ikon keranjang dan profil */
 .header-actions {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
+/* Ikon keranjang belanja */
 .cart-icon {
   position: relative;
   font-size: 1.25rem;
 }
 
+/* Indikator jumlah item di keranjang */
 .cart-count {
   position: absolute;
   top: -0.5rem;
@@ -303,6 +349,7 @@ textarea:focus {
   justify-content: center;
 }
 
+/* Tombol toggle menu untuk tampilan mobile */
 .mobile-menu-toggle {
   display: none;
   background: none;
@@ -312,75 +359,89 @@ textarea:focus {
 }
 
 /* Hero Section */
+/* Bagian hero dengan latar belakang gradien dan padding */
 .hero {
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
   color: white;
   padding: 4rem 0;
 }
 
+/* Konten hero dengan tata letak fleksibel */
 .hero-content {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
+/* Teks pada bagian hero */
 .hero-text {
   flex: 1;
 }
 
+/* Judul pada hero */
 .hero-text h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
+/* Paragraf pada hero */
 .hero-text p {
   font-size: 1.125rem;
   margin-bottom: 2rem;
   opacity: 0.9;
 }
 
+/* Grup tombol pada hero */
 .hero-buttons {
   display: flex;
   gap: 1rem;
 }
 
+/* Gambar pada hero */
 .hero-image {
   flex: 1;
 }
 
 /* Section Styles */
+/* Header untuk setiap bagian dengan teks di tengah */
 .section-header {
   text-align: center;
   margin-bottom: 2rem;
 }
 
+/* Judul pada header bagian */
 .section-header h2 {
   margin-bottom: 0.5rem;
 }
 
+/* Paragraf pada header bagian */
 .section-header p {
   color: var(--text-light);
   max-width: 600px;
   margin: 0 auto;
 }
 
+/* Footer untuk bagian dengan tombol di tengah */
 .section-footer {
   text-align: center;
   margin-top: 2rem;
 }
 
 /* Recommendation Form */
+/* Bagian formulir rekomendasi dengan latar belakang terang */
 .recommendation-form {
   padding: 4rem 0;
   background-color: var(--background-light);
 }
 
+/* Konten formulir rekomendasi dengan lebar maksimum */
 .recommendation-form-content {
   max-width: 600px;
   margin: 0 auto;
 }
 
 /* Products Grid */
+/* Grid untuk menampilkan produk dengan tata letak tiga kolom */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -388,41 +449,36 @@ textarea:focus {
   margin-top: 20px;
 }
 
-.product-card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-
+/* Kartu produk dengan latar belakang putih dan bayangan */
 .product-card {
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   padding: 12px;
-  /* pastikan lebar produk tidak full 100% agar berjajar */
   width: 100%;
   box-sizing: border-box;
 }
 
+/* Efek hover untuk kartu produk */
 .product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Area gambar pada kartu produk */
 .product-image {
   position: relative;
   height: 200px;
 }
 
+/* Gambar pada kartu produk dengan ukuran penuh */
 .product-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/* Rating pada kartu produk */
 .product-rating {
   position: absolute;
   top: 0.5rem;
@@ -437,25 +493,30 @@ textarea:focus {
   gap: 0.25rem;
 }
 
+/* Ikon bintang pada rating produk */
 .product-rating i {
   color: #f59e0b;
 }
 
+/* Informasi pada kartu produk */
 .product-info {
   padding: 1rem;
 }
 
+/* Judul pada kartu produk */
 .product-info h3 {
   margin-bottom: 0.25rem;
   font-size: 1rem;
 }
 
+/* Deskripsi pada kartu produk */
 .product-info p {
   color: var(--text-light);
   font-size: 0.875rem;
   margin-bottom: 0.5rem;
 }
 
+/* Footer pada kartu produk dengan harga dan tautan */
 .product-footer {
   display: flex;
   align-items: center;
@@ -463,11 +524,13 @@ textarea:focus {
   margin-top: 0.5rem;
 }
 
+/* Harga pada kartu produk */
 .product-price {
   font-weight: 600;
 }
 
 /* Articles Grid */
+/* Grid untuk menampilkan artikel dengan kolom responsif */
 .articles-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -475,6 +538,7 @@ textarea:focus {
   position: relative;
 }
 
+/* Kartu artikel dengan bayangan dan transisi */
 .article-card {
   border-radius: var(--border-radius);
   overflow: hidden;
@@ -483,37 +547,44 @@ textarea:focus {
   background-color: var(--background-color);
 }
 
+/* Efek hover untuk kartu artikel */
 .article-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Area gambar pada kartu artikel */
 .article-image {
   position: relative;
   height: 200px;
 }
 
+/* Gambar pada kartu artikel */
 .article-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/* Informasi pada kartu artikel */
 .article-info {
   padding: 1rem;
 }
 
+/* Tanggal pada kartu artikel */
 .article-date {
   color: var(--text-light);
   font-size: 0.875rem;
   margin-bottom: 0.5rem;
 }
 
+/* Judul pada kartu artikel */
 .article-info h3 {
   margin-bottom: 0.5rem;
   font-size: 1.125rem;
 }
 
+/* Cuplikan teks pada kartu artikel */
 .article-excerpt {
   color: var(--text-light);
   font-size: 0.875rem;
@@ -525,12 +596,14 @@ textarea:focus {
 }
 
 /* Footer */
+/* Bagian footer dengan latar belakang terang */
 .footer {
   background-color: var(--background-light);
   padding: 3rem 0 1.5rem;
   margin-top: 3rem;
 }
 
+/* Konten footer dengan tata letak grid */
 .footer-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -538,21 +611,25 @@ textarea:focus {
   margin-bottom: 2rem;
 }
 
+/* Judul kolom footer */
 .footer-column h3 {
   font-size: 1.125rem;
   margin-bottom: 1rem;
 }
 
+/* Daftar tautan pada kolom footer */
 .footer-column ul {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
+/* Efek hover untuk tautan footer */
 .footer-column a:hover {
   color: var(--primary-color);
 }
 
+/* Bagian bawah footer dengan teks hak cipta */
 .footer-bottom {
   text-align: center;
   padding-top: 1.5rem;
@@ -562,6 +639,7 @@ textarea:focus {
 }
 
 /* Page Header */
+/* Header halaman dengan latar belakang terang dan teks di tengah */
 .page-header {
   background-color: var(--background-light);
   padding: 2rem 0;
@@ -569,6 +647,7 @@ textarea:focus {
 }
 
 /* Products Page */
+/* Tata letak halaman produk dengan grid satu kolom */
 .products-layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -576,32 +655,37 @@ textarea:focus {
   margin: 2rem 0;
 }
 
-
+/* Sidebar produk yang tetap saat scroll */
 .products-sidebar {
   position: sticky;
   top: 5rem;
   height: fit-content;
 }
 
+/* Grup filter pada sidebar produk */
 .filter-group {
   margin-bottom: 1.5rem;
 }
 
+/* Judul pada grup filter */
 .filter-group h4 {
   margin-bottom: 0.75rem;
   font-size: 1rem;
 }
 
+/* Opsi filter dengan tata letak vertikal */
 .filter-options {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
+/* Slider harga pada filter */
 .price-slider {
   margin: 0.5rem 0;
 }
 
+/* Rentang harga pada filter */
 .price-range {
   display: flex;
   justify-content: space-between;
@@ -609,6 +693,7 @@ textarea:focus {
   color: var(--text-light);
 }
 
+/* Toolbar produk dengan pencarian dan pengurutan */
 .products-toolbar {
   display: flex;
   justify-content: space-between;
@@ -616,15 +701,18 @@ textarea:focus {
   margin-bottom: 1.5rem;
 }
 
+/* Kotak pencarian produk */
 .search-box {
   position: relative;
   max-width: 300px;
 }
 
+/* Input pada kotak pencarian */
 .search-box input {
   padding-right: 2.5rem;
 }
 
+/* Tombol pencarian */
 .search-box button {
   position: absolute;
   right: 0.5rem;
@@ -636,12 +724,14 @@ textarea:focus {
   cursor: pointer;
 }
 
+/* Opsi pengurutan produk */
 .sort-options {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
+/* Paginasi untuk navigasi halaman produk */
 .pagination {
   display: flex;
   justify-content: center;
@@ -649,6 +739,7 @@ textarea:focus {
   margin-top: 2rem;
 }
 
+/* Tombol paginasi */
 .pagination-btn {
   width: 2.5rem;
   height: 2.5rem;
@@ -662,30 +753,36 @@ textarea:focus {
   transition: var(--transition);
 }
 
+/* Efek hover untuk tombol paginasi */
 .pagination-btn:hover {
   background-color: var(--background-light);
 }
 
+/* Tombol paginasi aktif */
 .pagination-btn.active {
   background-color: var(--primary-color);
   color: white;
   border-color: var(--primary-color);
 }
 
+/* Tombol paginasi nonaktif */
 .pagination-btn.disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
 /* Product Detail Page */
+/* Kontainer untuk halaman detail produk */
 .product-detail-container {
   padding: 2rem 0;
 }
 
+/* Breadcrumb untuk navigasi halaman */
 .breadcrumb {
   margin-bottom: 2rem;
 }
 
+/* Tautan pada breadcrumb */
 .breadcrumb a {
   color: var(--text-light);
   display: flex;
@@ -693,10 +790,12 @@ textarea:focus {
   gap: 0.5rem;
 }
 
+/* Efek hover untuk tautan breadcrumb */
 .breadcrumb a:hover {
   color: var(--primary-color);
 }
 
+/* Tata letak detail produk dengan dua kolom */
 .product-detail {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -704,29 +803,34 @@ textarea:focus {
   margin-bottom: 3rem;
 }
 
+/* Galeri gambar produk */
 .product-gallery {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
+/* Gambar utama pada galeri produk */
 .product-main-image {
   border-radius: var(--border-radius);
   overflow: hidden;
   height: 400px;
 }
 
+/* Gambar pada galeri utama */
 .product-main-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/* Thumbnail pada galeri produk */
 .product-thumbnails {
   display: flex;
   gap: 0.5rem;
 }
 
+/* Setiap thumbnail pada galeri */
 .thumbnail {
   width: 80px;
   height: 80px;
@@ -736,24 +840,29 @@ textarea:focus {
   border: 2px solid transparent;
 }
 
+/* Thumbnail yang aktif */
 .thumbnail.active {
   border-color: var(--primary-color);
 }
 
+/* Gambar pada thumbnail */
 .thumbnail img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/* Header pada detail produk */
 .product-header {
   margin-bottom: 1.5rem;
 }
 
+/* Judul pada detail produk */
 .product-title {
   margin-bottom: 0.5rem;
 }
 
+/* Metadata produk seperti rating dan kategori */
 .product-meta {
   display: flex;
   align-items: center;
@@ -761,38 +870,46 @@ textarea:focus {
   margin-bottom: 1rem;
 }
 
+/* Rating pada detail produk */
 .product-rating {
   display: flex;
   align-items: center;
   gap: 0.25rem;
 }
 
+/* Ikon bintang pada rating */
 .product-rating i {
   color: #f59e0b;
 }
 
+/* Kategori pada detail produk */
 .product-category {
   color: var(--text-light);
 }
 
+/* Harga pada detail produk */
 .product-price {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--primary-color);
 }
 
+/* Deskripsi pada detail produk */
 .product-description {
   margin-bottom: 1.5rem;
 }
 
+/* Fitur produk dalam daftar */
 .product-features {
   margin-bottom: 1.5rem;
 }
 
+/* Daftar fitur produk */
 .product-features ul {
   list-style: none;
 }
 
+/* Item fitur produk */
 .product-features li {
   display: flex;
   align-items: flex-start;
@@ -800,19 +917,23 @@ textarea:focus {
   margin-bottom: 0.5rem;
 }
 
+/* Ikon pada fitur produk */
 .product-features i {
   color: var(--success-color);
   margin-top: 0.25rem;
 }
 
+/* Opsi produk seperti warna dan ukuran */
 .product-options {
   margin-bottom: 1.5rem;
 }
 
+/* Grup opsi produk */
 .option-group {
   margin-bottom: 1rem;
 }
 
+/* Opsi warna dan ukuran dengan tata letak fleksibel */
 .color-options,
 .size-options {
   display: flex;
@@ -820,17 +941,20 @@ textarea:focus {
   gap: 0.5rem;
 }
 
+/* Setiap opsi warna atau ukuran */
 .color-option,
 .size-option {
   cursor: pointer;
 }
 
+/* Input untuk opsi warna dan ukuran (disembunyikan) */
 .color-option input,
 .size-option input {
   position: absolute;
   opacity: 0;
 }
 
+/* Label untuk opsi warna dan ukuran */
 .color-label,
 .size-label {
   display: flex;
@@ -842,18 +966,21 @@ textarea:focus {
   transition: var(--transition);
 }
 
+/* Styling untuk opsi yang dipilih */
 .color-option input:checked + .color-label,
 .size-option input:checked + .size-label {
   border-color: var(--primary-color);
   background-color: var(--primary-light);
 }
 
+/* Selektor jumlah produk */
 .quantity-selector {
   display: flex;
   align-items: center;
   max-width: 150px;
 }
 
+/* Tombol untuk mengatur jumlah */
 .quantity-btn {
   width: 2rem;
   height: 2rem;
@@ -865,14 +992,17 @@ textarea:focus {
   cursor: pointer;
 }
 
+/* Tombol kurang dengan sudut kiri membulat */
 .quantity-btn.minus {
   border-radius: var(--border-radius) 0 0 var(--border-radius);
 }
 
+/* Tombol tambah dengan sudut kanan membulat */
 .quantity-btn.plus {
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 
+/* Input jumlah produk */
 .quantity-input {
   width: 3rem;
   height: 2rem;
@@ -882,21 +1012,25 @@ textarea:focus {
   border-radius: 0;
 }
 
+/* Aksi produk seperti tambah ke keranjang */
 .product-actions {
   display: flex;
   gap: 1rem;
 }
 
+/* Tab pada halaman detail produk */
 .product-tabs {
   margin-bottom: 3rem;
 }
 
+/* Daftar tab */
 .tabs {
   display: flex;
   border-bottom: 1px solid var(--border-color);
   margin-bottom: 1.5rem;
 }
 
+/* Tombol tab */
 .tab-btn {
   padding: 0.75rem 1.5rem;
   background: none;
@@ -908,59 +1042,71 @@ textarea:focus {
   transition: var(--transition);
 }
 
+/* Tombol tab aktif */
 .tab-btn.active {
   color: var(--primary-color);
   border-bottom-color: var(--primary-color);
 }
 
+/* Konten tab (disembunyikan secara default) */
 .tab-content {
   display: none;
 }
 
+/* Konten tab aktif */
 .tab-content.active {
   display: block;
 }
 
+/* Daftar ulasan produk */
 .reviews {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
+/* Setiap ulasan produk */
 .review {
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--border-color);
 }
 
+/* Ulasan terakhir tanpa garis bawah */
 .review:last-child {
   border-bottom: none;
 }
 
+/* Header ulasan */
 .review-header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5rem;
 }
 
+/* Tanggal ulasan */
 .review-date {
   color: var(--text-light);
   font-size: 0.875rem;
 }
 
+/* Rating ulasan */
 .review-rating {
   margin-bottom: 0.5rem;
 }
 
+/* Ikon bintang pada ulasan */
 .review-rating i {
   color: #f59e0b;
 }
 
+/* Tabel panduan ukuran */
 .size-chart {
   width: 100%;
   border-collapse: collapse;
   margin: 1rem 0;
 }
 
+/* Sel tabel pada panduan ukuran */
 .size-chart th,
 .size-chart td {
   padding: 0.75rem;
@@ -968,25 +1114,30 @@ textarea:focus {
   border-bottom: 1px solid var(--border-color);
 }
 
+/* Header tabel panduan ukuran */
 .size-chart th {
   font-weight: 600;
   background-color: var(--background-light);
 }
 
+/* Catatan pada panduan ukuran */
 .size-tip {
   font-style: italic;
   color: var(--text-light);
 }
 
+/* Judul untuk produk terkait */
 .related-products h2 {
   margin-bottom: 1.5rem;
 }
 
 /* Cart Page */
+/* Bagian keranjang belanja */
 .cart-section {
   padding: 2rem 0;
 }
 
+/* Header keranjang */
 .cart-header {
   display: flex;
   justify-content: space-between;
@@ -994,21 +1145,25 @@ textarea:focus {
   margin-bottom: 2rem;
 }
 
+/* Teks jumlah item di keranjang */
 .cart-count-text {
   color: var(--text-light);
 }
 
+/* Tata letak keranjang dengan dua kolom */
 .cart-layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
 }
 
+/* Tabel keranjang */
 .cart-table {
   width: 100%;
   border-collapse: collapse;
 }
 
+/* Header tabel keranjang */
 .cart-table th {
   text-align: left;
   padding: 1rem;
@@ -1016,18 +1171,21 @@ textarea:focus {
   font-weight: 600;
 }
 
+/* Sel tabel keranjang */
 .cart-table td {
   padding: 1rem;
   border-bottom: 1px solid var(--border-color);
   vertical-align: middle;
 }
 
+/* Produk dalam keranjang */
 .cart-product {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
+/* Gambar produk dalam keranjang */
 .cart-product-image {
   width: 80px;
   height: 80px;
@@ -1035,30 +1193,36 @@ textarea:focus {
   overflow: hidden;
 }
 
+/* Gambar pada produk keranjang */
 .cart-product-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/* Informasi produk dalam keranjang */
 .cart-product-info h3 {
   margin-bottom: 0.25rem;
   font-size: 1rem;
 }
 
+/* Metadata produk dalam keranjang */
 .cart-product-meta {
   color: var(--text-light);
   font-size: 0.875rem;
 }
 
+/* Total harga produk dalam keranjang */
 .cart-product-total {
   font-weight: 600;
 }
 
+/* Tombol hapus item dari keranjang */
 .remove-item {
   color: var(--error-color);
 }
 
+/* Aksi pada keranjang seperti lanjut belanja atau checkout */
 .cart-actions {
   display: flex;
   justify-content: space-between;
@@ -1066,32 +1230,38 @@ textarea:focus {
   margin-top: 1.5rem;
 }
 
+/* Formulir kupon pada keranjang */
 .coupon-form {
   display: flex;
   gap: 0.5rem;
 }
 
+/* Input kupon */
 .coupon-input {
   width: 200px;
 }
 
+/* Ringkasan keranjang */
 .cart-summary {
   background-color: var(--background-light);
   border-radius: var(--border-radius);
   padding: 1.5rem;
 }
 
+/* Judul ringkasan keranjang */
 .cart-summary h2 {
   margin-bottom: 1.5rem;
   font-size: 1.25rem;
 }
 
+/* Item dalam ringkasan keranjang */
 .summary-item {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
 
+/* Total dalam ringkasan keranjang */
 .summary-total {
   display: flex;
   justify-content: space-between;
@@ -1102,23 +1272,27 @@ textarea:focus {
   font-size: 1.125rem;
 }
 
+/* Metode pembayaran */
 .payment-methods {
   margin-top: 1.5rem;
   text-align: center;
 }
 
+/* Teks pada metode pembayaran */
 .payment-methods p {
   color: var(--text-light);
   font-size: 0.875rem;
   margin-bottom: 0.5rem;
 }
 
+/* Ikon metode pembayaran */
 .payment-icons {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
 }
 
+/* Setiap ikon pembayaran */
 .payment-icon {
   padding: 0.25rem 0.5rem;
   border: 1px solid var(--border-color);
@@ -1127,11 +1301,13 @@ textarea:focus {
 }
 
 /* Login/Register Page */
+/* Bagian autentikasi dengan latar belakang terang */
 .auth-section {
   padding: 3rem 0;
   background-color: var(--background-light);
 }
 
+/* Kontainer autentikasi dengan lebar maksimum */
 .auth-container {
   max-width: 500px;
   margin: 0 auto;
@@ -1141,10 +1317,12 @@ textarea:focus {
   overflow: hidden;
 }
 
+/* Tab autentikasi (login/register) */
 .auth-tabs {
   display: flex;
 }
 
+/* Setiap tab autentikasi */
 .auth-tab {
   flex: 1;
   padding: 1rem;
@@ -1156,30 +1334,36 @@ textarea:focus {
   transition: var(--transition);
 }
 
+/* Tab autentikasi aktif */
 .auth-tab.active {
   background-color: var(--background-color);
   color: var(--primary-color);
 }
 
+/* Konten autentikasi (disembunyikan secara default) */
 .auth-content {
   padding: 2rem;
   display: none;
 }
 
+/* Konten autentikasi aktif */
 .auth-content.active {
   display: block;
 }
 
+/* Judul pada konten autentikasi */
 .auth-content h1 {
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
 }
 
+/* Input kata sandi dengan posisi relatif */
 .password-input {
   position: relative;
 }
 
+/* Tombol toggle visibilitas kata sandi */
 .toggle-password {
   position: absolute;
   right: 0.75rem;
@@ -1191,6 +1375,7 @@ textarea:focus {
   cursor: pointer;
 }
 
+/* Opsi formulir seperti ingat saya atau lupa kata sandi */
 .form-options {
   display: flex;
   justify-content: space-between;
@@ -1198,6 +1383,7 @@ textarea:focus {
   margin-bottom: 1.5rem;
 }
 
+/* Opsi ingat saya dan persetujuan syarat */
 .remember-me,
 .terms-agreement {
   display: flex;
@@ -1205,16 +1391,19 @@ textarea:focus {
   gap: 0.5rem;
 }
 
+/* Tautan lupa kata sandi */
 .forgot-password {
   color: var(--primary-color);
 }
 
+/* Pemisah pada formulir autentikasi */
 .auth-divider {
   position: relative;
   text-align: center;
   margin: 1.5rem 0;
 }
 
+/* Garis pemisah pada autentikasi */
 .auth-divider::before {
   content: "";
   position: absolute;
@@ -1225,6 +1414,7 @@ textarea:focus {
   background-color: var(--border-color);
 }
 
+/* Teks pada pemisah autentikasi */
 .auth-divider span {
   position: relative;
   background-color: var(--background-color);
@@ -1233,23 +1423,27 @@ textarea:focus {
   font-size: 0.875rem;
 }
 
+/* Autentikasi sosial (Google, Facebook) */
 .social-auth {
   display: flex;
   gap: 1rem;
 }
 
+/* Tombol autentikasi sosial */
 .btn-social {
   flex: 1;
   background-color: var(--background-light);
   border: 1px solid var(--border-color);
 }
 
+/* Efek hover untuk tombol Google */
 .btn-google:hover {
   background-color: #ea4335;
   color: white;
   border-color: #ea4335;
 }
 
+/* Efek hover untuk tombol Facebook */
 .btn-facebook:hover {
   background-color: #1877f2;
   color: white;
@@ -1257,28 +1451,33 @@ textarea:focus {
 }
 
 /* Admin Dashboard */
+/* Tata letak dashboard admin dengan sidebar dan konten */
 .admin-layout {
   display: grid;
   grid-template-columns: 250px 1fr;
   min-height: 100vh;
 }
 
+/* Sidebar admin */
 .admin-sidebar {
   background-color: var(--background-light);
   padding: 1.5rem;
   border-right: 1px solid var(--border-color);
 }
 
+/* Logo pada sidebar admin */
 .admin-logo {
   margin-bottom: 2rem;
 }
 
+/* Menu pada sidebar admin */
 .admin-menu {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
+/* Item menu admin */
 .admin-menu-item {
   display: flex;
   align-items: center;
@@ -1288,16 +1487,19 @@ textarea:focus {
   transition: var(--transition);
 }
 
+/* Efek hover dan status aktif untuk item menu admin */
 .admin-menu-item:hover,
 .admin-menu-item.active {
   background-color: var(--primary-light);
   color: var(--primary-color);
 }
 
+/* Konten dashboard admin */
 .admin-content {
   padding: 1.5rem;
 }
 
+/* Header dashboard admin */
 .admin-header {
   display: flex;
   justify-content: space-between;
@@ -1305,12 +1507,14 @@ textarea:focus {
   margin-bottom: 2rem;
 }
 
+/* Informasi pengguna admin */
 .admin-user {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
 
+/* Avatar pengguna admin */
 .admin-user-avatar {
   width: 40px;
   height: 40px;
@@ -1318,20 +1522,24 @@ textarea:focus {
   overflow: hidden;
 }
 
+/* Informasi pengguna admin */
 .admin-user-info {
   display: flex;
   flex-direction: column;
 }
 
+/* Nama pengguna admin */
 .admin-user-name {
   font-weight: 500;
 }
 
+/* Peran pengguna admin */
 .admin-user-role {
   font-size: 0.75rem;
   color: var(--text-light);
 }
 
+/* Kartu dashboard admin */
 .admin-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1339,6 +1547,7 @@ textarea:focus {
   margin-bottom: 2rem;
 }
 
+/* Setiap kartu admin */
 .admin-card {
   background-color: var(--background-color);
   border-radius: var(--border-radius);
@@ -1346,6 +1555,7 @@ textarea:focus {
   padding: 1.5rem;
 }
 
+/* Header kartu admin */
 .admin-card-header {
   display: flex;
   justify-content: space-between;
@@ -1353,6 +1563,7 @@ textarea:focus {
   margin-bottom: 1rem;
 }
 
+/* Ikon pada kartu admin */
 .admin-card-icon {
   width: 40px;
   height: 40px;
@@ -1364,17 +1575,20 @@ textarea:focus {
   color: var(--primary-color);
 }
 
+/* Nilai pada kartu admin */
 .admin-card-value {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
 
+/* Label pada kartu admin */
 .admin-card-label {
   color: var(--text-light);
   font-size: 0.875rem;
 }
 
+/* Tabel dashboard admin */
 .admin-table {
   width: 100%;
   border-collapse: collapse;
@@ -1384,6 +1598,7 @@ textarea:focus {
   overflow: hidden;
 }
 
+/* Header tabel admin */
 .admin-table th {
   text-align: left;
   padding: 1rem;
@@ -1391,21 +1606,25 @@ textarea:focus {
   font-weight: 600;
 }
 
+/* Sel tabel admin */
 .admin-table td {
   padding: 1rem;
   border-top: 1px solid var(--border-color);
 }
 
+/* Efek hover untuk baris tabel admin */
 .admin-table tr:hover {
   background-color: var(--background-light);
 }
 
+/* Aksi pada tabel admin */
 .admin-actions {
   display: flex;
   gap: 0.5rem;
 }
 
 /* Responsive Styles */
+/* Pengaturan responsif untuk layar maksimum 992px */
 @media (max-width: 992px) {
   .hero-content {
     flex-direction: column;
@@ -1437,6 +1656,7 @@ textarea:focus {
   }
 }
 
+/* Pengaturan responsif untuk layar maksimum 768px */
 @media (max-width: 768px) {
   .main-nav {
     display: none;
@@ -1456,6 +1676,7 @@ textarea:focus {
   }
 }
 
+/* Pengaturan responsif untuk layar maksimum 576px */
 @media (max-width: 576px) {
   .hero-buttons {
     flex-direction: column;
@@ -1482,7 +1703,7 @@ textarea:focus {
   }
 }
 
-/* Tambahkan style untuk indikator scroll */
+/* Animasi untuk indikator scroll */
 @keyframes scrollIndicator {
   0% {
     opacity: 0.8;
@@ -1495,6 +1716,7 @@ textarea:focus {
   }
 }
 
+/* Indikator scroll pada grid produk dan artikel */
 .can-scroll::after {
   content: "";
   position: absolute;
@@ -1507,36 +1729,37 @@ textarea:focus {
   animation: scrollIndicator 1.5s infinite;
 }
 
+/* Posisi relatif untuk grid produk dan artikel */
 .products-grid,
 .articles-grid {
   position: relative;
 }
 
-/* Styles for the Modal */
+/* Modal untuk filter */
 .filter-modal {
-  display: none; /* Hidden by default */
+  display: none; /* Tersembunyi secara default */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  z-index: 1000; /* Ensure it appears above other content */
+  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+  justify-content: center; /* Posisi tengah horizontal */
+  align-items: center; /* Posisi tengah vertikal */
+  z-index: 1000; /* Pastikan muncul di atas konten lain */
 }
 
-/* Content inside the modal */
+/* Konten dalam modal filter */
 .filter-modal-content {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   width: 80%;
-  max-width: 500px; /* Adjust width as necessary */
+  max-width: 500px; /* Lebar maksimum modal */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Close button */
+/* Tombol tutup modal */
 .close-btn {
   position: absolute;
   top: 10px;
@@ -1545,11 +1768,12 @@ textarea:focus {
   cursor: pointer;
 }
 
+/* Efek hover untuk tombol tutup modal */
 .close-btn:hover {
   color: red;
 }
 
-/* Filter modal buttons */
+/* Tombol dalam modal filter */
 .filter-buttons {
   display: flex;
   gap: 10px;
@@ -1557,6 +1781,7 @@ textarea:focus {
   margin-top: 20px;
 }
 
+/* Tombol sekunder untuk modal filter */
 .btn-secondary {
   background-color: #6c757d;
   color: white;
@@ -1566,11 +1791,12 @@ textarea:focus {
   cursor: pointer;
 }
 
+/* Efek hover untuk tombol sekunder */
 .btn-secondary:hover {
   background-color: #5a6268;
 }
 
-/* Pagination */
+/* Paginasi untuk navigasi halaman */
 .pagination {
   display: flex;
   justify-content: center;
@@ -1579,6 +1805,7 @@ textarea:focus {
   margin-top: 20px;
 }
 
+/* Tombol paginasi */
 .pagination button {
   padding: 8px 16px;
   border: none;
@@ -1588,28 +1815,32 @@ textarea:focus {
   cursor: pointer;
 }
 
+/* Tombol paginasi nonaktif */
 .pagination button:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
 }
 
+/* Teks pada paginasi */
 .pagination span {
   font-size: 16px;
 }
 
+/* Sembunyikan indikator scroll pada layar lebih besar dari 768px */
 @media (min-width: 768px) {
   .can-scroll::after {
     display: none;
   }
 }
 
-/* Profile Dropdown */
+/* Dropdown profil */
 .profile-dropdown {
   position: relative;
   display: inline-flex;
   align-items: center;
 }
 
+/* Ikon profil */
 .profile-icon {
   display: flex;
   align-items: center;
@@ -1618,16 +1849,19 @@ textarea:focus {
   transition: var(--transition);
 }
 
+/* SVG pada ikon profil */
 .profile-icon svg {
   width: 24px;
   height: 24px;
   stroke: currentColor;
 }
 
+/* Efek hover untuk ikon profil */
 .profile-icon:hover {
   color: var(--primary-color);
 }
 
+/* Menu dropdown profil */
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -1644,12 +1878,14 @@ textarea:focus {
   z-index: 100;
 }
 
+/* Tampilkan menu dropdown saat hover */
 .profile-dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
+/* Item pada menu dropdown */
 .dropdown-item {
   display: block;
   padding: 0.75rem 1rem;
@@ -1658,7 +1894,60 @@ textarea:focus {
   transition: var(--transition);
 }
 
+/* Efek hover untuk item dropdown */
 .dropdown-item:hover {
   background-color: var(--background-light);
   color: var(--primary-color);
+}
+
+/* Bagian produk populer dengan teks di tengah dan jarak bawah */
+.popular-products {
+  text-align: center;
+  margin-bottom: 3rem; /* Memberikan jarak bawah sebelum bagian artikel */
+}
+
+/* Judul pada bagian produk populer */
+.popular-products h2 {
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraf pada bagian produk populer, dengan lebar maksimum dan pemusatan */
+.popular-products p {
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto 1.5rem; /* Memusatkan paragraf dan menambahkan jarak bawah */
+}
+
+/* Grid produk pada bagian produk populer dengan pemusatan */
+.popular-products .products-grid {
+  justify-content: center; /* Memusatkan item grid */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 250px)); /* Menyesuaikan ukuran kartu agar lebih kecil */
+  gap: 15px; /* Mengurangi jarak antar kartu */
+}
+
+/* Kartu produk pada bagian produk populer dengan ukuran lebih kecil */
+.popular-products .product-card {
+  width: 100%; /* Pastikan sesuai dengan grid */
+  max-width: 250px; /* Mengurangi lebar maksimum kartu */
+  padding: 8px; /* Mengurangi padding untuk kartu lebih kecil */
+}
+
+/* Gambar pada kartu produk populer */
+.popular-products .product-image {
+  height: 150px; /* Mengurangi tinggi gambar produk */
+}
+
+/* Judul pada kartu produk populer */
+.popular-products .product-info h3 {
+  font-size: 0.875rem; /* Ukuran font lebih kecil untuk judul */
+}
+
+/* Harga pada kartu produk populer */
+.popular-products .product-price {
+  font-size: 0.875rem; /* Ukuran font lebih kecil untuk harga */
+}
+
+/* Tautan detail pada kartu produk populer */
+.popular-products .product-footer a {
+  font-size: 0.75rem; /* Ukuran font lebih kecil untuk tautan detail */
 }

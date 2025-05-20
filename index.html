@@ -121,12 +121,56 @@
             </div>
         </section>
 
-<!-- Popular Products Section -->
+        <!-- Popular Products Section -->
         <section class="popular-products">
             <h2>Sepatu Lari Terpopuler</h2>
             <p>Sepatu lari terbaik yang dipilih oleh pelari di seluruh Indonesia.</p>
-            <div class="products-grid"></div>
-            <a href="pages/products.html" class="btn btn-secondary">Lihat Semua Produk</a>
+
+            <div class="products-grid modern-grid">
+
+                <!-- Mills Treximo Saga -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/img/products/Mills/2.jpg" alt="Mills Treximo Saga">
+                    </div>
+                    <div class="product-info">
+                        <h3>Mills Treximo Saga</h3>
+                        <div class="product-footer">
+                            <span class="product-price">Rp489.000</span>
+                            <a href="pages/product-detail.html?id=19" class="btn-link">Detail →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ardiles Nfinity Urbeat Pro -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/img/products/Ardiles/3.jpg" alt="Ardiles Nfinity Urbeat Pro">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ardiles Nfinity Urbeat Pro</h3>
+                        <div class="product-footer">
+                            <span class="product-price">Rp299.000</span>
+                            <a href="pages/product-detail.html?id=9" class="btn-link">Detail →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nike Air Zoom Pegasus 38 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/img/products/Ardiles/2.jpg" alt="Nike Air Zoom Pegasus 38">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ardiles Trail Gerbara 2.0 </h3>
+                        <div class="product-footer">
+                            <span class="product-price">Rp425.000</span>
+                            <a href="pages/product-detail.html?id=14" class="btn-link">Detail →</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
         <!-- Latest Articles Section -->
@@ -229,47 +273,11 @@
     </footer>
 
 
-    <script  src="assets/js/products.js"></script>
-    <script  src="assets/js/articles.js"></script>
-    <script  src="assets/js/articles-logic.js"></script>
-    <script  src="assets/js/cart.js"></script>
-    <script  src="assets/js/cart-logic.js"></script>
-
-  <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const productsGrid = document.querySelector(".products-grid");
-            if (!productsGrid) {
-                console.error("Elemen products-grid tidak ditemukan.");
-                return;
-            }
-
-            // Periksa apakah array products tersedia
-            if (typeof products === 'undefined') {
-                console.error("Array products tidak ditemukan. Pastikan products.js dimuat dengan benar.");
-                productsGrid.innerHTML = "<p>Error: Tidak dapat memuat produk.</p>";
-                return;
-            }
-
-            // Ambil 3 produk pertama
-            const topProducts = products.slice(0, 3);
-
-            // Render produk
-            productsGrid.innerHTML = "";
-            topProducts.forEach(product => {
-                const productCard = document.createElement("div");
-                productCard.className = "product-card";
-                productCard.innerHTML = `
-                    <div class="product-image">
-                        <img src="${product.image}" alt="${product.name}">
-                    </div>
-                    <div class="product-info">
-                        <h3>${product.name}</h3>
-                    </div>
-                `;
-                productsGrid.appendChild(productCard);
-            });
-        });
-    </script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/articles.js"></script>
+    <script src="assets/js/articles-logic.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/cart-logic.js"></script>
 </body>
 
 </html>
