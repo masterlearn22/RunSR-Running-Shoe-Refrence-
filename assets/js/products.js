@@ -10,7 +10,7 @@ const products = [
     features: ["lightweight", "cushioning"],
     description: "Sepatu lari jalan Cocok untuk daily training",
     rating: 4.5,
-    image: "../assets/img/products/910/1.jpeg"
+    image: "/assets/img/products/910/1.jpeg"
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const products = [
     features: ["stability", "waterproof"],
     description: "Sepatu trail running dengan daya tahan tinggi",
     rating: 4.6,
-    image: "../assets/img/products/910/2.jpg"
+    image: "/assets/img/products/910/2.jpg"
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const products = [
     features: ["lightweight", "cushioning"],
     description: "Sepatu maraton dengan teknologi terbaru",
     rating: 4.9,
-    image: "../assets/img/products/910/3.jpeg"
+    image: "/assets/img/products/910/3.jpeg"
   },
   // Brand: Ortuseight
   {
@@ -44,7 +44,7 @@ const products = [
     features: ["lightweight", "cushioning"],
     description: "Sepatu lari jalan dengan teknologi bantalan udara",
     rating: 4.4,
-    image: "../assets/img/products/Ortus/1.jpeg"
+    image: "/assets/img/products/Ortus/1.jpeg"
   },
   {
     id: 5,
@@ -55,7 +55,7 @@ const products = [
     features: ["cushioning"],
     description: "Sepatu dialy dengan daya tahan tinggi dan desain stylish",
     rating: 4.8,
-    image: "../assets/img/products/Ortus/2.jpeg"
+    image: "/assets/img/products/Ortus/2.jpeg"
   },
   {
     id: 6,
@@ -66,7 +66,7 @@ const products = [
     features: ["lightweight", "stability"],
     description: "Sepatu maraton dengan performa tinggi",
     rating: 4.7,
-    image: "../assets/img/products/Ortus/3.jpeg"
+    image: "/assets/img/products/Ortus/3.jpeg"
   },
   // Brand: Ardiles
   {
@@ -78,7 +78,7 @@ const products = [
     features: ["lightweight", "bouncing"],
     description: "Sepatu lari jalan dengan harga terjangkau",
     rating: 4.0,
-    image: "../assets/img/products/Ardiles/1.jpg"
+    image: "/assets/img/products/Ardiles/1.jpg"
   },
   {
     id: 8,
@@ -89,7 +89,7 @@ const products = [
     features: ["stability"],
     description: "Sepatu trail running dengan daya tahan tinggi",
     rating: 4.2,
-    image: "../assets/img/products/Ardiles/2.jpg"
+    image: "/assets/img/products/Ardiles/2.jpg"
   },
   {
     id: 9,
@@ -100,7 +100,7 @@ const products = [
     features: ["lightweight", "stability","cushioning"],
     description: "Sepatu SuperTrainer  dengan performa baik",
     rating: 4.3,
-    image: "../assets/img/products/Ardiles/3.jpg"
+    image: "/assets/img/products/Ardiles/3.jpg"
   },
   // Brand: Mills
   {
@@ -112,7 +112,7 @@ const products = [
     features: ["lightweight", "cushioning"],
     description: "Sepatu lari jalan dengan teknologi bantalan udara",
     rating: 4.4,
-    image: "../assets/img/products/Mills/1.jpeg",
+    image: "/assets/img/products/Mills/1.jpeg",
   },
   {
     id: 11,
@@ -123,7 +123,7 @@ const products = [
     features: ["waterproof", "stability"],
     description: "Sepatu trail running dengan grip superior",
     rating: 4.5,
-    image: "../assets/img/products/Mills/2.jpg"
+    image: "/assets/img/products/Mills/2.jpg"
   },
   {
     id: 12,
@@ -134,7 +134,7 @@ const products = [
     features: ["lightweight", "stability"],
     description: "Sepatu maraton dengan daya tahan tinggi",
     rating: 4.6,
-    image: "../assets/img/products/Mills/3.jpeg"
+    image: "/assets/img/products/Mills/3.jpeg"
   },
   // Brand: Nike
   {
@@ -146,7 +146,7 @@ const products = [
     features: ["lightweight", "cushioning"],
     description: "Sepatu lari jalan dengan teknologi Air Zoom",
     rating: 4.7,
-    image: "../assets/img/products/Nike/1.webp"
+    image: "/assets/img/products/Nike/1.webp"
   },
   {
     id: 14,
@@ -157,7 +157,7 @@ const products = [
     features: ["stability", "waterproof"],
     description: "Sepatu trail running dengan daya tahan tinggi",
     rating: 4.6,
-    image: "../assets/img/products/Nike/2.jpeg"
+    image: "/assets/img/products/Nike/2.jpeg"
   },
   {
     id: 15,
@@ -168,7 +168,7 @@ const products = [
     features: ["lightweight", "cushioning"],
     description: "Sepatu maraton dengan teknologi carbon plate",
     rating: 4.9,
-    image: "../assets/img/products/Nike/3.avif"
+    image: "/assets/img/products/Nike/3.avif"
   },
   // Brand: New Balance
   {
@@ -180,7 +180,7 @@ const products = [
     features: ["cushioning", "stability"],
     description: "Sepatu lari jalan dengan bantalan Fresh Foam",
     rating: 4.7,
-    image: "../assets/img/products/NB/1.jpg"
+    image: "/assets/img/products/NB/1.jpg"
   },
   {
     id: 17,
@@ -191,7 +191,7 @@ const products = [
     features: ["waterproof", "stability"],
     description: "Sepatu trail running dengan daya tahan tinggi",
     rating: 4.6,
-    image: "../assets/img/products/NB/2.webp"
+    image: "/assets/img/products/NB/2.webp"
   },
   {
     id: 18,
@@ -202,7 +202,7 @@ const products = [
     features: ["lightweight", "cushioning"],
     description: "Sepatu maraton dengan teknologi carbon plate",
     rating: 4.8,
-    image: "../assets/img/products/NB/3.png"
+    image: "/assets/img/products/NB/3.png"
   },
   // // Brand: Asics
   // {
@@ -214,7 +214,7 @@ const products = [
   //   features: ["cushioning", "stability"],
   //   description: "Sepatu lari jalan dengan teknologi GEL",
   //   rating: 4.7,
-  //   image: "../assets/img/products/Asics/1"
+  //   image: "/assets/img/products/Asics/1"
   // },
   // {
   //   id: 20,
@@ -225,7 +225,7 @@ const products = [
   //   features: ["waterproof", "stability"],
   //   description: "Sepatu trail running dengan daya tahan tinggi",
   //   rating: 4.6,
-  //   image: "../assets/img/products/Asics/2"
+  //   image: "/assets/img/products/Asics/2"
   // },
   // {
   //   id: 21,
@@ -236,7 +236,7 @@ const products = [
   //   features: ["lightweight", "cushioning"],
   //   description: "Sepatu maraton dengan teknologi carbon plate",
   //   rating: 4.9,
-  //   image: "../assets/img/products/Asics/3"
+  //   image: "/assets/img/products/Asics/3"
   // },
   // // Brand: Hoka
   // {
@@ -248,7 +248,7 @@ const products = [
   //   features: ["lightweight", "cushioning"],
   //   description: "Sepatu lari jalan dengan bantalan maksimal",
   //   rating: 4.7,
-  //   image: "../assets/img/products/Hoka/1"
+  //   image: "/assets/img/products/Hoka/1"
   // },
   // {
   //   id: 23,
@@ -259,7 +259,7 @@ const products = [
   //   features: ["waterproof", "stability"],
   //   description: "Sepatu trail running dengan grip superior",
   //   rating: 4.6,
-  //   image: "../assets/img/products/Hoka/2"
+  //   image: "/assets/img/products/Hoka/2"
   // },
   // {
   //   id: 24,
@@ -270,7 +270,7 @@ const products = [
   //   features: ["lightweight", "cushioning"],
   //   description: "Sepatu maraton dengan teknologi carbon plate",
   //   rating: 4.8,
-  //   image: "../assets/img/products/Hoka/3"
+  //   image: "/assets/img/products/Hoka/3"
   // },
   // // Brand: Mizuno
   // {
@@ -282,7 +282,7 @@ const products = [
   //   features: ["cushioning", "stability"],
   //   description: "Sepatu lari jalan dengan teknologi Wave",
   //   rating: 4.6,
-  //   image: "../assets/img/products/Mizuno/1"
+  //   image: "/assets/img/products/Mizuno/1"
   // },
   // {
   //   id: 26,
@@ -293,7 +293,7 @@ const products = [
   //   features: ["waterproof", "stability"],
   //   description: "Sepatu trail running dengan daya tahan tinggi",
   //   rating: 4.5,
-  //   image: "../assets/img/products/Mizuno/2"
+  //   image: "/assets/img/products/Mizuno/2"
   // },
   // {
   //   id: 27,
@@ -304,7 +304,7 @@ const products = [
   //   features: ["lightweight", "cushioning"],
   //   description: "Sepatu maraton dengan teknologi carbon plate",
   //   rating: 4.7,
-  //   image: "../assets/img/products/Mizuno/3"
+  //   image: "/assets/img/products/Mizuno/3"
   // },
   // // Brand: Puma
   // {
@@ -316,7 +316,7 @@ const products = [
   //   features: ["lightweight", "cushioning"],
   //   description: "Sepatu lari jalan dengan teknologi Nitro",
   //   rating: 4.5,
-  //   image: "../assets/img/products/Puma/1"
+  //   image: "/assets/img/products/Puma/1"
   // },
   // {
   //   id: 29,
@@ -327,7 +327,7 @@ const products = [
   //   features: ["waterproof", "stability"],
   //   description: "Sepatu trail running dengan daya tahan tinggi",
   //   rating: 4.4,
-  //   image: "../assets/img/products/Puma/2"
+  //   image: "/assets/img/products/Puma/2"
   // },
   // {
   //   id: 30,
@@ -338,7 +338,7 @@ const products = [
   //   features: ["lightweight", "cushioning"],
   //   description: "Sepatu maraton dengan teknologi carbon plate",
   //   rating: 4.8,
-  //   image: "../assets/img/products/Puma/3"
+  //   image: "/assets/img/products/Puma/3"
   // },
   // // Brand: Brodo
   // {
@@ -350,7 +350,7 @@ const products = [
   //   features: ["lightweight", "cushioning"],
   //   description: "Sepatu lari jalan dengan desain minimalis",
   //   rating: 4.3,
-  //   image: "../assets/img/products/Brodo/1"
+  //   image: "/assets/img/products/Brodo/1"
   // },
   // {
   //   id: 32,
@@ -361,7 +361,7 @@ const products = [
   //   features: ["waterproof", "stability"],
   //   description: "Sepatu trail running dengan grip superior",
   //   rating: 4.5,
-  //   image: "../assets/img/products/Brodo/2"
+  //   image: "/assets/img/products/Brodo/2"
   // },
   // {
   //   id: 33,
@@ -372,7 +372,7 @@ const products = [
   //   features: ["lightweight", "stability"],
   //   description: "Sepatu maraton dengan daya tahan tinggi",
   //   rating: 4.4,
-  //   image: "../assets/img/products/Brodo/3"
+  //   image: "/assets/img/products/Brodo/3"
   // },
   // // Brand: Saucony
   // {
@@ -384,7 +384,7 @@ const products = [
   //   features: ["lightweight", "cushioning"],
   //   description: "Sepatu lari jalan dengan bantalan PWRRUN",
   //   rating: 4.6,
-  //   image: "../assets/img/products/Saucony/1"
+  //   image: "/assets/img/products/Saucony/1"
   // },
   // {
   //   id: 35,
@@ -395,7 +395,7 @@ const products = [
   //   features: ["waterproof", "stability"],
   //   description: "Sepatu trail running dengan daya tahan tinggi",
   //   rating: 4.7,
-  //   image: "../assets/img/products/Saucony/2"
+  //   image: "/assets/img/products/Saucony/2"
   // },
   // {
   //   id: 36,
@@ -406,7 +406,7 @@ const products = [
   //   features: ["lightweight", "cushioning"],
   //   description: "Sepatu maraton dengan teknologi carbon plate",
   //   rating: 4.8,
-  //   image: "../assets/img/products/Saucony/3"
+  //   image: "/assets/img/products/Saucony/3"
   // },
   // // Brand: Adidas
   // {
@@ -418,7 +418,7 @@ const products = [
   //   features: ["cushioning", "stability"],
   //   description: "Sepatu lari jalan dengan teknologi Boost",
   //   rating: 4.7,
-  //   image: "../assets/img/products/Adidas/1"
+  //   image: "/assets/img/products/Adidas/1"
   // },
   // {
   //   id: 38,
@@ -429,7 +429,7 @@ const products = [
   //   features: ["lightweight", "stability"],
   //   description: "Sepatu trail running dengan teknologi Continental",
   //   rating: 4.6,
-  //   image: "../assets/img/products/Adidas/2"
+  //   image: "/assets/img/products/Adidas/2"
   // },
   // {
   //   id: 39,
@@ -440,7 +440,7 @@ const products = [
   //   features: ["lightweight", "cushioning"],
   //   description: "Sepatu maraton dengan teknologi carbon rods",
   //   rating: 4.9,
-  //   image: "../assets/img/products/Adidas/3"
+  //   image: "/assets/img/products/Adidas/3"
   // },
   // // Brand: Brooks
   // {
@@ -452,7 +452,7 @@ const products = [
   //   features: ["cushioning", "stability"],
   //   description: "Sepatu lari jalan dengan bantalan DNA Loft",
   //   rating: 4.7,
-  //   image: "../assets/img/products/Brooks/1"
+  //   image: "/assets/img/products/Brooks/1"
   // },
   // {
   //   id: 41,
@@ -463,7 +463,7 @@ const products = [
   //   features: ["waterproof", "stability"],
   //   description: "Sepatu trail running dengan traksi superior",
   //   rating: 4.6,
-  //   image: "../assets/img/products/Brooks/2"
+  //   image: "/assets/img/products/Brooks/2"
   // },
   // {
   //   id: 42,
@@ -474,7 +474,7 @@ const products = [
   //   features: ["stability", "cushioning"],
   //   description: "Sepatu lari jalan dengan dukungan stabilitas",
   //   rating: 4.8,
-  //   image: "../assets/img/products/Brooks/3"
+  //   image: "/assets/img/products/Brooks/3"
   // },
   // // Brand: On
   // {
@@ -486,7 +486,7 @@ const products = [
   //   features: ["lightweight", "cushioning"],
   //   description: "Sepatu lari jalan dengan teknologi CloudTec",
   //   rating: 4.6,
-  //   image: "../assets/img/products/On/1"
+  //   image: "/assets/img/products/On/1"
   // },
   // {
   //   id: 44,
@@ -497,7 +497,7 @@ const products = [
   //   features: ["waterproof", "stability"],
   //   description: "Sepatu trail running dengan grip superior",
   //   rating: 4.5,
-  //   image: "../assets/img/products/On/2"
+  //   image: "/assets/img/products/On/2"
   // },
   // {
   //   id: 45,
@@ -508,7 +508,7 @@ const products = [
   //   features: ["stability", "cushioning"],
   //   description: "Sepatu lari jalan dengan dukungan stabilitas",
   //   rating: 4.7,
-  //   image: "../assets/img/products/On/3"
+  //   image: "/assets/img/products/On/3"
   // },
   // // Brand: Under Armour
   // {
@@ -520,7 +520,7 @@ const products = [
   //   features: ["cushioning", "stability"],
   //   description: "Sepatu lari jalan dengan teknologi HOVR",
   //   rating: 4.5,
-  //   image: "../assets/img/products/UA/1"
+  //   image: "/assets/img/products/UA/1"
   // },
   // {
   //   id: 47,
@@ -531,7 +531,7 @@ const products = [
   //   features: ["lightweight", "cushioning"],
   //   description: "Sepatu lari jalan ringan dan responsif",
   //   rating: 4.4,
-  //   image: "../assets/img/products/UA/2"
+  //   image: "/assets/img/products/UA/2"
   // },
   // {
   //   id: 48,
@@ -542,7 +542,7 @@ const products = [
   //   features: ["lightweight", "cushioning"],
   //   description: "Sepatu lari jalan dengan performa tinggi",
   //   rating: 4.6,
-  //   image: "../assets/img/products/UA/3"
+  //   image: "/assets/img/products/UA/3"
   // },
   // // Brand: Salomon
   // {
@@ -554,7 +554,7 @@ const products = [
   //   features: ["waterproof", "stability"],
   //   description: "Sepatu trail running dengan grip superior",
   //   rating: 4.8,
-  //   image: "../assets/img/products/Salomon/1"
+  //   image: "/assets/img/products/Salomon/1"
   // },
   // {
   //   id: 50,
@@ -565,7 +565,7 @@ const products = [
   //   features: ["waterproof", "stability"],
   //   description: "Sepatu trail running untuk medan basah",
   //   rating: 4.7,
-  //   image: "../assets/img/products/Salomon/2"
+  //   image: "/assets/img/products/Salomon/2"
   // },
   // {
   //   id: 51,
@@ -576,7 +576,7 @@ const products = [
   //   features: ["stability", "waterproof"],
   //   description: "Sepatu trail running dengan daya tahan tinggi",
   //   rating: 4.6,
-  //   image: "../assets/img/products/Salomon/3"
+  //   image: "/assets/img/products/Salomon/3"
   // },
   // // Brand: Reebok
   // {
@@ -588,7 +588,7 @@ const products = [
   //   features: ["lightweight", "cushioning"],
   //   description: "Sepatu lari jalan dengan bantalan Floatride",
   //   rating: 4.4,
-  //   image: "../assets/img/products/Reebok/1"
+  //   image: "/assets/img/products/Reebok/1"
   // },
   // {
   //   id: 53,
@@ -599,7 +599,7 @@ const products = [
   //   features: ["stability", "cushioning"],
   //   description: "Sepatu lari santai untuk latihan serbaguna",
   //   rating: 4.5,
-  //   image: "../assets/img/products/Reebok/2"
+  //   image: "/assets/img/products/Reebok/2"
   // },
   // {
   //   id: 54,
@@ -610,7 +610,7 @@ const products = [
   //   features: ["lightweight", "cushioning"],
   //   description: "Sepatu lari jalan dengan bantalan responsif",
   //   rating: 4.3,
-  //   image: "../assets/img/products/Reebok/3"
+  //   image: "/assets/img/products/Reebok/3"
   // },
 ];
 
@@ -620,6 +620,7 @@ const formatPrice = (price) => {
 };
 
 // Debounce util (boleh tetap ada jika mau pakai search, atau bisa dihapus)
+// Debounce util
 function debounce(func, wait) {
   let timeout;
   return function (...args) {
@@ -670,7 +671,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>${product.description}</p>
           <div class="product-footer">
             <span class="product-price">${formatPrice(product.price)}</span>
-            <a href="../pages/product-detail.html?id=${product.id}" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+            <a href="/pages/product-detail.html?id=${product.id}" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       `;
