@@ -249,9 +249,9 @@
             /* Default jika tidak diset oleh styles.css */
             --primary-color: rgb(var(--primary-rgb));
             --primary-light: rgba(var(--primary-rgb), 0.1);
-            --border-color: #ddd; /* Sesuaikan dengan styles.css Anda jika perlu */
-            --border-radius: 4px; /* Sesuaikan dengan styles.css Anda jika perlu */
-            --text-light: #777; /* Sesuaikan dengan styles.css Anda jika perlu */
+            --border-color: #ddd;
+            --border-radius: 4px;
+            --text-light: #777;
         }
     </style>
 </head>
@@ -304,155 +304,142 @@
                                         <img src="../assets/img/products/Nike/3.avif" alt="Nike Air Zoom 1">
                                     </div>
                                     <div class="summary-product-info">
-                                        <h4>Nike ZoomX Vaporfly Next% 2</h4>
+                                        <h4>Ortuseight Hyperglide 1.4</h4>
                                         <div class="summary-product-meta">
-                                            <p>Ukuran: 42 | Warna: Hitam</p>
-                                            <p>1 x Rp3.499.000</p>
+                                            <p>Ukuran: 42 | Warna: Putih</p>
+                                            <p>1 x Rp 500.000</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="summary-product">
-                                    <div class="summary-product-image">
-                                        <img src="../assets/img/products/910/1.jpeg" alt="Adidas Ultraboost 2">
-                                    </div>
-                                    <div class="summary-product-info">
-                                        <h4>910 Haze Veloce</h4>
-                                        <div class="summary-product-meta">
-                                            <p>Ukuran: 42 | Model : Gravity Black White</p>
-                                            <p>1 x Rp599.000</p>
+                            </div> 
+
+
+                            <div class="form-section">
+                                <h2>Metode Pengiriman</h2>
+                                <div class="shipping-options" id="shipping-options">
+                                    <label class="shipping-option">
+                                        <input type="radio" name="shipping" value="regular" data-cost="8000" checked>
+                                        <div class="shipping-option-content">
+                                            <div class="shipping-option-info">
+                                                <h4>Reguler (2-3 hari)</h4>
+                                                <p>Pengiriman standar ke seluruh Indonesia</p>
+                                            </div>
+                                            <div class="shipping-option-price">Rp8.000</div>
                                         </div>
-                                    </div>
+                                    </label>
+                                    <label class="shipping-option">
+                                        <input type="radio" name="shipping" value="express" data-cost="20000">
+                                        <div class="shipping-option-content">
+                                            <div class="shipping-option-info">
+                                                <h4>Express (1 hari)</h4>
+                                                <p>Pengiriman cepat ke kota-kota besar</p>
+                                            </div>
+                                            <div class="shipping-option-price">Rp20.000</div>
+                                        </div>
+                                    </label>
+                                    <label class="shipping-option">
+                                        <input type="radio" name="shipping" value="same-day" data-cost="25000">
+                                        <div class="shipping-option-content">
+                                            <div class="shipping-option-info">
+                                                <h4>Same Day (Hari ini)</h4>
+                                                <p>Pengiriman di hari yang sama (hanya untuk area tertentu)</p>
+                                            </div>
+                                            <div class="shipping-option-price">Rp25.000</div>
+                                        </div>
+                                    </label>
+                                    <div class="error-message" id="shipping-error">Pilih metode pengiriman</div>
                                 </div>
                             </div>
-                        </div>
-                           
 
-                        <div class="form-section">
-                            <h2>Metode Pengiriman</h2>
-                            <div class="shipping-options" id="shipping-options">
-                                <label class="shipping-option">
-                                    <input type="radio" name="shipping" value="regular" data-cost="50000" checked>
-                                    <div class="shipping-option-content">
-                                        <div class="shipping-option-info">
-                                            <h4>Reguler (2-3 hari)</h4>
-                                            <p>Pengiriman standar ke seluruh Indonesia</p>
+                            <div class="form-section">
+                                <h2>Metode Pembayaran</h2>
+                                <div class="payment-options">
+                                    <div class="payment-option-group" id="payment-bank-group">
+                                        <h4>Transfer Bank</h4>
+                                        <div class="payment-option-list">
+                                            <label class="payment-option">
+                                                <input type="radio" name="payment" value="bca">
+                                                <div class="payment-option-content">
+                                                    <div class="payment-option-icon">
+                                                        <img src="../assets/img/icon/BCA.png" alt="BCA">
+                                                    </div>
+                                                    <div class="payment-option-info">BCA</div>
+                                                </div>
+                                            </label>
+                                            <label class="payment-option">
+                                                <input type="radio" name="payment" value="mandiri">
+                                                <div class="payment-option-content">
+                                                    <div class="payment-option-icon">
+                                                        <img src="../assets/img/icon/Mandiri.png" alt="Mandiri">
+                                                    </div>
+                                                    <div class="payment-option-info">Mandiri</div>
+                                                </div>
+                                            </label>
+                                            <label class="payment-option">
+                                                <input type="radio" name="payment" value="bni">
+                                                <div class="payment-option-content">
+                                                    <div class="payment-option-icon">
+                                                        <img src="../assets/img/icon/BNI.png" alt="BNI">
+                                                    </div>
+                                                    <div class="payment-option-info">BNI</div>
+                                                </div>
+                                            </label>
+                                            <label class="payment-option">
+                                                <input type="radio" name="payment" value="bri">
+                                                <div class="payment-option-content">
+                                                    <div class="payment-option-icon">
+                                                        <img src="../assets/img/icon/BRI.png" alt="BRI">
+                                                    </div>
+                                                    <div class="payment-option-info">BRI</div>
+                                                </div>
+                                            </label>
                                         </div>
-                                        <div class="shipping-option-price">Rp50.000</div>
                                     </div>
-                                </label>
-                                <label class="shipping-option">
-                                    <input type="radio" name="shipping" value="express" data-cost="100000">
-                                    <div class="shipping-option-content">
-                                        <div class="shipping-option-info">
-                                            <h4>Express (1 hari)</h4>
-                                            <p>Pengiriman cepat ke kota-kota besar</p>
-                                        </div>
-                                        <div class="shipping-option-price">Rp100.000</div>
-                                    </div>
-                                </label>
-                                <label class="shipping-option">
-                                    <input type="radio" name="shipping" value="same-day" data-cost="150000">
-                                    <div class="shipping-option-content">
-                                        <div class="shipping-option-info">
-                                            <h4>Same Day (Hari ini)</h4>
-                                            <p>Pengiriman di hari yang sama (hanya untuk area tertentu)</p>
-                                        </div>
-                                        <div class="shipping-option-price">Rp150.000</div>
-                                    </div>
-                                </label>
-                                <div class="error-message" id="shipping-error">Pilih metode pengiriman</div>
-                            </div>
-                        </div>
 
-                        <div class="form-section">
-                            <h2>Metode Pembayaran</h2>
-                            <div class="payment-options">
-                                <div class="payment-option-group" id="payment-bank-group">
-                                    <h4>Transfer Bank</h4>
-                                    <div class="payment-option-list">
-                                        <label class="payment-option">
-                                            <input type="radio" name="payment" value="bca">
-                                            <div class="payment-option-content">
-                                                <div class="payment-option-icon">
-                                                    <img src="../assets/img/icon/BCA.png" alt="BCA">
+                                    <div class="payment-option-group" id="payment-ewallet-group">
+                                        <h4>E-Wallet</h4>
+                                        <div class="payment-option-list">
+                                            <label class="payment-option">
+                                                <input type="radio" name="payment" value="gopay">
+                                                <div class="payment-option-content">
+                                                    <div class="payment-option-icon">
+                                                        <img src="../assets/img/icon/Gopay.png" alt="GoPay">
+                                                    </div>
+                                                    <div class="payment-option-info">GoPay</div>
                                                 </div>
-                                                <div class="payment-option-info">BCA</div>
-                                            </div>
-                                        </label>
-                                        <label class="payment-option">
-                                            <input type="radio" name="payment" value="mandiri">
-                                            <div class="payment-option-content">
-                                                <div class="payment-option-icon">
-                                                    <img src="../assets/img/icon/Mandiri.png" alt="Mandiri">
+                                            </label>
+                                            <label class="payment-option">
+                                                <input type="radio" name="payment" value="ovo">
+                                                <div class="payment-option-content">
+                                                    <div class="payment-option-icon">
+                                                        <img src="../assets/img/icon/OVO.png" alt="OVO">
+                                                    </div>
+                                                    <div class="payment-option-info">OVO</div>
                                                 </div>
-                                                <div class="payment-option-info">Mandiri</div>
-                                            </div>
-                                        </label>
-                                        <label class="payment-option">
-                                            <input type="radio" name="payment" value="bni">
-                                            <div class="payment-option-content">
-                                                <div class="payment-option-icon">
-                                                    <img src="../assets/img/icon/BNI.png" alt="BNI">
+                                            </label>
+                                            <label class="payment-option">
+                                                <input type="radio" name="payment" value="dana">
+                                                <div class="payment-option-content">
+                                                    <div class="payment-option-icon">
+                                                        <img src="../assets/img/icon/DANA.png" alt="DANA">
+                                                    </div>
+                                                    <div class="payment-option-info">DANA</div>
                                                 </div>
-                                                <div class="payment-option-info">BNI</div>
-                                            </div>
-                                        </label>
-                                        <label class="payment-option">
-                                            <input type="radio" name="payment" value="bri">
-                                            <div class="payment-option-content">
-                                                <div class="payment-option-icon">
-                                                    <img src="../assets/img/icon/BRI.png" alt="BRI">
-                                                </div>
-                                                <div class="payment-option-info">BRI</div>
-                                            </div>
-                                        </label>
+                                            </label>
+                                        </div>
                                     </div>
+                                    <div class="error-message" id="payment-error">Pilih metode pembayaran</div>
                                 </div>
-
-                                <div class="payment-option-group" id="payment-ewallet-group">
-                                    <h4>E-Wallet</h4>
-                                    <div class="payment-option-list">
-                                        <label class="payment-option">
-                                            <input type="radio" name="payment" value="gopay">
-                                            <div class="payment-option-content">
-                                                <div class="payment-option-icon">
-                                                    <img src="../assets/img/icon/Gopay.png" alt="GoPay">
-                                                </div>
-                                                <div class="payment-option-info">GoPay</div>
-                                            </div>
-                                        </label>
-                                        <label class="payment-option">
-                                            <input type="radio" name="payment" value="ovo">
-                                            <div class="payment-option-content">
-                                                <div class="payment-option-icon">
-                                                    <img src="../assets/img/icon/OVO.png" alt="OVO">
-                                                </div>
-                                                <div class="payment-option-info">OVO</div>
-                                            </div>
-                                        </label>
-                                        <label class="payment-option">
-                                            <input type="radio" name="payment" value="dana">
-                                            <div class="payment-option-content">
-                                                <div class="payment-option-icon">
-                                                    <img src="../assets/img/icon/DANA.png" alt="DANA">
-                                                </div>
-                                                <div class="payment-option-info">DANA</div>
-                                            </div>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="error-message" id="payment-error">Pilih metode pembayaran</div>
                             </div>
-                        </div>
 
-                         <div class="summary-divider"></div>
+                            <div class="summary-divider"></div>
                             <div class="summary-item">
                                 <span>Subtotal</span>
-                                <span id="summary-subtotal-value">Rp3.500.000</span>
+                                <span id="summary-subtotal-value">Rp500.000</span>
                             </div>
                             <div class="summary-item">
                                 <span>Pengiriman</span>
-                                <span id="summary-shipping-value">Rp50.000</span>
+                                <span id="summary-shipping-value">Rp8.000</span>
                             </div>
                             <div class="summary-item">
                                 <span>Diskon</span>
@@ -460,15 +447,15 @@
                             </div>
                             <div class="summary-total">
                                 <span>Total</span>
-                                <span id="summary-total-value">Rp3.550.000</span>
+                                <span id="summary-total-value">Rp508.000</span>
                             </div>
-                        
+                        </div> 
+
 
                         <div class="form-actions">
                             <a href="cart.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Kembali ke
                                 Keranjang</a>
-                            <button type="submit" id="submit-payment" class="btn btn-primary">Lanjutkan <i
-                                    class="fas fa-arrow-right"></i></button>
+                            <button type="submit" id="submit-payment" class="btn btn-primary">Lanjutkan <i class="fas fa-arrow-right"></i></button>
                         </div>
                     </form>
 
@@ -537,12 +524,11 @@
             const subtotalElement = document.getElementById('summary-subtotal-value');
             const shippingCostElement = document.getElementById('summary-shipping-value');
             const totalElement = document.getElementById('summary-total-value');
-            // const discountElement = document.getElementById('summary-discount-value'); // Untuk pengembangan di masa depan jika ada diskon dinamis
+            // const discountElement = document.getElementById('summary-discount-value'); // Untuk pengembangan di masa depan
 
             function parseCurrencyToNumber(currencyString) {
                 if (!currencyString || typeof currencyString !== 'string') return 0;
                 if (currencyString.trim() === '-') return 0; // Handle cases like discount "-"
-                // Menghilangkan "Rp", semua titik (pemisah ribuan), lalu konversi ke float
                 return parseFloat(currencyString.replace('Rp', '').replace(/\./g, '').replace(',', '.'));
             }
 
@@ -552,7 +538,7 @@
 
             function updateOrderSummary() {
                 if (!subtotalElement || !shippingCostElement || !totalElement) {
-                    // console.error("Elemen ringkasan tidak ditemukan untuk pembaruan!");
+                    // console.error("Summary elements not found for update!");
                     return;
                 }
 
@@ -566,8 +552,10 @@
                         selectedShippingCost = parseFloat(costAttribute);
                     } else {
                         // Fallback jika data-cost tidak ada (sebaiknya data-cost selalu ada)
-                        // Untuk kasus ini, kita akan tetap menggunakan data-cost
-                        console.warn('Atribut data-cost tidak ditemukan pada opsi pengiriman yang dipilih. Pastikan semua input radio pengiriman memiliki atribut data-cost.');
+                        const priceElement = selectedOptionInput.closest('.shipping-option').querySelector('.shipping-option-price');
+                        if (priceElement) {
+                            selectedShippingCost = parseCurrencyToNumber(priceElement.textContent);
+                        }
                     }
                 }
                 
@@ -585,15 +573,15 @@
             });
 
             // Panggil sekali saat load untuk memastikan total awal benar
-            // dan ringkasan pengiriman sesuai dengan opsi default yang dipilih.
             updateOrderSummary();
+
             // --- Akhir Logika Update Ringkasan Pesanan ---
 
 
             // Fungsi untuk menampilkan notifikasi
             function showNotification(message, isSuccess = true) {
                 const notification = document.getElementById('notification');
-                if (!notification) return;
+                if (!notification) return; // Pastikan elemen notifikasi ada
                 const icon = notification.querySelector('i');
                 const messageElement = notification.querySelector('.notification-message');
 
@@ -617,7 +605,7 @@
             function validateForm() {
                 let isValid = true;
 
-                const errorElements = form.querySelectorAll('.error');
+                const errorElements = form.querySelectorAll('.error'); // Lebih umum untuk menghapus class error
                 errorElements.forEach(element => {
                     element.classList.remove('error');
                 });
@@ -627,7 +615,7 @@
 
                 const inputs = form.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], select, textarea');
                 inputs.forEach(input => {
-                    const formGroup = input.closest('.form-group'); // Asumsi input berada dalam .form-group untuk pesan error
+                    const formGroup = input.closest('.form-group');
                     if (input.hasAttribute('required') && !input.value.trim()) {
                         isValid = false;
                         if (formGroup) formGroup.classList.add('error');
@@ -657,10 +645,21 @@
                     if (paymentEwalletGroup) paymentEwalletGroup.classList.remove('error');
                 }
                 
+                // Validasi metode pengiriman (opsional, karena sudah ada default checked)
+                // const shippingSelected = form.querySelector('input[name="shipping"]:checked');
+                // const shippingErrorMsg = document.getElementById('shipping-error');
+                // if (!shippingSelected) {
+                //     isValid = false;
+                //     if (shippingErrorMsg) shippingErrorMsg.style.display = 'block';
+                // } else {
+                //    if (shippingErrorMsg) shippingErrorMsg.style.display = 'none';
+                // }
+
+
                 return isValid;
             }
-            
-            if (form) {
+
+            if (form) { // Pastikan form ada sebelum menambahkan event listener
                 form.addEventListener('submit', function (e) {
                     e.preventDefault();
 
@@ -678,7 +677,7 @@
                         }, 2000);
                     } else {
                         showNotification('Mohon lengkapi semua data yang diperlukan', false);
-                        const firstError = form.querySelector('.error, .form-group.error'); // Lebih spesifik
+                        const firstError = form.querySelector('.error'); // Cari elemen pertama dengan class error
                         if (firstError) {
                             firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
                         }
@@ -687,21 +686,32 @@
 
                 const allInputs = form.querySelectorAll('input, select, textarea');
                 allInputs.forEach(input => {
-                    input.addEventListener('input', function () { // 'input' event untuk text fields
+                    input.addEventListener('input', function () {
                         const formGroup = this.closest('.form-group');
                         if (formGroup && formGroup.classList.contains('error')) {
                             formGroup.classList.remove('error');
                         }
+                        // Untuk payment error
+                        if (this.name === 'payment') {
+                             const paymentErrorMsg = document.getElementById('payment-error');
+                             const paymentBankGroup = document.getElementById('payment-bank-group');
+                             const paymentEwalletGroup = document.getElementById('payment-ewallet-group');
+                             if (paymentErrorMsg) paymentErrorMsg.style.display = 'none';
+                             if (paymentBankGroup) paymentBankGroup.classList.remove('error');
+                             if (paymentEwalletGroup) paymentEwalletGroup.classList.remove('error');
+                        }
                     });
-                     // 'change' event untuk radio/checkbox untuk menghapus error pada grup payment
-                    if (input.type === 'radio' && input.name === 'payment') {
+                    // Event change juga penting untuk radio/checkbox
+                     if (input.type === 'radio' || input.type === 'checkbox') {
                         input.addEventListener('change', function() {
-                            const paymentErrorMsg = document.getElementById('payment-error');
-                            const paymentBankGroup = document.getElementById('payment-bank-group');
-                            const paymentEwalletGroup = document.getElementById('payment-ewallet-group');
-                            if (paymentErrorMsg) paymentErrorMsg.style.display = 'none';
-                            if (paymentBankGroup) paymentBankGroup.classList.remove('error');
-                            if (paymentEwalletGroup) paymentEwalletGroup.classList.remove('error');
+                            if (this.name === 'payment') {
+                                const paymentErrorMsg = document.getElementById('payment-error');
+                                const paymentBankGroup = document.getElementById('payment-bank-group');
+                                const paymentEwalletGroup = document.getElementById('payment-ewallet-group');
+                                if (paymentErrorMsg) paymentErrorMsg.style.display = 'none';
+                                if (paymentBankGroup) paymentBankGroup.classList.remove('error');
+                                if (paymentEwalletGroup) paymentEwalletGroup.classList.remove('error');
+                            }
                         });
                     }
                 });

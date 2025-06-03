@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya - RunShoes</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css"> <link rel="stylesheet" href="../../assets/css/admin.css">   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Tambahan CSS khusus untuk halaman profil pengguna jika diperlukan */
+        .user-profile-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--admin-border);
+            background-color: var(--admin-card-bg);
+        }
+        .user-profile-header h1 {
+            margin: 0;
+            font-size: 1.75rem; /* Sesuaikan ukuran jika perlu */
+            color: var(--admin-text);
+        }
+        .user-profile-content-area {
+            padding: 1.5rem;
+            background-color: var(--admin-card-bg); /* Atau var(--admin-bg) jika ingin sama dengan body */
+            border-radius: 0.375rem; /* var(--admin-border-radius) jika ada */
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* var(--admin-box-shadow) jika ada */
+            margin: 1.5rem; /* Memberi jarak dari header konten admin (jika ada) dan tepi */
+        }
+
+        /* Pastikan admin-content tidak punya padding default jika kita menambahkan padding di user-profile-content-area */
+        .admin-content.profile-page-content {
+            padding: 0; /* Menghapus padding default dari .admin-content jika .user-profile-content-area digunakan */
+        }
+    </style>
+</head>
+<body class="admin-body"> <div class="admin-layout">
+        <aside class="admin-sidebar" id="userProfileSidebar">
+            <div class="admin-logo">
+                <a href="../../index.html"> <i class="fas fa-user-circle"></i> <span>Profil Saya</span>
+                </a>
+            </div>
+            <nav class="admin-menu">
+                <ul>
+                    <li>
+                        <a href="user-profile-index.html" class="active"> <i class="fas fa-id-card"></i> <span>Beranda Profil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="user-profile-edit.html">
+                            <i class="fas fa-edit"></i> <span>Edit Profil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="user-profile-history.html">
+                            <i class="fas fa-history"></i> <span>History Transaksi</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="user-profile-settings.html"> <i class="fas fa-cog"></i> <span>Pengaturan Akun</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../index.html"> <i class="fas fa-sign-out-alt"></i> <span>Keluar</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="admin-content profile-page-content">
+            <header class="admin-header"> <div class="admin-header-left">
+                    <button class="sidebar-toggle" id="userSidebarToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Beranda Profil</h1>
+                </div>
+                <div class="admin-header-right">
+                    <a href="cart.html" class="notification-btn" title="Keranjang Belanja">
+                        <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    <a href="../../index.html" class="btn btn-sm" style="background-color: var(--admin-primary); color: white;">Kembali ke Situs</a>
+                </div>
+            </header>
+            
+            <div class="user-profile-content-area">
+                <h2>Selamat Datang, [Nama Pengguna]!</h2>
+                <p>Ini adalah halaman utama profil Anda. Anda dapat mengelola informasi akun dan melihat riwayat transaksi Anda dari menu di samping.</p>
+                
+                <div class="dashboard-summary" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));"> <div class="summary-card">
+                        <div class="summary-icon bg-primary">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="summary-info">
+                            <h3>Total Transaksi</h3>
+                            <p class="summary-value">15</p> <a href="user-profile-history.html">Lihat Detail</a>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon bg-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="summary-info">
+                            <h3>Alamat Pengiriman Utama</h3>
+                            <p class="summary-value" style="font-size: 1rem;">Jl. Contoh No. 123, Kota Contoh</p> <a href="user-profile-edit.html#address">Ubah Alamat</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </main>
+    </div>
+
+    <script>
+        // Contoh JavaScript sederhana untuk sidebar toggle jika admin.js tidak digunakan/disesuaikan
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.getElementById('userProfileSidebar');
+            const sidebarToggle = document.getElementById('userSidebarToggle');
+            const adminLayout = document.querySelector('.admin-layout'); // Target elemen layout utama
+
+            if (sidebar && sidebarToggle && adminLayout) {
+                sidebarToggle.addEventListener('click', function() {
+                    sidebar.classList.toggle('collapsed');
+                    adminLayout.classList.toggle('sidebar-collapsed'); // Class ini ada di admin.css untuk menyesuaikan margin konten
+                });
+            }
+
+            // Logika untuk user dropdown jika Anda menambahkannya kembali (dari admin.js)
+            // const userDropdownBtn = document.querySelector('.user-dropdown-btn');
+            // const userDropdownMenu = document.querySelector('.user-dropdown-menu');
+            // if (userDropdownBtn && userDropdownMenu) {
+            //     userDropdownBtn.addEventListener('click', function() {
+            //         userDropdownMenu.classList.toggle('active');
+            //     });
+            //     // Klik di luar untuk menutup dropdown
+            //     document.addEventListener('click', function(event) {
+            //         if (!userDropdownBtn.contains(event.target) && !userDropdownMenu.contains(event.target)) {
+            //             userDropdownMenu.classList.remove('active');
+            //         }
+            //     });
+            // }
+        });
+    </script>
+</body>
+</html>

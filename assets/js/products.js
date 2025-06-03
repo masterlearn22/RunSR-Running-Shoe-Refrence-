@@ -37,14 +37,14 @@ const products = [
   // Brand: Ortuseight
   {
     id: 4,
-    name: "Ortuseight Hyperglide 3.0",
+    name: "Ortuseight Hyperglide 1.4",
     brand: "ortuseight",
     type: "road",
     price: 600000,
     features: ["lightweight", "cushioning"],
     description: "Sepatu lari jalan dengan teknologi bantalan udara",
     rating: 4.4,
-    image: "../assets/img/products/Ortus/1.jpeg"
+    image: "../assets/img/products/Ortus/1.jpg"
   },
   {
     id: 5,
@@ -671,7 +671,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>${product.description}</p>
           <div class="product-footer">
             <span class="product-price">${formatPrice(product.price)}</span>
-            <a href="pages/product-detail.html?id=${product.id}" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
+            <a href="../pages/product-detail.html?id=${product.id}" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       `;

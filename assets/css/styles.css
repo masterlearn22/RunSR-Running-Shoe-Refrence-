@@ -1951,3 +1951,577 @@ textarea:focus {
 .popular-products .product-footer a {
   font-size: 0.75rem; /* Ukuran font lebih kecil untuk tautan detail */
 }
+
+/* === Tambahan dan Modifikasi untuk Halaman Artikel === */
+
+/* Bagian utama artikel */
+.articles-section {
+  padding: 2rem 0; /* Memberi sedikit ruang di atas dan bawah bagian artikel */
+}
+
+/* Tata letak dasar untuk sidebar dan konten artikel */
+.articles-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr; /* Lebar sidebar 280px, konten mengisi sisa ruang */
+  gap: 2rem; /* Jarak antara sidebar dan konten */
+}
+
+/* Styling untuk widget di sidebar */
+.articles-sidebar .sidebar-widget {
+  margin-bottom: 2rem; /* Jarak antar widget */
+  background-color: var(--background-light); /* Warna latar belakang widget (opsional) */
+  padding: 1.5rem; /* Padding di dalam widget (opsional) */
+  border-radius: var(--border-radius); /* Sudut melengkung untuk widget (opsional) */
+}
+
+.articles-sidebar .sidebar-widget h3 {
+  font-size: 1.25rem; /* Sesuaikan ukuran judul widget */
+  margin-bottom: 1rem; /* Jarak bawah judul widget */
+}
+
+/* Daftar kategori di sidebar */
+.articles-sidebar .category-list {
+  list-style: none; /* Hapus bullet default */
+  padding: 0;
+  margin: 0;
+}
+
+.articles-sidebar .category-list li a {
+  display: block; /* Membuat tautan mengisi lebar penuh */
+  padding: 0.6rem 0; /* Padding atas-bawah untuk setiap item kategori */
+  color: var(--text-light);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.articles-sidebar .category-list li a:hover,
+.articles-sidebar .category-list li a.active {
+  color: var(--primary-color);
+  font-weight: 500; /* Atau 600 jika ingin lebih tebal */
+}
+
+/* Artikel populer di sidebar */
+.popular-articles .popular-article {
+  display: flex; /* Mengatur gambar dan info berdampingan */
+  gap: 1rem; /* Jarak antara gambar dan info */
+  margin-bottom: 1rem; /* Jarak antar item artikel populer */
+  align-items: center; /* Menyamakan posisi vertikal gambar dan info */
+}
+
+.popular-articles .popular-article:last-child {
+  margin-bottom: 0; /* Hapus margin bawah untuk item terakhir */
+}
+
+.popular-articles .popular-article-image {
+  flex-shrink: 0; /* Mencegah gambar mengecil */
+  width: 80px; /* Lebar tetap untuk gambar */
+  height: 60px; /* Tinggi tetap untuk gambar */
+  border-radius: var(--border-radius);
+  overflow: hidden; /* Memastikan gambar tidak keluar dari border-radius */
+}
+
+.popular-articles .popular-article-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Gambar mengisi area tanpa distorsi */
+}
+
+.popular-articles .popular-article-info h4 {
+  font-size: 0.9rem; /* Ukuran font judul artikel populer */
+  margin-bottom: 0.25rem;
+  line-height: 1.3; /* Kerapatan baris */
+  color: var(--text-color);
+}
+.popular-articles .popular-article-info h4 a { /* Jika judul adalah link */
+    text-decoration: none;
+    color: inherit;
+}
+.popular-articles .popular-article-info h4 a:hover {
+    color: var(--primary-color);
+}
+
+.popular-articles .popular-article-info p {
+  font-size: 0.75rem; /* Ukuran font untuk tanggal */
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+/* Toolbar di atas daftar artikel (pencarian dan urutkan) */
+.articles-content .articles-toolbar { /* Lebih spesifik untuk menghindari konflik */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem; /* Jarak ke grid artikel */
+}
+
+.articles-content .articles-toolbar .search-box {
+  flex-grow: 0; /* Tidak perlu membesar */
+  width: 100%; /* Lebar default */
+  max-width: 350px; /* Batasi lebar maksimum */
+}
+
+.articles-content .articles-toolbar .sort-options {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.articles-content .articles-toolbar .sort-options label {
+  margin-bottom: 0; /* Reset margin bottom dari form-group label jika ada */
+}
+
+
+/* Badge kategori pada kartu artikel */
+.article-image {
+  position: relative; /* Diperlukan agar posisi absolut bekerja */
+  /* height: 200px; */ /* Anda sudah punya ini di styles.css */
+}
+
+.article-category {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  text-transform: capitalize; /* Membuat huruf pertama kapital */
+  z-index: 1; /* Pastikan di atas gambar */
+}
+
+/* Meta artikel (tanggal dan ikon kalender) */
+.article-info .article-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Jarak antara ikon dan teks tanggal */
+  color: var(--text-light);
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem; /* Jarak ke judul artikel */
+}
+
+.article-info .article-meta i {
+  color: var(--text-light); /* Sesuaikan jika ingin warna ikon berbeda */
+}
+
+/* Tombol Baca Selengkapnya */
+.article-info .btn-sm {
+    padding: 0.35rem 0.75rem; /* Sedikit padding lebih */
+    font-size: 0.8rem; /* Sesuaikan ukuran font jika perlu */
+}
+.article-info .btn-sm i {
+    margin-left: 0.35rem; /* Jarak ikon panah */
+}
+
+
+/* Penyesuaian untuk .divider jika digunakan di sidebar */
+.articles-sidebar .divider {
+  margin: 1rem 0; /* Jarak yang konsisten untuk divider */
+}
+
+/* Penyesuaian untuk search-box di sidebar jika perlu */
+.articles-sidebar .search-box {
+    margin-top: 0.5rem; /* Jarak dari judul "Cari Artikel" */
+}
+.articles-sidebar .search-box input[type="search"] {
+    background-color: var(--background-color); /* Pastikan kontras dengan bg widget */
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .articles-layout {
+    grid-template-columns: 1fr; /* Sidebar dan konten akan bertumpuk */
+  }
+
+  .articles-sidebar {
+    margin-bottom: 2rem; /* Jarak sidebar ke konten saat bertumpuk */
+  }
+}
+
+@media (max-width: 768px) {
+    .articles-content .articles-toolbar {
+        flex-direction: column; /* Toolbar bertumpuk di layar kecil */
+        align-items: stretch; /* Lebar penuh untuk item toolbar */
+        gap: 1rem;
+    }
+    .articles-content .articles-toolbar .search-box {
+        max-width: none; /* Lebar penuh untuk search box */
+    }
+    .articles-content .articles-toolbar .sort-options {
+        justify-content: flex-start; /* Rata kiri untuk opsi urutkan */
+    }
+}
+
+/* === Article Detail Page Styles === */
+
+/* Kontainer utama untuk detail artikel */
+.article-detail-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  max-width: 900px; /* Batasi lebar maksimum untuk kenyamanan membaca */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Header Artikel (Judul, Meta, Author) */
+.article-detail .article-header {
+  margin-bottom: 2rem;
+  text-align: center; /* Pusatkan konten header */
+}
+
+.article-detail .article-meta {
+  display: flex;
+  flex-wrap: wrap; /* Agar tag bisa turun baris jika terlalu banyak */
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem 1rem; /* Jarak antar item meta (vertikal horizontal) */
+  color: var(--text-light);
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.article-detail .article-meta .article-category {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  font-size: 0.8rem; /* Sedikit lebih kecil agar rapi */
+}
+
+.article-detail .article-meta .article-date {
+  display: inline-flex; /* Agar ikon dan tanggal sejajar */
+  align-items: center;
+}
+
+.article-detail .article-meta .article-date i {
+  margin-right: 0.35rem;
+}
+
+.article-detail .article-title {
+  font-size: 2.25rem; /* Sesuaikan ukuran judul jika perlu */
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.article-detail .article-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem; /* Jarak dari judul */
+}
+
+.article-detail .author-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover; /* Pastikan gambar penulis tidak terdistorsi */
+}
+
+.article-detail .author-info {
+  text-align: left; /* Teks info penulis rata kiri */
+}
+
+.article-detail .author-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.1rem;
+}
+
+.article-detail .author-role {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+/* Gambar Utama Artikel */
+.article-detail .article-featured-image {
+  margin-top: 1rem; /* Jarak dari header */
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius);
+  overflow: hidden; /* Memastikan gambar mengikuti border-radius */
+}
+
+.article-detail .article-featured-image img {
+  width: 100%;
+  height: auto;
+  display: block; /* Menghilangkan spasi bawah yang kadang muncul pada gambar */
+}
+
+/* Konten Artikel */
+.article-content {
+  line-height: 1.7; /* Spasi antar baris untuk kenyamanan membaca */
+  font-size: 1rem; /* Ukuran font standar, bisa disesuaikan */
+  color: #374151; /* Warna teks yang lebih nyaman dibaca (mirip text-gray-700) */
+}
+
+.article-content h2 {
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.article-content h3 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.article-content p {
+  margin-bottom: 1.25rem;
+}
+
+.article-content ul,
+.article-content ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.75rem; /* Indentasi untuk daftar */
+}
+
+.article-content ul li,
+.article-content ol li {
+  margin-bottom: 0.6rem; /* Jarak antar item daftar */
+}
+
+.article-content ul {
+  list-style: disc; /* Gaya daftar default */
+}
+.article-content ol {
+  list-style: decimal; /* Gaya daftar default */
+}
+
+.article-content a { /* Styling untuk link di dalam konten artikel */
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+.article-content a:hover {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+/* styles.css - Modifikasi untuk .article-content .article-image */
+
+/* === CSS DIAGNOSTIK DAN PERBAIKAN PAKSA === */
+/* Target spesifik untuk kontainer div yang membungkus gambar "Tipe Kaki" */
+/* Selector :has(img[alt="Tipe Kaki"]) akan menargetkan div.article-image
+   yang memiliki anak img dengan alt="Tipe Kaki". */
+
+/* === CSS DIAGNOSTIK DAN PERBAIKAN PAKSA (REVISI FINAL) === */
+
+/* Target spesifik untuk kontainer div yang membungkus gambar "Tipe Kaki" */
+.article-content .article-image:has(img[alt="Tipe Kaki"]) {
+    position: static !important;
+    display: block !important;
+    clear: both !important;
+    margin-top: 2.5rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 3rem !important; /* MARGIN BAWAH YANG BESAR untuk mendorong elemen berikutnya */
+    max-width: 80% !important;
+    overflow: hidden !important;   /* PENTING: Kembalikan ke 'hidden'. Ini akan memaksa div
+                                      untuk menghitung tingginya berdasarkan konten di dalamnya
+                                      (gambar + caption) dan "membungkusnya". Jika ada konten
+                                      yang lebih tinggi dari yang dihitung, akan dipotong,
+                                      tapi ini seharusnya membantu kalkulasi ruang yang benar. */
+    
+    /* DEBUGGING VISUAL (bisa dihapus jika sudah berhasil) */
+    /* border: 5px dashed hotpink !important; */
+    /* background-color: rgba(255, 255, 0, 0.1) !important;  */
+}
+
+/* === PERBAIKAN SPESIFIK UNTUK GAMBAR KONTEN ATAS DI DETAIL ARTIKEL === */
+
+/* Targetkan div kontainer spesifik menggunakan kelas baru */
+.article-content .article-image-atas-spesifik {
+    position: static !important;   /* Pastikan alur normal, timpa global .article-image jika ada position:relative */
+    display: block !important;
+    height: auto !important;      /* PENTING: Biarkan tinggi div ditentukan oleh kontennya (gambar + caption) */
+    max-width: 80% !important;     /* Batasi lebar kontainer gambar */
+    margin-top: 2.5rem !important;
+    margin-bottom: 3rem !important; /* Margin bawah yang besar untuk mendorong H2 berikutnya */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    overflow: hidden !important;    /* Pastikan konten tidak meluap dan tinggi dihitung benar */
+    clear: both !important;         /* Untuk jaga-jaga dari float sebelumnya */
+
+    /* DEBUGGING VISUAL (bisa dihapus jika sudah berhasil) */
+    /* border: 5px dashed purple !important; */
+    /* background-color: rgba(0, 255, 255, 0.05) !important;  */
+}
+
+/* Targetkan gambar di dalam kontainer spesifik tersebut */
+.article-content .article-image-atas-spesifik img {
+    width: 100% !important;
+    height: auto !important;      /* PENTING: Pastikan tinggi gambar otomatis sesuai aspek rasio, timpa global .article-image img jika ada height:100% */
+    display: block !important;
+    margin-bottom: 0.75rem !important; /* Jarak ke caption */
+    border-radius: var(--border-radius); /* Pertahankan gaya visual */
+    box-shadow: var(--box-shadow);      /* Pertahankan gaya visual */
+
+    /* DEBUGGING VISUAL (bisa dihapus jika sudah berhasil) */
+    /* border: 3px dashed darkgreen !important; */
+}
+
+/* Targetkan caption di dalam kontainer spesifik */
+.article-content .article-image-atas-spesifik .image-caption {
+    display: block !important;
+    font-size: 0.875rem !important;
+    color: var(--text-light) !important;
+    font-style: italic !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    line-height: 1.4 !important;
+
+    /* DEBUGGING VISUAL (bisa dihapus jika sudah berhasil) */
+    /* border: 1px dashed orange !important; */
+}
+
+/* Target H2 yang mengikuti SETELAH elemen .article-image manapun di dalam .article-content */
+/* Ini akan berlaku untuk H2 setelah gambar atas maupun gambar bawah jika ada */
+.article-content .article-image + h2 {
+    clear: both !important;       /* Pastikan H2 "membersihkan" float dari atasnya */
+    margin-top: 2.5rem !important; /* Berikan margin atas yang jelas untuk H2 */
+    position: static !important;  /* Pastikan H2 juga dalam alur normal */
+
+    /* DEBUGGING VISUAL (bisa dihapus jika sudah berhasil) */
+    /* background-color: rgba(255, 0, 255, 0.05) !important;  */
+    /* border-top: 2px dotted darkmagenta !important; */
+}
+
+/* Tag Artikel */
+.article-tags {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--border-radius);
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem; /* Agar ada spasi jika tag turun baris */
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.tag:hover {
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+/* Bagikan Artikel */
+.article-share {
+  margin: 2.5rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.article-share p {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.social-share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.social-share .btn-social { /* Pastikan tombol sosial tidak tumpang tindih */
+  flex: 0 0 auto; /* Tidak membesar atau mengecil */
+  width: 40px;
+  height: 40px;
+  font-size: 1.1rem; /* Ukuran ikon */
+  padding: 0; /* Hapus padding jika .btn sudah punya */
+  border-radius: 50%; /* Buat lingkaran */
+  line-height: 40px; /* Sejajarkan ikon vertikal (jika tidak pakai flex di .btn-social) */
+  text-align: center; /* Sejajarkan ikon horizontal */
+  color: var(--text-color); /* Warna ikon default */
+  background-color: var(--background-light); /* Latar default */
+  border: 1px solid var(--border-color); /* Border default */
+}
+.social-share .btn-social:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+/* Artikel Terkait */
+.related-articles {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.related-articles h2 {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+/* Pastikan .articles-grid di related-articles juga rapi */
+/* Jika .article-detail-container memiliki max-width 900px,
+   mungkin lebih baik menampilkan 2 kartu per baris untuk related articles
+   atau sesuaikan minmax agar pas. */
+.related-articles .articles-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Default ini mungkin sudah cukup */
+  /* Jika ingin maksimal 2 kartu pada container 900px: */
+  /* grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); */
+}
+
+/* styles.css */
+/* ... (kode CSS Anda yang sudah ada) ... */
+
+/* Tambahan untuk Halaman Pembayaran - Ringkasan Pesanan Gambar Produk */
+.payment-summary .summary-products {
+    display: flex; /* Mengatur produk dalam satu baris jika memungkinkan atau membungkus */
+    flex-direction: column; /* Atau 'row' jika Anda ingin produk berjajar horizontal dan scroll */
+    gap: 1rem; /* Jarak antar produk di ringkasan */
+    margin-bottom: 1rem; /* Jarak sebelum garis pemisah */
+}
+
+.payment-summary .summary-product {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Jarak antara gambar dan info produk */
+}
+
+.payment-summary .summary-product-image {
+    width: 60px;    /* Atur lebar gambar yang diinginkan */
+    height: 60px;   /* Atur tinggi gambar yang diinginkan */
+    border-radius: var(--border-radius); /* Menggunakan variabel radius dari CSS Anda */
+    overflow: hidden; /* Memastikan gambar tidak keluar dari batas radius */
+    flex-shrink: 0; /* Mencegah gambar mengecil jika kontainer flex terlalu sempit */
+}
+
+.payment-summary .summary-product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Membuat gambar mengisi area tanpa distorsi, memotong jika perlu */
+    /* Jika Anda ingin seluruh gambar terlihat tanpa terpotong, gunakan: object-fit: contain; */
+    display: block;
+}
+
+.payment-summary .summary-product-info h4 {
+    font-size: 0.9rem; /* Menyesuaikan ukuran font judul produk di ringkasan */
+    margin-bottom: 0.25rem;
+}
+
+.payment-summary .summary-product-meta {
+    font-size: 0.8rem; /* Menyesuaikan ukuran font meta produk */
+    color: var(--text-light);
+}
+
+.payment-summary .summary-product-meta p {
+    margin-bottom: 0.2rem; /* Mengurangi jarak antar baris meta */
+}
+
+
+/* ... (sisa kode CSS Anda) ... */

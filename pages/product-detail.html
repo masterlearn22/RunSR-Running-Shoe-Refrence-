@@ -6,14 +6,50 @@
     <title>Detail Produk - RunShoes</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Added for cart icon shake animation */
+        .cart-icon-shake {
+            animation: cartShake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+            transform: translate3d(0, 0, 0);
+        }
+        @keyframes cartShake {
+            10%, 90% { transform: translate3d(-1px, 0, 0) scale(1.1); }
+            20%, 80% { transform: translate3d(2px, 0, 0) scale(1.1); }
+            30%, 50%, 70% { transform: translate3d(-2px, 0, 0) scale(1.1); }
+            40%, 60% { transform: translate3d(2px, 0, 0) scale(1.1); }
+        }
+        /* Style for the flying image */
+        .flying-product-image {
+            position: fixed;
+            z-index: 1050; /* Ensure it's on top */
+            border-radius: 50%; /* Optional: makes it look like a coin/token */
+            transition: left 0.7s cubic-bezier(0.29, 0.01, 0.53, 0.83), 
+                        top 0.7s cubic-bezier(0.29, 0.01, 0.53, 0.83), 
+                        width 0.7s cubic-bezier(0.29, 0.01, 0.53, 0.83), 
+                        height 0.7s cubic-bezier(0.29, 0.01, 0.53, 0.83), 
+                        opacity 0.7s ease-in-out;
+            object-fit: cover; /* Ensures the image aspect ratio is maintained */
+        }
+        /* Styling for product actions to ensure buttons are spaced nicely */
+        .product-actions {
+            display: flex;
+            gap: 10px; /* Adds space between buttons */
+            align-items: center; /* Aligns buttons vertically if they wrap */
+        }
+        .product-actions .btn {
+            flex-grow: 1; /* Allows buttons to grow and fill space if needed */
+        }
+        .product-actions .btn-outline {
+            flex-grow: 0; /* Prevent wishlist button from growing too much */
+            min-width: auto; /* Adjust if necessary */
+        }
+    </style>
 </head>
 <body>
 <header class="header">
   <div class="container header-content">
-    <!-- Logo -->
     <a href="../index.html" class="logo">RunShoes</a>
 
-    <!-- Navigation Links -->
     <nav class="main-nav">
       <ul>
         <li><a href="../index.html" class="active">Beranda</a></li>
@@ -23,24 +59,18 @@
       </ul>
     </nav>
 
-    <!-- Header Actions (Cart and Profile) -->
     <div class="header-actions">
-      <!-- Cart -->
       <a href="cart.html" class="cart-icon">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-        </svg>
-        <span class="cart-count">2</span>
-      </a>
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">2</span>
+                    </a>
 
-      <!-- Profile Icon with Dropdown -->
       <div class="profile-dropdown">
         <a href="#" class="profile-icon">
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
           </svg>
         </a>
-        <!-- Dropdown Menu -->
         <div class="dropdown-menu">
           <a href="admin/dashboard.html" class="dropdown-item">Admin</a>
           <a href="user/profile.html" class="dropdown-item">User</a>
@@ -59,27 +89,27 @@
             <div class="product-detail">
                 <div class="product-gallery">
                     <div class="product-main-image">
-                        <img src="../assets/images/products/shoe-1.jpg" alt="Nike Air Zoom 1" id="main-product-image">
+                        <img src="../assets/img/products/Ortus/1.jpg" alt="Ortuseight Hyperglide 1.4" id="main-product-image">
                     </div>
                     <div class="product-thumbnails">
-                        <div class="thumbnail active" data-image="../assets/images/products/shoe-1.jpg">
-                            <img src="../assets/images/products/shoe-1.jpg" alt="Nike Air Zoom 1 - View 1">
+                        <div class="thumbnail active" data-image="../assets/img/products/Ortus/1.jpg">
+                            <img src="../assets/img/products/Ortus/1.jpg" alt="Ortuseight Hyperglide 1.4 - View 1">
                         </div>
-                        <div class="thumbnail" data-image="../assets/images/products/shoe-1-side.jpg">
-                            <img src="../assets/images/products/shoe-1-side.jpg" alt="Nike Air Zoom 1 - View 2">
+                        <div class="thumbnail" data-image="../assets/img/products/Ortus/11.jpg">
+                            <img src="../assets/img/products/Ortus/11.jpg" alt="Ortuseight Hyperglide 1.4 - View 2">
                         </div>
-                        <div class="thumbnail" data-image="../assets/images/products/shoe-1-back.jpg">
-                            <img src="../assets/images/products/shoe-1-back.jpg" alt="Nike Air Zoom 1 - View 3">
+                        <div class="thumbnail" data-image="../assets/img/products/Ortus/12.jpg">
+                            <img src="../assets/img/products/Ortus/12.jpg" alt="Ortuseight Hyperglide 1.4 - View 3">
                         </div>
-                        <div class="thumbnail" data-image="../assets/images/products/shoe-1-top.jpg">
-                            <img src="../assets/images/products/shoe-1-top.jpg" alt="Nike Air Zoom 1 - View 4">
+                        <div class="thumbnail" data-image="../assets/img/products/Ortus/13.jpg">
+                            <img src="../assets/img/products/Ortus/13.jpg" alt="Ortuseight Hyperglide 1.4 - View 4">
                         </div>
                     </div>
                 </div>
 
                 <div class="product-info">
                     <div class="product-header">
-                        <h1 class="product-title">Nike Air Zoom 1</h1>
+                        <h1 class="product-title">Ortuseight Hyperglide 1.4</h1>
                         <div class="product-meta">
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
@@ -181,8 +211,9 @@
                     </div>
 
                     <div class="product-actions">
-                        <button class="btn btn-primary btn-lg"><i class="fas fa-shopping-bag"></i> Tambah ke Keranjang</button>
-                        <button class="btn btn-outline btn-lg"><i class="fas fa-heart"></i></button>
+                        <button class="btn btn-primary btn-lg" id="add-to-cart-button"><i class="fas fa-shopping-bag"></i> Tambah ke Keranjang</button>
+                        <a href="../pages/payment2.html" class="btn btn-success btn-lg" id="buy-now-button"><i class="fas fa-credit-card"></i> Beli Sekarang</a>
+                        <button class="btn btn-outline btn-lg" title="Tambahkan ke Wishlist"><i class="fas fa-heart"></i></button>
                     </div>
                 </div>
             </div>
@@ -333,48 +364,48 @@
                 <div class="products-grid">
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="../assets/images/products/shoe-2.jpg" alt="Adidas Ultraboost 2">
+                            <img src="../assets/img/products/910/1.jpeg" alt="910 Haze Veloce">
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <span>4.8</span>
                             </div>
                         </div>
                         <div class="product-info">
-                            <h3>Adidas Ultraboost 2</h3>
-                            <p>Sepatu untuk trail running</p>
+                            <h3>910 Haze Veloce</h3>
+                            <p>Sepatu untuk Daily Training</p>
                             <div class="product-footer">
-                                <span class="product-price">Rp1.000.000</span>
+                                <span class="product-price">Rp 599.000</span>
                                 <a href="product-detail.html?id=2" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="../assets/images/products/shoe-3.jpg" alt="Asics Gel-Nimbus 3">
+                            <img src="../assets/img/products/Ardiles/1.jpg" alt="Ardiles Nfinity Raiton">
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <span>4.7</span>
                             </div>
                         </div>
                         <div class="product-info">
-                            <h3>Asics Gel-Nimbus 3</h3>
+                            <h3>Ardiles Nfinity Raiton</h3>
                             <p>Sepatu untuk maraton</p>
                             <div class="product-footer">
-                                <span class="product-price">Rp1.500.000</span>
+                                <span class="product-price">Rp 300.000</span>
                                 <a href="product-detail.html?id=3" class="btn btn-sm">Detail <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="../assets/images/products/shoe-4.jpg" alt="Brooks Ghost 4">
+                            <img src="../assets/img/products/Ortus/3.jpeg" alt="Ortuseight Hyperglide 1.4">
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <span>4.6</span>
                             </div>
                         </div>
                         <div class="product-info">
-                            <h3>Brooks Ghost 4</h3>
+                            <h3>Ortuseight Hyperglide 1.4"></h3>
                             <p>Sepatu untuk lari santai</p>
                             <div class="product-footer">
                                 <span class="product-price">Rp2.000.000</span>
@@ -384,14 +415,14 @@
                     </div>
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="../assets/images/products/shoe-5.jpg" alt="New Balance Fresh Foam 5">
+                            <img src="../assets/img/products/Mills/3.jpeg" alt="mills dynaplate fineknit">
                             <div class="product-rating">
                                 <i class="fas fa-star"></i>
                                 <span>4.5</span>
                             </div>
                         </div>
                         <div class="product-info">
-                            <h3>New Balance Fresh Foam 5</h3>
+                            <h3>mills dynaplate fineknit</h3>
                             <p>Sepatu untuk lari jalan</p>
                             <div class="product-footer">
                                 <span class="product-price">Rp2.500.000</span>
@@ -449,25 +480,165 @@
 
     <script src="../assets/js/main.js"></script>
     <script>
-  // Extract product ID from URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const productId = parseInt(urlParams.get("id"));
+  // Existing script for product details (assuming `products` array is defined elsewhere, e.g., in main.js)
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = parseInt(urlParams.get("id"));
 
-  // Find the product by ID
-  const product = products.find((p) => p.id === productId);
+    // This 'products' variable would need to be globally available or loaded before this script.
+    // For demonstration, if 'products' is not defined, this part will gracefully fail or be skipped.
+    if (typeof products !== 'undefined' && products) {
+      const product = products.find((p) => p.id === productId);
 
-  if (product) {
-    // Update product details dynamically
-    document.querySelector(".product-title").textContent = product.name;
-    document.querySelector(".product-brand").textContent = product.brand;
-    document.querySelector(".product-price").textContent = `Rp${product.price.toLocaleString("id-ID")}`;
-    document.querySelector(".product-description").textContent = product.description;
-    document.querySelector(".product-image img").src = product.image;
-    document.querySelector(".product-rating span").textContent = product.rating;
-  } else {
-    // Handle case where product is not found
-    document.querySelector(".product-detail").innerHTML = "<p>Product not found.</p>";
+      if (product) {
+        // Update product details dynamically
+        const productTitleEl = document.querySelector(".product-title");
+        if (productTitleEl) productTitleEl.textContent = product.name;
+        
+        // const productBrandEl = document.querySelector(".product-brand"); // .product-brand class doesn't exist in the HTML
+        // if (productBrandEl) productBrandEl.textContent = product.brand;
+
+        const productPriceEl = document.querySelector(".product-price");
+        if (productPriceEl) productPriceEl.textContent = `Rp${product.price.toLocaleString("id-ID")}`;
+        
+        const productDescriptionEl = document.querySelector(".product-description p"); // Target the <p> inside
+        if (productDescriptionEl) productDescriptionEl.textContent = product.description;
+        
+        const mainProductImageEl = document.getElementById("main-product-image");
+        if (mainProductImageEl) mainProductImageEl.src = product.image;
+        
+        const productRatingSpanEl = document.querySelector(".product-rating span");
+        if (productRatingSpanEl) productRatingSpanEl.textContent = product.rating + (product.reviews ? ` (${product.reviews} ulasan)` : '');
+      } else {
+        const productDetailEl = document.querySelector(".product-detail");
+        if (productDetailEl) productDetailEl.innerHTML = "<p>Product not found.</p>";
+      }
+    }
+  } catch (error) {
+    console.warn("Error in product detail loading script:", error);
   }
+
+  // --- Animation for Add to Cart & Other JS functionalities ---
+  document.addEventListener('DOMContentLoaded', () => {
+    const addToCartButton = document.getElementById('add-to-cart-button');
+    const mainProductImage = document.getElementById('main-product-image');
+    const headerCartIcon = document.querySelector('.header-actions .cart-icon'); // The <a> tag
+    const headerCartBagIcon = document.querySelector('.header-actions .cart-icon .fa-shopping-bag'); // The <i> tag inside
+
+    if (addToCartButton && mainProductImage && headerCartIcon && headerCartBagIcon) {
+      addToCartButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default button action
+
+        // 1. Create the flying image
+        const flyingImage = document.createElement('img');
+        flyingImage.src = mainProductImage.src;
+        flyingImage.classList.add('flying-product-image'); // Apply styles via class
+
+        // 2. Set initial position (from the main product image)
+        const mainImageRect = mainProductImage.getBoundingClientRect();
+        flyingImage.style.left = mainImageRect.left + 'px';
+        flyingImage.style.top = mainImageRect.top + 'px';
+        flyingImage.style.width = mainImageRect.width / 2 + 'px'; // Start a bit smaller
+        flyingImage.style.height = mainImageRect.height / 2 + 'px';
+        flyingImage.style.opacity = '1';
+
+        document.body.appendChild(flyingImage);
+
+        // 3. Get target position (the shopping bag icon in the header)
+        const cartIconRect = headerCartBagIcon.getBoundingClientRect();
+
+        // 4. Animate - Force reflow to apply initial styles before transition
+        requestAnimationFrame(() => {
+            flyingImage.style.left = (cartIconRect.left + cartIconRect.width / 2 - 10) + 'px'; // Center on icon, 10px is half of target width
+            flyingImage.style.top = (cartIconRect.top + cartIconRect.height / 2 - 10) + 'px'; // Center on icon, 10px is half of target height
+            flyingImage.style.width = '20px'; // Shrink
+            flyingImage.style.height = '20px';
+            flyingImage.style.opacity = '0';
+        });
+
+
+        // 5. After animation, remove element and give feedback
+        flyingImage.addEventListener('transitionend', () => {
+          flyingImage.remove();
+
+          // Update cart count (example)
+          const cartCountElement = headerCartIcon.querySelector('.cart-count');
+          if (cartCountElement) {
+            let currentCount = parseInt(cartCountElement.textContent);
+            cartCountElement.textContent = currentCount + 1;
+          }
+
+          // Shake cart icon
+          headerCartIcon.classList.add('cart-icon-shake');
+          setTimeout(() => {
+            headerCartIcon.classList.remove('cart-icon-shake');
+          }, 400); // Duration of the shake animation
+        }, { once: true }); // Ensure the event listener is removed after firing once
+      });
+    }
+
+    // Thumbnail click:
+    const thumbnails = document.querySelectorAll('.product-thumbnails .thumbnail');
+    const currentMainImage = document.getElementById('main-product-image');
+
+    if (currentMainImage && thumbnails.length > 0) {
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                currentMainImage.src = this.dataset.image;
+                currentMainImage.alt = this.querySelector('img').alt;
+
+                const activeThumbnail = document.querySelector('.product-thumbnails .thumbnail.active');
+                if (activeThumbnail) activeThumbnail.classList.remove('active');
+                this.classList.add('active');
+            });
+        });
+    }
+
+
+    // Tab switching
+    const tabButtons = document.querySelectorAll('.product-tabs .tab-btn');
+    // const tabContents = document.querySelectorAll('.product-tabs .tab-content'); // Not directly needed if we just use IDs
+
+    if (tabButtons.length > 0) {
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const activeTabButton = document.querySelector('.product-tabs .tab-btn.active');
+                const activeTabContent = document.querySelector('.product-tabs .tab-content.active');
+
+                if(activeTabButton) activeTabButton.classList.remove('active');
+                if(activeTabContent) activeTabContent.classList.remove('active');
+
+                this.classList.add('active');
+                const targetTabContent = document.getElementById(this.dataset.tab);
+                if(targetTabContent) targetTabContent.classList.add('active');
+            });
+        });
+    }
+    
+
+    // Quantity selector
+    const quantityInput = document.querySelector('.quantity-input');
+    const minusBtn = document.querySelector('.quantity-selector .quantity-btn.minus');
+    const plusBtn = document.querySelector('.quantity-selector .quantity-btn.plus');
+
+    if (quantityInput && minusBtn && plusBtn) {
+        minusBtn.addEventListener('click', () => {
+            let currentValue = parseInt(quantityInput.value);
+            const minValue = parseInt(quantityInput.min);
+            if (currentValue > minValue) {
+                quantityInput.value = currentValue - 1;
+            }
+        });
+
+        plusBtn.addEventListener('click', () => {
+            let currentValue = parseInt(quantityInput.value);
+            const maxValue = parseInt(quantityInput.max);
+            if (currentValue < maxValue) {
+                quantityInput.value = currentValue + 1;
+            }
+        });
+    }
+  });
 </script>
 </body>
 </html>
