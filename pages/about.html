@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - RunShoes</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Tambahan CSS Khusus untuk Halaman Tentang Kami (jika diperlukan) */
+        .about-section {
+            padding: 3rem 0;
+        }
+
+        .about-section .container {
+            max-width: 900px; /* Batasi lebar konten agar lebih mudah dibaca */
+        }
+
+        .about-section h1, .about-section h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-section h2 {
+            color: var(--primary-color);
+        }
+
+        .about-section p {
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .our-values {
+            display: grid;
+            /* Mengubah menjadi 4 kolom agar tampil horizontal dalam satu baris */
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .value-item {
+            background-color: var(--background-light);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            display: flex; /* Menambahkan flex untuk kontrol alignment vertikal jika konten berbeda tinggi */
+            flex-direction: column; /* Menyusun item di dalam value-item secara vertikal */
+            justify-content: flex-start; /* Memulai alignment dari atas */
+        }
+
+        .value-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .value-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-align: center;
+            flex-grow: 1; /* Memungkinkan paragraf untuk mengisi ruang jika diperlukan */
+        }
+
+        .team-section {
+            background-color: var(--background-light);
+            padding: 3rem 0;
+            margin-top: 2rem;
+        }
+        .team-section .container {
+            max-width: 900px;
+        }
+
+        .team-section h2 {
+            text-align: center;
+            margin-bottom: 1.5rem; 
+            /* color: var(--primary-color); */
+        }
+
+        .team-section p {
+            text-align: center;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Media query untuk layar yang lebih kecil agar nilai-nilai tidak terlalu sempit */
+        @media (max-width: 768px) {
+            .our-values {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Kembali ke 2 kolom atau auto-fit */
+            }
+        }
+        @media (max-width: 480px) {
+            .our-values {
+                grid-template-columns: 1fr; /* Menjadi 1 kolom pada layar sangat kecil */
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="../index.html" class="logo">RunShoes</a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="products.html">Produk</a></li>
+                    <li><a href="articles.html">Artikel</a></li>
+                    <li><a href="about.html" class="active">Tentang Kami</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+
+                <div class="profile-dropdown">
+                    <a href="#" class="profile-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="admin/dashboard.html" class="dropdown-item">Admin</a>
+                        <a href="user/profile-index.html" class="dropdown-item">User</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Tentang RunShoes</h1>
+                <p>Lebih dari sekadar toko, kami adalah partner lari Anda.</p>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <h2>Misi Kami</h2>
+                <p>
+                    Di RunShoes, kami percaya bahwa setiap langkah lari dimulai dengan sepatu yang tepat. Misi kami adalah untuk memberdayakan setiap pelari di Indonesia, dari pemula hingga profesional, dengan menyediakan akses mudah ke sepatu lari berkualitas terbaik yang sesuai dengan kebutuhan unik, gaya lari, dan anggaran mereka. Kami berdedikasi untuk membantu Anda mencapai performa puncak dan menikmati setiap momen lari dengan nyaman dan percaya diri.
+                </p>
+
+                <h2>Kisah Kami</h2>
+                <p>
+                    RunShoes lahir dari kecintaan kami terhadap dunia lari dan keinginan untuk menciptakan platform yang tidak hanya menjual sepatu, tetapi juga membangun komunitas. Kami menyadari betapa pentingnya pemilihan sepatu yang tepat untuk mencegah cedera dan meningkatkan performa. Oleh karena itu, kami berkomitmen untuk menyediakan informasi yang akurat, rekomendasi yang dipersonalisasi, dan koleksi sepatu lari pilihan dari merek-merek terpercaya.
+                </p>
+
+                <h2>Nilai-Nilai Kami</h2>
+                <div class="our-values">
+                    <div class="value-item">
+                        <i class="fas fa-shoe-prints"></i>
+                        <h3>Passion untuk Lari</h3>
+                        <p>Kami adalah pelari, sama seperti Anda. Kecintaan kami pada olahraga ini mendorong kami untuk selalu memberikan yang terbaik.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-users"></i>
+                        <h3>Fokus pada Pelanggan</h3>
+                        <p>Kebutuhan dan kepuasan Anda adalah prioritas utama kami. Kami siap membantu Anda menemukan sepatu yang sempurna.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Kualitas & Kepercayaan</h3>
+                        <p>Kami hanya menyediakan produk original dan berkualitas tinggi dari merek-merek ternama yang telah teruji.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Edukasi & Inspirasi</h3>
+                        <p>Melalui artikel dan rekomendasi, kami bertujuan untuk mengedukasi dan menginspirasi Anda dalam perjalanan lari Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="team-section">
+            <div class="container">
+                <h2>Tim Kami</h2>
+                <p>
+                    Tim RunShoes terdiri dari para penggemar lari, ahli produk, dan profesional layanan pelanggan yang bersemangat untuk berbagi pengetahuan dan pengalaman kami. Kami terus belajar dan mengikuti perkembangan terbaru dalam teknologi sepatu lari agar dapat memberikan saran terbaik untuk Anda. Kami bukan hanya penjual, kami adalah konsultan lari Anda.
+                </p>
+                <p style="margin-top: 1.5rem;">
+                    Terima kasih telah memilih RunShoes sebagai partner lari Anda. Mari berlari lebih jauh bersama!
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>RunShoes</span>
+                    </div>
+                    <p>Temukan sepatu lari yang tepat untuk kebutuhan Anda.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Produk</h3>
+                    <ul>
+                        <li><a href="products.html">Semua Produk</a></li>
+                        <li><a href="products.html?type=road">Sepatu Lari Jalan</a></li>
+                        <li><a href="products.html?type=trail">Sepatu Trail Running</a></li>
+                        <li><a href="products.html?type=marathon">Sepatu Maraton</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Artikel</h3>
+                    <ul>
+                        <li><a href="articles.html">Semua Artikel</a></li>
+                        <li><a href="articles.html?category=tips">Tips & Trik</a></li>
+                        <li><a href="articles.html?category=training">Latihan</a></li>
+                        <li><a href="articles.html?category=maintenance">Perawatan Sepatu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontak</h3>
+                    <ul>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="#">Hubungi Kami</a></li> <li><a href="#">FAQ</a></li> </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 RunShoes. Hak Cipta Dilindungi.</p> </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/products.js"></script>
+    <script src="../assets/js/articles.js"></script>
+    <script src="../assets/js/articles-logic.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/cart-logic.js"></script>
+    </body>
+
+</html>

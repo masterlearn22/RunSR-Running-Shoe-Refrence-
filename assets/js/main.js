@@ -221,3 +221,122 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 })
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    // Tab switching logic
+    const tabs = document.querySelectorAll('.auth-tab');
+    const contents = document.querySelectorAll('.auth-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Deactivate current active tab and content
+            const currentActiveTab = document.querySelector('.auth-tab.active');
+            if (currentActiveTab) {
+                currentActiveTab.classList.remove('active');
+            }
+            const currentActiveContent = document.querySelector('.auth-content.active');
+            if (currentActiveContent) {
+                currentActiveContent.classList.remove('active');
+            }
+
+            // Activate new tab and content
+            tab.classList.add('active');
+            const targetContentId = tab.dataset.tab;
+            const targetContent = document.getElementById(targetContentId);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+
+    // Password toggle logic
+    const togglePasswordButtons = document.querySelectorAll('.toggle-password');
+    togglePasswordButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const passwordInput = button.previousElementSibling; // Annahme: input ist direkt vor dem Button
+            if (passwordInput && (passwordInput.type === 'password' || passwordInput.type === 'text')) {
+                const icon = button.querySelector('i');
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    if (icon) {
+                        icon.classList.remove('fa-eye');
+                        icon.classList.add('fa-eye-slash');
+                    }
+                } else {
+                    passwordInput.type = 'password';
+                    if (icon) {
+                        icon.classList.remove('fa-eye-slash');
+                        icon.classList.add('fa-eye');
+                    }
+                }
+            }
+        });
+    });
+
+    // Login form submission
+    const loginForm = document.getElementById('login-form');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Mencegah submit form standar
+
+            // Simulasi validasi sederhana
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            if (email.trim() === '' || password.trim() === '') {
+                alert('Mohon isi semua field untuk login.');
+                return;
+            }
+
+            // Simulasi login berhasil
+            alert('Login berhasil! Anda akan diarahkan ke halaman utama.');
+            window.location.href = '../index.html'; // Arahkan ke index.html
+        });
+    }
+
+    // Register form submission
+    const registerForm = document.getElementById('register-form');
+    if (registerForm) {
+        registerForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Mencegah submit form standar
+
+            // Simulasi validasi sederhana
+            const name = document.getElementById('register-name').value;
+            const email = document.getElementById('register-email').value;
+            const password = document.getElementById('register-password').value;
+            const confirmPassword = document.getElementById('register-confirm-password').value;
+            const terms = document.getElementById('terms-agreement').checked;
+
+            if (name.trim() === '' || email.trim() === '' || password.trim() === '' || confirmPassword.trim() === '') {
+                alert('Mohon isi semua field untuk registrasi.');
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert('Password dan konfirmasi password tidak cocok.');
+                return;
+            }
+
+            if (!terms) {
+                alert('Anda harus menyetujui Syarat & Ketentuan dan Kebijakan Privasi.');
+                return;
+            }
+
+            // Simulasi registrasi berhasil
+            alert('Registrasi berhasil! Anda akan diarahkan ke halaman utama.');
+            window.location.href = '../index.html'; // Arahkan ke index.html
+        });
+    }
+
+    // Mobile menu toggle (jika Anda membutuhkannya di sini juga)
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    if (mobileMenuToggle && mainNav) {
+        mobileMenuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active'); // Anda mungkin perlu menambahkan style untuk .main-nav.active
+        });
+    }
+
+});
