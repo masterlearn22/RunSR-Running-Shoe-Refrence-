@@ -7,6 +7,28 @@
     <link rel="stylesheet" href="../../assets/css/styles.css">
     <link rel="stylesheet" href="../../assets/css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- <style>
+        /* CSS Tambahan untuk memperbaiki lebar kolom tabel stok rendah */
+        .table-card .admin-table {
+            table-layout: fixed; /* Memaksa tabel mengikuti lebar yang ditentukan */
+            width: 60%;
+        }
+
+        /* Mengatur lebar spesifik untuk setiap kolom di tabel stok rendah */
+        .dashboard-tables .table-card:last-child .admin-table th:nth-child(1) { width: 27%; } /* Kolom Produk */
+        .dashboard-tables .table-card:last-child .admin-table th:nth-child(2) { width:20%; } /* Kolom Kategori */
+        .dashboard-tables .table-card:last-child .admin-table th:nth-child(3) { width: 30%; text-align: center;} /* Kolom Stok */
+
+        .dashboard-tables .table-card:last-child .admin-table td:nth-child(3) {
+            text-align: center; /* Memusatkan angka stok */
+        }
+
+        /* Memastikan nama produk yang panjang bisa turun baris (wrap) */
+        .product-cell span {
+            white-space: normal;
+            word-break: break-word;
+        }
+    </style> -->
 </head>
 <body class="admin-body">
     <div class="admin-layout">
@@ -52,7 +74,7 @@
                     </div>
                     <div class="admin-user-dropdown">
                         <button class="user-dropdown-btn">
-                            <img src="../../assets/images/admin/admin-avatar.jpg" alt="Admin" class="admin-avatar">
+                            <img src="../../assets/img/user/000.jpg" alt="Admin" class="admin-avatar">
                             <span>Admin</span>
                             <i class="fas fa-chevron-down"></i>
                         </button>
@@ -67,7 +89,8 @@
 
             <div class="admin-content-body">
                 <div class="dashboard-summary">
-                    <div class="summary-card">
+                    <!-- Summary Cards remain the same -->
+                     <div class="summary-card">
                         <div class="summary-icon bg-primary">
                             <i class="fas fa-shopping-bag"></i>
                         </div>
@@ -109,39 +132,6 @@
                     </div>
                 </div>
 
-                <div class="dashboard-charts">
-                    <div class="chart-card">
-                        <div class="chart-header">
-                            <h3>Penjualan Bulanan</h3>
-                            <div class="chart-actions">
-                                <select>
-                                    <option value="2023">2023</option>
-                                    <option value="2022">2022</option>
-                                    <option value="2021">2021</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="chart-body">
-                            <canvas id="salesChart"></canvas>
-                        </div>
-                    </div>
-                    <div class="chart-card">
-                        <div class="chart-header">
-                            <h3>Produk Terlaris</h3>
-                            <div class="chart-actions">
-                                <select>
-                                    <option value="month">Bulan Ini</option>
-                                    <option value="quarter">Kuartal Ini</option>
-                                    <option value="year">Tahun Ini</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="chart-body">
-                            <canvas id="productsChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="dashboard-tables">
                     <div class="table-card">
                         <div class="table-header">
@@ -157,69 +147,43 @@
                                         <th>Tanggal</th>
                                         <th>Total</th>
                                         <th>Status</th>
-                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>#ORD-1234</td>
                                         <td>Budi Santoso</td>
-                                        <td>15 Apr 2023</td>
+                                        <td>15 Jun 2025</td>
                                         <td>Rp1,500,000</td>
                                         <td><span class="status-badge status-completed">Selesai</span></td>
-                                        <td>
-                                            <div class="table-actions">
-                                                <button class="btn-icon" title="Lihat Detail"><i class="fas fa-eye"></i></button>
-                                            </div>
-                                        </td>
                                     </tr>
                                     <tr>
                                         <td>#ORD-1233</td>
                                         <td>Ani Wijaya</td>
-                                        <td>14 Apr 2023</td>
+                                        <td>14 Jun 2025</td>
                                         <td>Rp2,300,000</td>
                                         <td><span class="status-badge status-processing">Diproses</span></td>
-                                        <td>
-                                            <div class="table-actions">
-                                                <button class="btn-icon" title="Lihat Detail"><i class="fas fa-eye"></i></button>
-                                            </div>
-                                        </td>
                                     </tr>
                                     <tr>
                                         <td>#ORD-1232</td>
                                         <td>Citra Dewi</td>
-                                        <td>13 Apr 2023</td>
+                                        <td>13 Jun 2025</td>
                                         <td>Rp850,000</td>
                                         <td><span class="status-badge status-shipped">Dikirim</span></td>
-                                        <td>
-                                            <div class="table-actions">
-                                                <button class="btn-icon" title="Lihat Detail"><i class="fas fa-eye"></i></button>
-                                            </div>
-                                        </td>
                                     </tr>
                                     <tr>
                                         <td>#ORD-1231</td>
                                         <td>Dedi Kurniawan</td>
-                                        <td>12 Apr 2023</td>
+                                        <td>12 Jun 2025</td>
                                         <td>Rp3,200,000</td>
                                         <td><span class="status-badge status-pending">Menunggu Pembayaran</span></td>
-                                        <td>
-                                            <div class="table-actions">
-                                                <button class="btn-icon" title="Lihat Detail"><i class="fas fa-eye"></i></button>
-                                            </div>
-                                        </td>
                                     </tr>
                                     <tr>
                                         <td>#ORD-1230</td>
                                         <td>Eko Prasetyo</td>
-                                        <td>11 Apr 2023</td>
+                                        <td>11 Jun 2025</td>
                                         <td>Rp1,750,000</td>
                                         <td><span class="status-badge status-cancelled">Dibatalkan</span></td>
-                                        <td>
-                                            <div class="table-actions">
-                                                <button class="btn-icon" title="Lihat Detail"><i class="fas fa-eye"></i></button>
-                                            </div>
-                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -237,89 +201,58 @@
                                         <th>Produk</th>
                                         <th>Kategori</th>
                                         <th>Stok</th>
-                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>
                                             <div class="product-cell">
-                                                <img src="../../assets/images/products/shoe-1.jpg" alt="Nike Air Zoom 1">
-                                                <span>Nike Air Zoom 1</span>
+                                                <img src="../../assets/img/products/910/1.jpeg" alt="910">
+                                                <span>910 Haze Veloce</span>
                                             </div>
                                         </td>
                                         <td>Lari Jalan</td>
                                         <td><span class="stock-warning">5</span></td>
-                                        <td>
-                                            <div class="table-actions">
-                                                <button class="btn-icon" title="Edit Produk"><i class="fas fa-edit"></i></button>
-                                                <button class="btn-icon" title="Tambah Stok"><i class="fas fa-plus-circle"></i></button>
-                                            </div>
-                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="product-cell">
-                                                <img src="../../assets/images/products/shoe-3.jpg" alt="Asics Gel-Nimbus 3">
-                                                <span>Asics Gel-Nimbus 3</span>
+                                                <img src="../../assets/img/products/Ardiles/1.jpg" alt="Ardiles Nfinity Raiton">
+                                                <span>Ardiles Nfinity Raiton</span>
                                             </div>
                                         </td>
                                         <td>Maraton</td>
                                         <td><span class="stock-warning">3</span></td>
-                                        <td>
-                                            <div class="table-actions">
-                                                <button class="btn-icon" title="Edit Produk"><i class="fas fa-edit"></i></button>
-                                                <button class="btn-icon" title="Tambah Stok"><i class="fas fa-plus-circle"></i></button>
-                                            </div>
-                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="product-cell">
-                                                <img src="../../assets/images/products/shoe-5.jpg" alt="New Balance Fresh Foam 5">
-                                                <span>New Balance Fresh Foam 5</span>
+                                                <img src="../../assets/img/products/Nike/1.webp" alt="Nike Air Zoom Pegasus 38">
+                                                <span>Nike Air Zoom Pegasus 38</span>
                                             </div>
                                         </td>
                                         <td>Lari Jalan</td>
                                         <td><span class="stock-warning">7</span></td>
-                                        <td>
-                                            <div class="table-actions">
-                                                <button class="btn-icon" title="Edit Produk"><i class="fas fa-edit"></i></button>
-                                                <button class="btn-icon" title="Tambah Stok"><i class="fas fa-plus-circle"></i></button>
-                                            </div>
-                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="product-cell">
-                                                <img src="../../assets/images/products/shoe-8.jpg" alt="Asics GT-2000 8">
-                                                <span>Asics GT-2000 8</span>
+                                                <img src="../../assets/img/products/Ortus/3.jpeg" alt="Ortuseight Hypersonic 1.3">
+                                                <span>Ortuseight Hypersonic 1.3</span>
                                             </div>
                                         </td>
                                         <td>Lari Santai</td>
                                         <td><span class="stock-danger">2</span></td>
-                                        <td>
-                                            <div class="table-actions">
-                                                <button class="btn-icon" title="Edit Produk"><i class="fas fa-edit"></i></button>
-                                                <button class="btn-icon" title="Tambah Stok"><i class="fas fa-plus-circle"></i></button>
-                                            </div>
-                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="product-cell">
-                                                <img src="../../assets/images/products/shoe-9.jpg" alt="Brooks Adrenaline 9">
-                                                <span>Brooks Adrenaline 9</span>
+                                                <img src="../../assets/img/products/NB/3.png" alt="New Balance FuelCell RC Elite v2">
+                                                <span>New Balance FuelCell RC Elite</span>
                                             </div>
                                         </td>
                                         <td>Lari Jalan</td>
                                         <td><span class="stock-danger">1</span></td>
-                                        <td>
-                                            <div class="table-actions">
-                                                <button class="btn-icon" title="Edit Produk"><i class="fas fa-edit"></i></button>
-                                                <button class="btn-icon" title="Tambah Stok"><i class="fas fa-plus-circle"></i></button>
-                                            </div>
-                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
